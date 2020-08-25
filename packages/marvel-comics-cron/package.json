@@ -1,0 +1,31 @@
+{
+  "name": "@marvel/comics",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "author": "Victor Nicolas Lizarraga Ochoa",
+  "private": true,
+  "scripts": {
+    "build": "yarn tsc",
+    "start": "rm -rf ./dist & nest start",
+    "start:dev": "nest start --watch",
+    "start:debug": "nest start --debug --watch",
+    "start:prod": "node dist/main"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@nestjs/common": "^7.4.2",
+    "@nestjs/core": "^7.4.2",
+    "@nestjs/cqrs": "^6.1.0",
+    "@nestjs/platform-express": "^7.4.2",
+    "@nestjs/schedule": "^0.4.0",
+    "@types/md5": "^2.2.0",
+    "axios": "^0.20.0",
+    "dotenv": "^8.2.0",
+    "md5": "^2.3.0",
+    "reflect-metadata": "^0.1.13",
+    "rxjs": "^6.6.2"
+  }
+}

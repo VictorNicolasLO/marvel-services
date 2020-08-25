@@ -1,0 +1,12 @@
+{
+  "name": "@marvel/services",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Victor Nicolas Lizarraga Ochoa"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "license": "MIT"
+}
