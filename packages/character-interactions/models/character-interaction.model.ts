@@ -4,7 +4,7 @@ import {
   IComicSummary,
   ICharacter,
 } from "./interfaces/icharacter-interaction";
-import { CharacterInteractionCreated } from "../events/aggregate/comic-created.event";
+import { CharacterInteractionCreatedEvent } from "../events/aggregate/character-interaction-created.event";
 
 export class CharacterInteractionModel
   extends Model<ICharacterInteraction>
@@ -36,6 +36,6 @@ export class CharacterInteractionModel
   }
 
   create() {
-    this.apply(new CharacterInteractionCreated(this.id, this.toDto()));
+    this.apply(new CharacterInteractionCreatedEvent(this.id, this.toDto()));
   }
 }
