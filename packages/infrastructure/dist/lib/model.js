@@ -19,10 +19,10 @@ class Model extends cqrs_1.AggregateRoot {
         this.fromDto(dto);
     }
     set id(value) {
-        assert_1.default(value, 'Id is required for user creation');
-        asserts_1.assertString(value, 'Id must be string');
+        assert_1.default(value, "Id is required for user creation");
+        asserts_1.assertString(value, "Id must be string");
         if (this._id) {
-            throw new common_1.ConflictException('this model already has an id');
+            throw new common_1.ConflictException("this model already has an id");
         }
         this._id = value;
     }
@@ -30,15 +30,15 @@ class Model extends cqrs_1.AggregateRoot {
         return this._id;
     }
     fromDto(dto) {
-        Object.keys(dto).forEach(dtoKey => {
-            if (!dtoKey.startsWith('_'))
+        Object.keys(dto).forEach((dtoKey) => {
+            if (!dtoKey.startsWith("_"))
                 this[dtoKey] = dto[dtoKey];
         });
     }
     toDto() {
         const dto = {};
-        Object.getOwnPropertyNames(this).forEach(modelKey => {
-            if (modelKey.startsWith('_') && modelKey !== '__isInRepository')
+        Object.getOwnPropertyNames(this).forEach((modelKey) => {
+            if (modelKey.startsWith("_") && modelKey !== "__isInRepository")
                 dto[modelKey.substring(1)] = this[modelKey];
         });
         return dto;
@@ -51,4 +51,9 @@ class Model extends cqrs_1.AggregateRoot {
     }
 }
 exports.Model = Model;
+Model.assertProp = (value, message = "") => {
+    if (!value) {
+        throw new common_1.BadRequestException(`Model property exception: ${message}`);
+    }
+};
 //# sourceMappingURL=model.js.map

@@ -18,4 +18,8 @@ var redis_driver_1 = require("./lib/db-drivers/redis-driver");
 Object.defineProperty(exports, "RedisDriver", { enumerable: true, get: function () { return redis_driver_1.RedisDriver; } });
 var mongo_driver_1 = require("./lib/db-drivers/mongo-driver");
 Object.defineProperty(exports, "MongoDriver", { enumerable: true, get: function () { return mongo_driver_1.MongoDriver; } });
+var aggregate_event_1 = require("./lib/events/aggregate-event");
+Object.defineProperty(exports, "AggregateEvent", { enumerable: true, get: function () { return aggregate_event_1.AggregateEvent; } });
+var domain_event_1 = require("./lib/events/domain-event");
+Object.defineProperty(exports, "DomainEvent", { enumerable: true, get: function () { return domain_event_1.DomainEvent; } });
 //# sourceMappingURL=index.js.map

@@ -64,6 +64,11 @@
     consola "^2.3.0"
     node-fetch "^2.3.0"
 
+"@types/http-assert@^1.5.1":
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/@types/http-assert/-/http-assert-1.5.1.tgz#d775e93630c2469c2f980fc27e3143240335db3b"
+  integrity sha512-PGAK759pxyfXE78NbKxyfRcWYA/KwW17X290cNev/qAsn9eQIxkH4shoNBafH37wewhDG/0p1cHPbK6+SzZjWQ==
+
 "@types/md5@^2.2.0":
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/@types/md5/-/md5-2.2.0.tgz#cd82e16b95973f94bb03dee40c5b6be4a7fb7fb4"
@@ -446,6 +451,11 @@ debug@^3.2.6:
   dependencies:
     ms "^2.1.1"
 
+deep-equal@~1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/deep-equal/-/deep-equal-1.0.1.tgz#f5d260292b660e084eff4cdbc9f08ad3247448b5"
+  integrity sha1-9dJgKStmDghO/0zbyfCK0yR0SLU=
+
 deep-extend@^0.6.0:
   version "0.6.0"
   resolved "https://registry.yarnpkg.com/deep-extend/-/deep-extend-0.6.0.tgz#c4fa7c95404a17a9c3e8ca7e1537312b736330ac"
@@ -780,6 +790,14 @@ has-unicode@^2.0.0:
   version "2.0.1"
   resolved "https://registry.yarnpkg.com/has-unicode/-/has-unicode-2.0.1.tgz#e0e6fe6a28cf51138855e086d1691e771de2a8b9"
   integrity sha1-4Ob+aijPUROIVeCG0Wkedx3iqLk=
+
+http-assert@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/http-assert/-/http-assert-1.4.1.tgz#c5f725d677aa7e873ef736199b89686cceb37878"
+  integrity sha512-rdw7q6GTlibqVVbXr0CKelfV5iY8G2HqEUkhSk297BMbSpSL8crXC+9rjKoMcZZEsksX30le6f/4ul4E28gegw==
+  dependencies:
+    deep-equal "~1.0.1"
+    http-errors "~1.7.2"
 
 http-errors@1.7.2:
   version "1.7.2"

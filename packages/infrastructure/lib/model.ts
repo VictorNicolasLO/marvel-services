@@ -1,14 +1,15 @@
-import { AggregateRoot } from '@nestjs/cqrs';
-import { v4 as uuidv4 } from 'uuid';
-import { assertString } from './asserts';
-import assert from 'assert';
-import { ConflictException } from '@nestjs/common';
+import { AggregateRoot } from "@nestjs/cqrs";
+import { v4 as uuidv4 } from "uuid";
+import { assertString } from "./asserts";
+import assert from "assert";
+import { ConflictException, BadRequestException } from "@nestjs/common";
 type BasicModel = {
   id: string;
 };
 export type ModelOptions = {
   isInRepository: boolean;
 };
+
 export abstract class Model<T> extends AggregateRoot {
   update?(data: Partial<T>): void;
   create?(): void;
@@ -22,11 +23,17 @@ export abstract class Model<T> extends AggregateRoot {
     this.fromDto(dto);
   }
 
+  static assertProp = (value: boolean, message: string = "") => {
+    if (!value) {
+      throw new BadRequestException(`Model property exception: ${message}`);
+    }
+  };
+
   set id(value: string) {
-    assert(value, 'Id is required for user creation');
-    assertString(value, 'Id must be string');
+    assert(value, "Id is required for user creation");
+    assertString(value, "Id must be string");
     if (this._id) {
-      throw new ConflictException('this model already has an id');
+      throw new ConflictException("this model already has an id");
     }
     this._id = value;
   }
@@ -35,16 +42,16 @@ export abstract class Model<T> extends AggregateRoot {
   }
 
   public fromDto(dto) {
-    Object.keys(dto).forEach(dtoKey => {
-      if (!dtoKey.startsWith('_')) (this as any)[dtoKey] = dto[dtoKey];
+    Object.keys(dto).forEach((dtoKey) => {
+      if (!dtoKey.startsWith("_")) (this as any)[dtoKey] = dto[dtoKey];
       //else throw new Error("A DTO can't have underscore properties");
     });
   }
 
   public toDto(): T & BasicModel {
     const dto = {} as T;
-    Object.getOwnPropertyNames(this).forEach(modelKey => {
-      if (modelKey.startsWith('_') && modelKey !== '__isInRepository')
+    Object.getOwnPropertyNames(this).forEach((modelKey) => {
+      if (modelKey.startsWith("_") && modelKey !== "__isInRepository")
         (dto as any)[modelKey.substring(1)] = this[modelKey];
     });
     return dto as T & BasicModel;

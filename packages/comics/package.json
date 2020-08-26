@@ -1,5 +1,5 @@
 {
-  "name": "@marvel/marvel-comics-cron",
+  "name": "@marvel/comics",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -21,9 +21,11 @@
     "@nestjs/cqrs": "^6.1.0",
     "@nestjs/platform-express": "^7.4.2",
     "@nestjs/schedule": "^0.4.0",
+    "@types/http-assert": "^1.5.1",
     "@types/md5": "^2.2.0",
     "axios": "^0.20.0",
     "dotenv": "^8.2.0",
+    "http-assert": "^1.4.1",
     "md5": "^2.3.0",
     "reflect-metadata": "^0.1.13",
     "rxjs": "^6.6.2"
