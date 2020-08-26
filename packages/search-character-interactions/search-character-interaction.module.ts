@@ -3,6 +3,8 @@ import { CqrsModule, EventBus } from "@nestjs/cqrs";
 import { AppEventPublisher, AppQueryBus } from "@marvel/infrastructure";
 import { CharacterInteractionCreatedEvent } from "@marvel/character-interactions";
 import { ReadCharacterInteractionsRepository } from "./repositories/read-character-interactions.repository";
+import { CharacterInteractionCreatedHandler } from "./events/character-interaction-created.handler";
+import { GetCharacterInteractionByNameHandler } from "./queries/handlers/get-character-interaction.handler";
 
 @Module({
   imports: [CqrsModule],
@@ -10,7 +12,8 @@ import { ReadCharacterInteractionsRepository } from "./repositories/read-charact
     ReadCharacterInteractionsRepository,
     AppEventPublisher,
     AppQueryBus,
-    CreateCharacterInteractionHandler,
+    CharacterInteractionCreatedHandler,
+    GetCharacterInteractionByNameHandler,
   ],
 })
 export class SearchCharacterInteractionModule {
@@ -20,12 +23,13 @@ export class SearchCharacterInteractionModule {
     private readonly eventPublisher: AppEventPublisher
   ) {
     /** ------------ */
+    this.event$.register([CharacterInteractionCreatedHandler]);
     this.eventPublisher.setDomainName("search-character-interactions");
     this.eventPublisher.registerEvents([CharacterInteractionCreatedEvent]);
     this.eventPublisher.bridgeEventsTo((this.event$ as any).subject$);
     this.event$.publisher = this.eventPublisher;
     /** ------------ */
     this.query$.domainName = "search-character-interactions";
-    this.query$.register([]);
+    this.query$.register([GetCharacterInteractionByNameHandler]);
   }
 }
