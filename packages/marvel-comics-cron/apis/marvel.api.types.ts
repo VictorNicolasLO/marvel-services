@@ -2,6 +2,7 @@ export type GetComicsParams = {
   orderBy?: "onsaleDate" | "focDay";
   offset?: number;
   limit?: number;
+  characters?: string;
 };
 
 export type GetComicsResult = {

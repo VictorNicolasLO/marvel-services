@@ -4,9 +4,13 @@ import { AppCommandBus } from "@marvel/infrastructure";
 import { SyncStatusRepository } from "./repositories/sync-status-repository";
 import { MarvelApi } from "./apis/marvel.api";
 import { GetComicsResult } from "./apis/marvel.api.types";
+import { CreateComicCommand } from "@marvel/comics";
+import { extractIdFromUrl } from "./utils/extract-id-from-url";
 
 const BATCH_NUMBER = 100;
-
+const CAPTAIN_AMERICA_ID = 1009220;
+const IRON_MAN_ID = 1009368;
+const CHARACTERS = `${IRON_MAN_ID},${CAPTAIN_AMERICA_ID}`;
 @Injectable()
 export class MarvelComicsCronService {
   private logger = new Logger(MarvelComicsCronService.name);
@@ -32,9 +36,25 @@ export class MarvelComicsCronService {
           limit: BATCH_NUMBER,
           offset,
           orderBy: "onsaleDate",
+          characters: CHARACTERS,
         });
         result.data.results.forEach((comic) => {
-          this.commandBus.execute; // TODO send command
+          this.commandBus.execute(
+            new CreateComicCommand({
+              id: comic.id.toString(),
+              title: comic.title,
+              image: `${comic.thumbnail.path}/portrait_incredible.${comic.thumbnail.extension}`,
+              characters: comic.characters.items.map((character) => ({
+                id: extractIdFromUrl(character.resourceURI),
+                name: character.name,
+              })),
+              creators: comic.creators.items.map((creator) => ({
+                id: extractIdFromUrl(creator.resourceURI),
+                name: creator.name,
+                role: creator.role,
+              })),
+            })
+          );
         });
         offset += result.data.count;
       } while (result.data.count > 0);
