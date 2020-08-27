@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SearchCharacterInteractionQuery = void 0;
 class SearchCharacterInteractionQuery {
 }
 exports.SearchCharacterInteractionQuery = SearchCharacterInteractionQuery;

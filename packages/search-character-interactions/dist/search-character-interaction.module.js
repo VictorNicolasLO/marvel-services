@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.SearchCharacterInteractionModule = void 0;
 const common_1 = require("@nestjs/common");
 const cqrs_1 = require("@nestjs/cqrs");
 const infrastructure_1 = require("@marvel/infrastructure");
@@ -22,6 +21,8 @@ let SearchCharacterInteractionModule = class SearchCharacterInteractionModule {
         this.query$ = query$;
         this.event$ = event$;
         this.eventPublisher = eventPublisher;
+    }
+    onModuleInit() {
         this.event$.register([character_interaction_created_handler_1.CharacterInteractionCreatedHandler]);
         this.eventPublisher.setDomainName("search-character-interactions");
         this.eventPublisher.registerEvents([character_interactions_1.CharacterInteractionCreatedEvent]);

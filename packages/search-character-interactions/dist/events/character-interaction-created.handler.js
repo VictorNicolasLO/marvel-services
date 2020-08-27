@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CharacterInteractionCreatedHandler = void 0;
 const cqrs_1 = require("@nestjs/cqrs");
 const character_interactions_1 = require("@marvel/character-interactions");
 const read_character_interactions_repository_1 = require("../repositories/read-character-interactions.repository");
@@ -19,11 +18,11 @@ let CharacterInteractionCreatedHandler = class CharacterInteractionCreatedHandle
         this.readCharacterInteractionsRepository = readCharacterInteractionsRepository;
     }
     async handle({ characterInteraction }) {
-        characterInteraction.characters.map(async (character, index) => {
+        await Promise.all(characterInteraction.characters.map(async (character, index) => {
             const characterToAdd = characterInteraction.characters[index - 1] ||
                 characterInteraction.characters[index + 1];
             const nameId = generate_name_id_1.generateNameId(character.name);
-            const interactionsFound = await this.readCharacterInteractionsRepository.get(nameId);
+            const { value: interactionsFound, unlock, } = await this.readCharacterInteractionsRepository.getAndLock(nameId);
             const comicSummary = {
                 name: characterInteraction.comic.title,
                 image: characterInteraction.comic.image,
@@ -58,7 +57,8 @@ let CharacterInteractionCreatedHandler = class CharacterInteractionCreatedHandle
                     ],
                 });
             }
-        });
+            await unlock();
+        }));
     }
 };
 CharacterInteractionCreatedHandler = __decorate([

@@ -1,5 +1,5 @@
 {
-  "name": "@marvel/character-interactions",
+  "name": "@marvel/search-character-interactions",
   "version": "1.0.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ReadCharacterInteractionsRepository = void 0;
 const common_1 = require("@nestjs/common");
 const infrastructure_1 = require("@marvel/infrastructure");
 let ReadCharacterInteractionsRepository = class ReadCharacterInteractionsRepository extends infrastructure_1.GenericQueryKeyValueRepository {

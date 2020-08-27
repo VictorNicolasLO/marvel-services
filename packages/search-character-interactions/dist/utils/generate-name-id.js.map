@@ -1,1 +1,1 @@
-{"version":3,"file":"generate-name-id.js","sourceRoot":"","sources":["../../utils/generate-name-id.ts"],"names":[],"mappings":";;;AAAA,SAAgB,cAAc,CAAC,IAAY;IACzC,OAAO,IAAI,CAAC,WAAW,EAAE,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC,IAAI,CAAC,GAAG,CAAC,CAAC;AACjD,CAAC;AAFD,wCAEC"}
+{"version":3,"file":"generate-name-id.js","sourceRoot":"","sources":["../../utils/generate-name-id.ts"],"names":[],"mappings":";;AAAA,SAAgB,cAAc,CAAC,IAAY;IACzC,OAAO,IAAI,CAAC,WAAW,EAAE,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC,IAAI,CAAC,GAAG,CAAC,CAAC;AACjD,CAAC;AAFD,wCAEC"}

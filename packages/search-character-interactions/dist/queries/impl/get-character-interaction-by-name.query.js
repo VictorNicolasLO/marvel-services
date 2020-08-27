@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetCharacterInteractionByNameQuery = void 0;
 const search_character_interaction_query_1 = require("../search-character-interaction.query");
 class GetCharacterInteractionByNameQuery extends search_character_interaction_query_1.SearchCharacterInteractionQuery {
     constructor(name) {

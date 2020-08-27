@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.GetCharacterInteractionByNameHandler = void 0;
 const cqrs_1 = require("@nestjs/cqrs");
 const get_character_interaction_by_name_query_1 = require("../impl/get-character-interaction-by-name.query");
 const read_character_interactions_repository_1 = require("../../repositories/read-character-interactions.repository");
