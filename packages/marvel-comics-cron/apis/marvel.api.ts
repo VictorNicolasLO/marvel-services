@@ -24,6 +24,6 @@ export class MarvelApi {
   }
 
   async getComics(params: GetComicsParams): Promise<GetComicsResult> {
-    return (await this.api.get("comics", { params })).data?.data;
+    return (await this.api.get("comics", { params })).data;
   }
 }

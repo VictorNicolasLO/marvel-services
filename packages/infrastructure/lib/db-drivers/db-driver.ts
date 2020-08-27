@@ -7,7 +7,10 @@ export abstract class DbDriver<T> {
   abstract async delete(filter: Partial<T>): Promise<T>;
 }
 
-export abstract class KeyValueDbDriver<T>{
+export abstract class KeyValueDbDriver<T> {
   abstract async put(key: string, value: Partial<T>): Promise<T | null>;
   abstract async get(key: string): Promise<T | null>;
+  abstract async getAndLock(
+    key: string
+  ): Promise<{ value: T; unlock: () => Promise<any> } | null>;
 }

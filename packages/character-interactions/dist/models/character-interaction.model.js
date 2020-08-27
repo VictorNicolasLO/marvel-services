@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CharacterInteractionModel = void 0;
 const infrastructure_1 = require("@marvel/infrastructure");
 const character_interaction_created_event_1 = require("../events/aggregate/character-interaction-created.event");
 class CharacterInteractionModel extends infrastructure_1.Model {

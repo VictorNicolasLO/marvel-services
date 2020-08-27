@@ -27,8 +27,10 @@ export class MarvelComicsCronService {
     if (!this.loading) {
       this.loading = true;
       this.logger.log("Start job");
-      const status = await this.syncStatusRepository.get("status");
-      let offset = status.lastOffset | 0;
+      const status = (await this.syncStatusRepository.get("status")) || {
+        lastOffset: 0,
+      };
+      let offset = status.lastOffset;
       let result: GetComicsResult;
       do {
         this.logger.log(`Batch LIMIT: ${BATCH_NUMBER}, OFFSET: ${offset}`);
@@ -38,6 +40,7 @@ export class MarvelComicsCronService {
           orderBy: "onsaleDate",
           characters: CHARACTERS,
         });
+        console.log(result);
         result.data.results.forEach((comic) => {
           this.commandBus.execute(
             new CreateComicCommand({
@@ -57,8 +60,9 @@ export class MarvelComicsCronService {
           );
         });
         offset += result.data.count;
+        await this.syncStatusRepository.put("status", { lastOffset: offset });
       } while (result.data.count > 0);
-      await this.syncStatusRepository.put("status", { lastOffset: offset });
+
       this.loading = false;
     } else {
       this.logger.warn("Job already in progress");

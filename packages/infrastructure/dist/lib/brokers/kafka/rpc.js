@@ -20,16 +20,16 @@ class Rpc {
             topics: [default_config_1.defaultReplyTopic(this.replyTopic)],
         });
         this.setupReplyConsumer();
-        process.on('exit', async () => {
+        process.on("exit", async () => {
             this.consumer.disconnect();
             await this.kafkaClient.deleteTopics({ topics: [this.replyTopic] });
-            console.log('Goodbye!');
+            console.log("Goodbye!");
         });
     }
     async setupReplyConsumer() {
         this.consumer = this.kafka.consumer(default_config_1.defaultReplyConsumerconfig());
         await this.consumer.connect();
-        this.consumer.on('consumer.crash', error => {
+        this.consumer.on("consumer.crash", (error) => {
             throw error;
         });
         await this.consumer.subscribe({
@@ -39,7 +39,7 @@ class Rpc {
             autoCommit: true,
             eachMessage: async (message) => {
                 const { message: { value }, } = message;
-                const { error, response, requestId } = JSON.parse(value.toString('utf-8'));
+                const { error, response, requestId } = JSON.parse(value.toString("utf-8"));
                 const { timeoutId, resolve, reject } = this.pendingResponses[requestId];
                 clearTimeout(timeoutId);
                 if (!error)
@@ -51,7 +51,7 @@ class Rpc {
     }
     rpc(topic, cb) {
         this.subscriber.subscribe(topic, async (payload) => {
-            const { data, replyTopic, requestId } = JSON.parse(payload.message.value.toString('utf-8'));
+            const { data, replyTopic, requestId } = JSON.parse(payload.message.value.toString("utf-8"));
             try {
                 const response = await cb(data);
                 const responsePayload = {
@@ -85,7 +85,7 @@ class Rpc {
             }
         }, default_config_1.defaultRequestTopic(topic));
     }
-    request(topic, data) {
+    request(topic, data, acks) {
         return new Promise(async (resolve, reject) => {
             const run = async () => {
                 const requestId = uuid_1.v1();
@@ -100,7 +100,7 @@ class Rpc {
                             }),
                         },
                     ],
-                    acks: 0,
+                    acks,
                 });
                 const timeoutId = setTimeout(() => {
                     reject(new common_1.RequestTimeoutException(`Request time out for topic ${topic}`));

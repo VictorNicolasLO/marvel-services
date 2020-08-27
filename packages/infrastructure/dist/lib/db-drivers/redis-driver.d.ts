@@ -4,4 +4,8 @@ export declare class RedisDriver<T> extends KeyValueDbDriver<T> {
     constructor(prefix: string);
     put(key: string, value: Partial<T>): Promise<T>;
     get(key: string): Promise<T>;
+    getAndLock(key: string): Promise<{
+        value: any;
+        unlock: any;
+    }>;
 }

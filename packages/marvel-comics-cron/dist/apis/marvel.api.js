@@ -18,7 +18,7 @@ const md5_1 = __importDefault(require("md5"));
 const config_1 = require("../config");
 let MarvelApi = class MarvelApi {
     constructor() {
-        const api = axios_1.default.create({ baseURL: config_1.MARVEL_BASE_URL, });
+        const api = axios_1.default.create({ baseURL: config_1.MARVEL_BASE_URL });
         api.interceptors.request.use((config) => {
             const ts = Date.now();
             config.params.ts = ts;
@@ -29,8 +29,7 @@ let MarvelApi = class MarvelApi {
         this.api = api;
     }
     async getComics(params) {
-        var _a;
-        return (_a = (await this.api.get("comics", { params })).data) === null || _a === void 0 ? void 0 : _a.data;
+        return (await this.api.get("comics", { params })).data;
     }
 };
 MarvelApi = __decorate([

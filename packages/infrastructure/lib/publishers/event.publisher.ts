@@ -4,15 +4,16 @@ import {
   IEvent,
   EventPublisher as Es,
   EventBus,
-} from '@nestjs/cqrs';
-import { Subject } from 'rxjs';
-import { Injectable } from '@nestjs/common';
-import { KafkaBroker } from '../brokers/kafka';
+} from "@nestjs/cqrs";
+import { Subject, async } from "rxjs";
+import { Injectable } from "@nestjs/common";
+import { KafkaBroker } from "../brokers/kafka";
 
-const PREFIX = process.env.BROKER_PREFIX || ""
+const PREFIX = process.env.BROKER_PREFIX || "";
 
 @Injectable()
-export class AppEventPublisher extends Es
+export class AppEventPublisher
+  extends Es
   implements IEventPublisher, IMessageSource {
   domainName: string;
   eventClasses: any[] = [];
@@ -20,14 +21,19 @@ export class AppEventPublisher extends Es
     super(es);
   }
 
+  public groupIdPrefix: string = "";
+
   setDomainName(domainName: string) {
-    new KafkaBroker({ groupId: domainName }, true);
+    new KafkaBroker({ groupId: this.groupIdPrefix + domainName }, true);
     this.domainName = domainName;
   }
 
   publish<T extends IEvent>(event: T) {
-    const broker = new KafkaBroker({ groupId: this.domainName }, true);
-    let routing = '';
+    const broker = new KafkaBroker(
+      { groupId: this.groupIdPrefix + this.domainName },
+      true
+    );
+    let routing = "";
     const aggregateId = (event as any).aggregateId;
     if ((event as any).constructor.aggregateName) {
       const aggregateName = (event as any).constructor.aggregateName;
@@ -45,42 +51,57 @@ export class AppEventPublisher extends Es
         type: event.constructor.name,
         data: event,
       },
-      aggregateId || null,
+      aggregateId || null
     );
   }
 
   bridgeEventsTo<T extends IEvent>(subject: Subject<T>) {
-    const broker = new KafkaBroker({ groupId: this.domainName }, true);
-    const topicsCallbacks: { [topic: string]: ((msg: any) => Promise<void>)[] } = {}
-    this.eventClasses.forEach(async EventClass => {
-      const onEvent = async msg => {
+    const broker = new KafkaBroker(
+      { groupId: this.groupIdPrefix + this.domainName },
+      true
+    );
+    const topicsCallbacks: {
+      [topic: string]: ((msg: any) => Promise<void>)[];
+    } = {};
+    this.eventClasses.forEach(async (EventClass) => {
+      const onEvent = async (msg) => {
         // Await or not await ?
-        console.log(this.domainName)
-        console.log(msg)
-        console.log(msg.type)
-        console.log(EventClass.name)
+        console.log(this.domainName);
+        console.log(msg);
+        console.log(msg.type);
+        console.log(EventClass.name);
         if (msg.type === EventClass.name) {
           const obj = new EventClass();
-          await subject.next(Object.setPrototypeOf(msg.data, obj));
+          return await subject.next(Object.setPrototypeOf(msg.data, obj));
         }
       };
 
       if (EventClass.domainName) {
-        const topic = PREFIX + `events.domain.${EventClass.domainName}.${EventClass.name}`
+        const topic =
+          PREFIX + `events.domain.${EventClass.domainName}.${EventClass.name}`;
         if (topicsCallbacks[topic]) {
-          topicsCallbacks[topic].push(onEvent)
+          topicsCallbacks[topic].push(onEvent);
         } else {
-          topicsCallbacks[topic] = [onEvent]
-          broker.subscribeTo(topic, async (message) => topicsCallbacks[topic].forEach((cb) => cb(message)));
+          topicsCallbacks[topic] = [onEvent];
+          broker.subscribeTo(topic, async (message) => {
+            await Promise.all(
+              topicsCallbacks[topic].map(async (cb) => {
+                await cb(message);
+              })
+            );
+          });
         }
-
       } else if (EventClass.aggregateName) {
-        const topic = PREFIX + `events.aggregate.${EventClass.aggregateName}`
+        const topic = PREFIX + `events.aggregate.${EventClass.aggregateName}`;
         if (topicsCallbacks[topic]) {
-          topicsCallbacks[topic].push(onEvent)
+          topicsCallbacks[topic].push(onEvent);
         } else {
-          topicsCallbacks[topic] = [onEvent]
-          broker.subscribeTo(topic, async (message) => topicsCallbacks[topic].forEach((cb) => cb(message)));
+          topicsCallbacks[topic] = [onEvent];
+          broker.subscribeTo(topic, async (message) => {
+            await Promise.all(
+              topicsCallbacks[topic].map(async (cb) => await cb(message))
+            );
+          });
         }
       }
     });

@@ -12,19 +12,23 @@ const common_1 = require("@nestjs/common");
 const kafka_1 = require("../brokers/kafka");
 const PREFIX = process.env.BROKER_PREFIX || "";
 let AppQueryBus = class AppQueryBus extends cqrs_1.QueryBus {
+    constructor() {
+        super(...arguments);
+        this.groupIdPrefix = "";
+    }
     set domainName(value) {
-        new kafka_1.KafkaBroker({ groupId: value }, true);
+        new kafka_1.KafkaBroker({ groupId: this.groupIdPrefix + value }, true);
         this._domainName = value;
     }
     get domainName() {
         return this._domainName;
     }
     async execute(command) {
-        const broker = new kafka_1.KafkaBroker({ groupId: this.domainName }, true);
+        const broker = new kafka_1.KafkaBroker({ groupId: this.groupIdPrefix + this.domainName }, true);
         const domainName = command.constructor.domainName;
         const commandName = command.constructor.name;
         try {
-            const result = await broker.request(PREFIX + `queries.${domainName}.${commandName}`, { data: command });
+            const result = await broker.request(PREFIX + `queries.${domainName}.${commandName}`, { data: command }, 0);
             return result;
         }
         catch (e) {
@@ -38,19 +42,19 @@ let AppQueryBus = class AppQueryBus extends cqrs_1.QueryBus {
         }
         const target = this.reflectQueryName(handler);
         if (!target) {
-            throw 'INVALID QUERY';
+            throw "INVALID QUERY";
         }
         this.bind(instance, target.name);
     }
     bind(handler, name) {
-        const broker = new kafka_1.KafkaBroker({ groupId: this.domainName }, true);
+        const broker = new kafka_1.KafkaBroker({ groupId: this.groupIdPrefix + this.domainName }, true);
         broker.rpc(PREFIX + `queries.${this.domainName}.${name}`, (msg) => new Promise(async (resolve, reject) => {
             try {
                 const result = await handler.execute(msg.data);
                 resolve(result);
             }
             catch (e) {
-                common_1.Logger.error(e.message, e.trace, 'RPC consumer reponse');
+                common_1.Logger.error(e.message, e.trace, "RPC consumer reponse");
                 reject(e);
                 throw e;
             }

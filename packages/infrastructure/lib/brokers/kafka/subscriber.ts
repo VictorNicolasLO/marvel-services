@@ -4,12 +4,12 @@ import {
   Consumer,
   EachMessagePayload,
   ITopicConfig,
-} from 'kafkajs';
+} from "kafkajs";
 
 import {
   defaultConsumerConfig,
   defaultEventTopicConfig,
-} from './default-config';
+} from "./default-config";
 
 export class Subscriber {
   private consumer: Consumer;
@@ -17,10 +17,11 @@ export class Subscriber {
   constructor(
     private kafka: Kafka,
     private kafkaClient: Admin,
-    private groupId: string,
+    private groupId: string
   ) {
     this.setupConsumer();
-    setTimeout(() => { // TODO replace by runConsumer function
+    setTimeout(() => {
+      // TODO replace by runConsumer function
       this.runConsumer();
     }, 5000);
   }
@@ -28,14 +29,14 @@ export class Subscriber {
   async subscribe(
     topic: string,
     cb: (message: EachMessagePayload) => void,
-    topicConfig?: ITopicConfig,
+    topicConfig?: ITopicConfig
   ) {
     await this.kafkaClient.createTopics({
       topics: [topicConfig || defaultEventTopicConfig(topic)],
     });
     if (!this.callbacks[topic]) {
       this.callbacks[topic] = [cb];
-      console.log('TOPIC ADDED', topic);
+      console.log("TOPIC ADDED", topic);
       await this.consumer.subscribe({
         topic,
         fromBeginning: true,
@@ -48,22 +49,25 @@ export class Subscriber {
   private async setupConsumer() {
     this.consumer = this.kafka.consumer(defaultConsumerConfig(this.groupId));
     await this.consumer.connect();
-    this.consumer.on('consumer.crash', error => {
+    this.consumer.on("consumer.crash", (error) => {
       throw error;
     });
-    console.log('CONSUMER CONNECTED');
+    console.log("CONSUMER CONNECTED");
   }
 
   public async runConsumer() {
-    console.log('CONSUMER RUNNING');
+    console.log("CONSUMER RUNNING");
     await this.consumer.run({
       autoCommit: true,
       eachMessage: async (message: EachMessagePayload) => {
-        console.log('llego');
+        console.log("llego");
         console.log(message.partition, message.topic);
-        this.callbacks[message.topic].forEach(cb => {
-          cb(message);
-        });
+        await Promise.all(
+          this.callbacks[message.topic].map(async (cb) => {
+            return await cb(message);
+          })
+        );
+        console.log("FINISH");
       },
     });
   }

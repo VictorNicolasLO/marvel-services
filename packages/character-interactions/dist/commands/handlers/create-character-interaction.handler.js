@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateCharacterInteractionHandler = void 0;
 const cqrs_1 = require("@nestjs/cqrs");
 const create_character_interaction_command_1 = require("../impl/create-character-interaction.command");
 const character_interactions_repository_1 = require("../../repositories/character-interactions.repository");
@@ -19,9 +18,11 @@ let CreateCharacterInteractionHandler = class CreateCharacterInteractionHandler 
         this.repository = repository;
     }
     async execute(command) {
+        console.log("HANDLER");
         const characterInteractionExist = await this.repository.findOne({
             id: command.characterInteractionDto.id,
         });
+        console.log(characterInteractionExist);
         if (characterInteractionExist) {
             throw new common_1.BadRequestException("characterInteractionExist already exist");
         }

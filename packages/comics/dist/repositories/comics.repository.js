@@ -9,10 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ComicsRepository = void 0;
 const common_1 = require("@nestjs/common");
 const infrastructure_1 = require("@marvel/infrastructure");
 const comic_model_1 = require("../models/comic.model");
+const cqrs_1 = require("@nestjs/cqrs");
 let ComicsRepository = class ComicsRepository extends infrastructure_1.GenericRepository {
     constructor(ep) {
         super(new infrastructure_1.MongoDriver("comics"), comic_model_1.ComicModel, ep);
@@ -21,7 +21,7 @@ let ComicsRepository = class ComicsRepository extends infrastructure_1.GenericRe
 };
 ComicsRepository = __decorate([
     common_1.Injectable(),
-    __metadata("design:paramtypes", [infrastructure_1.AppEventPublisher])
+    __metadata("design:paramtypes", [cqrs_1.EventPublisher])
 ], ComicsRepository);
 exports.ComicsRepository = ComicsRepository;
 //# sourceMappingURL=comics.repository.js.map

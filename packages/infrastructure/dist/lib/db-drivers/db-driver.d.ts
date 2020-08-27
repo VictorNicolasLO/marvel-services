@@ -9,4 +9,8 @@ export declare abstract class DbDriver<T> {
 export declare abstract class KeyValueDbDriver<T> {
     abstract put(key: string, value: Partial<T>): Promise<T | null>;
     abstract get(key: string): Promise<T | null>;
+    abstract getAndLock(key: string): Promise<{
+        value: T;
+        unlock: () => Promise<any>;
+    } | null>;
 }

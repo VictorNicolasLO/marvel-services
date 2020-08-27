@@ -1,1 +1,1 @@
-{"version":3,"file":"comics-domain-event.js","sourceRoot":"","sources":["../../events/comics-domain-event.ts"],"names":[],"mappings":";;;AAAA,2DAAqD;AAErD,MAAa,iBAAkB,SAAQ,4BAAW;;AAAlD,8CAEC;AADQ,4BAAU,GAAG,QAAQ,CAAC"}
+{"version":3,"file":"comics-domain-event.js","sourceRoot":"","sources":["../../events/comics-domain-event.ts"],"names":[],"mappings":";;AAAA,2DAAqD;AAErD,MAAa,iBAAkB,SAAQ,4BAAW;;AAAlD,8CAEC;AADQ,4BAAU,GAAG,QAAQ,CAAC"}

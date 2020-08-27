@@ -1,0 +1,1 @@
+{"version":3,"file":"extract-id-from-url.js","sourceRoot":"","sources":["../../utils/extract-id-from-url.ts"],"names":[],"mappings":";;AAAA,SAAgB,gBAAgB,CAAC,GAAW;IAC1C,MAAM,SAAS,GAAG,GAAG,CAAC,KAAK,CAAC,GAAG,CAAC,CAAC;IACjC,OAAO,SAAS,CAAC,SAAS,CAAC,MAAM,GAAG,CAAC,CAAC,CAAC;AACzC,CAAC;AAHD,4CAGC"}

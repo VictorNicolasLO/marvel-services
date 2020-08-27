@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CreateComicHandler = void 0;
 const cqrs_1 = require("@nestjs/cqrs");
 const create_comic_command_1 = require("../impl/create-comic.command");
 const comics_repository_1 = require("../../repositories/comics.repository");

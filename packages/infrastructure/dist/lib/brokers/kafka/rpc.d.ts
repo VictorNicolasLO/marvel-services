@@ -1,5 +1,5 @@
-import { Kafka, Admin, Producer } from 'kafkajs';
-import { Subscriber } from './subscriber';
+import { Kafka, Admin, Producer } from "kafkajs";
+import { Subscriber } from "./subscriber";
 export declare class Rpc {
     private kafka;
     private kafkaClient;
@@ -13,5 +13,5 @@ export declare class Rpc {
     private init;
     private setupReplyConsumer;
     rpc(topic: string, cb: (data: any) => any): void;
-    request(topic: string, data: any): Promise<unknown>;
+    request(topic: string, data: any, acks: 0 | 1 | -1): Promise<unknown>;
 }

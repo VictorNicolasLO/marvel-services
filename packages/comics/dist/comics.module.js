@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ComicsModule = void 0;
 const common_1 = require("@nestjs/common");
 const comics_repository_1 = require("./repositories/comics.repository");
 const cqrs_1 = require("@nestjs/cqrs");
@@ -20,6 +19,8 @@ let ComicsModule = class ComicsModule {
         this.command$ = command$;
         this.event$ = event$;
         this.eventPublisher = eventPublisher;
+    }
+    onModuleInit() {
         this.eventPublisher.setDomainName("comics");
         this.eventPublisher.registerEvents([]);
         this.eventPublisher.bridgeEventsTo(this.event$.subject$);
@@ -34,8 +35,8 @@ ComicsModule = __decorate([
         providers: [
             comics_repository_1.ComicsRepository,
             infrastructure_1.AppEventPublisher,
-            infrastructure_1.AppCommandBus,
             create_comic_handler_1.CreateComicHandler,
+            infrastructure_1.AppCommandBus,
         ],
     }),
     __metadata("design:paramtypes", [infrastructure_1.AppCommandBus,

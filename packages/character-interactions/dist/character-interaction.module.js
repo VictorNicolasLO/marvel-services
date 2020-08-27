@@ -9,7 +9,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CharacterInteractionModule = void 0;
 const common_1 = require("@nestjs/common");
 const character_interactions_repository_1 = require("./repositories/character-interactions.repository");
 const cqrs_1 = require("@nestjs/cqrs");
@@ -18,16 +17,21 @@ const create_character_interaction_handler_1 = require("./commands/handlers/crea
 const comics_1 = require("@marvel/comics");
 const comics_saga_1 = require("./sagas/comics.saga");
 const DOMAIN_NAME = "character-interactions";
+const GROUP_ID_PREFIX = "v7";
 let CharacterInteractionModule = class CharacterInteractionModule {
     constructor(command$, event$, eventPublisher) {
         this.command$ = command$;
         this.event$ = event$;
         this.eventPublisher = eventPublisher;
+    }
+    onModuleInit() {
+        this.eventPublisher.groupIdPrefix = GROUP_ID_PREFIX;
         this.eventPublisher.setDomainName(DOMAIN_NAME);
         this.eventPublisher.registerEvents([comics_1.ComicCreatedEventDomain]);
         this.eventPublisher.bridgeEventsTo(this.event$.subject$);
         this.event$.publisher = this.eventPublisher;
         this.event$.registerSagas([comics_saga_1.ComicsSaga]);
+        this.command$.groupIdPrefix = GROUP_ID_PREFIX;
         this.command$.domainName = DOMAIN_NAME;
         this.command$.register([create_character_interaction_handler_1.CreateCharacterInteractionHandler]);
     }

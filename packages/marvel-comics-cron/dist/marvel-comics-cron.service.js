@@ -15,6 +15,12 @@ const schedule_1 = require("@nestjs/schedule");
 const infrastructure_1 = require("@marvel/infrastructure");
 const sync_status_repository_1 = require("./repositories/sync-status-repository");
 const marvel_api_1 = require("./apis/marvel.api");
+const comics_1 = require("@marvel/comics");
+const extract_id_from_url_1 = require("./utils/extract-id-from-url");
+const BATCH_NUMBER = 100;
+const CAPTAIN_AMERICA_ID = 1009220;
+const IRON_MAN_ID = 1009368;
+const CHARACTERS = `${IRON_MAN_ID},${CAPTAIN_AMERICA_ID}`;
 let MarvelComicsCronService = MarvelComicsCronService_1 = class MarvelComicsCronService {
     constructor(commandBus, syncStatusRepository, marvelApi) {
         this.commandBus = commandBus;
@@ -24,18 +30,48 @@ let MarvelComicsCronService = MarvelComicsCronService_1 = class MarvelComicsCron
         this.loading = false;
     }
     async handleCron() {
-        this.logger.log("TRY job");
+        this.logger.log("Try job");
         if (!this.loading) {
             this.loading = true;
-            this.logger.log("STARTS job");
-            const status = await this.syncStatusRepository.get("status");
-            const result = await this.marvelApi.getComics({
-                limit: 10, offset: 0, orderBy: "onsaleDate"
-            });
-            console.log(result);
-            await this.syncStatusRepository.put("status", { lastSync: new Date() });
+            this.logger.log("Start job");
+            const status = (await this.syncStatusRepository.get("status")) || {
+                lastOffset: 0,
+            };
+            let offset = status.lastOffset;
+            let result;
+            do {
+                this.logger.log(`Batch LIMIT: ${BATCH_NUMBER}, OFFSET: ${offset}`);
+                result = await this.marvelApi.getComics({
+                    limit: BATCH_NUMBER,
+                    offset,
+                    orderBy: "onsaleDate",
+                    characters: CHARACTERS,
+                });
+                console.log(result);
+                result.data.results.forEach((comic) => {
+                    this.commandBus.execute(new comics_1.CreateComicCommand({
+                        id: comic.id.toString(),
+                        title: comic.title,
+                        image: `${comic.thumbnail.path}/portrait_incredible.${comic.thumbnail.extension}`,
+                        characters: comic.characters.items.map((character) => ({
+                            id: extract_id_from_url_1.extractIdFromUrl(character.resourceURI),
+                            name: character.name,
+                        })),
+                        creators: comic.creators.items.map((creator) => ({
+                            id: extract_id_from_url_1.extractIdFromUrl(creator.resourceURI),
+                            name: creator.name,
+                            role: creator.role,
+                        })),
+                    }));
+                });
+                offset += result.data.count;
+                await this.syncStatusRepository.put("status", { lastOffset: offset });
+            } while (result.data.count > 0);
+            this.loading = false;
         }
-        this.loading = false;
+        else {
+            this.logger.warn("Job already in progress");
+        }
     }
 };
 __decorate([
@@ -46,7 +82,9 @@ __decorate([
 ], MarvelComicsCronService.prototype, "handleCron", null);
 MarvelComicsCronService = MarvelComicsCronService_1 = __decorate([
     common_1.Injectable(),
-    __metadata("design:paramtypes", [infrastructure_1.AppCommandBus, sync_status_repository_1.SyncStatusRepository, marvel_api_1.MarvelApi])
+    __metadata("design:paramtypes", [infrastructure_1.AppCommandBus,
+        sync_status_repository_1.SyncStatusRepository,
+        marvel_api_1.MarvelApi])
 ], MarvelComicsCronService);
 exports.MarvelComicsCronService = MarvelComicsCronService;
 //# sourceMappingURL=marvel-comics-cron.service.js.map

@@ -60,6 +60,7 @@ export class CharacterInteractionCreatedHandler
             ],
           });
         }
+
         await unlock();
       })
     );

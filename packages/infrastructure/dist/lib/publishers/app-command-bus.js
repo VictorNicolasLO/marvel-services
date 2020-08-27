@@ -18,9 +18,10 @@ const PREFIX = process.env.BROKER_PREFIX || "";
 let AppCommandBus = class AppCommandBus extends cqrs_1.CommandBus {
     constructor(moduleRef) {
         super(moduleRef);
+        this.groupIdPrefix = "";
     }
     set domainName(value) {
-        new kafka_1.KafkaBroker({ groupId: value }, true);
+        new kafka_1.KafkaBroker({ groupId: this.groupIdPrefix + value }, true);
         this._domainName = value;
     }
     get domainName() {
@@ -28,11 +29,11 @@ let AppCommandBus = class AppCommandBus extends cqrs_1.CommandBus {
     }
     async execute(command) {
         console.log(this.domainName);
-        const broker = new kafka_1.KafkaBroker({ groupId: this.domainName }, true);
+        const broker = new kafka_1.KafkaBroker({ groupId: this.groupIdPrefix + this.domainName }, true);
         const domainName = command.constructor.domainName;
         const commandName = command.constructor.name;
         try {
-            const result = await broker.request(PREFIX + `commands.${domainName}.${commandName}`, { data: command });
+            const result = await broker.request(PREFIX + `commands.${domainName}.${commandName}`, { data: command }, -1);
             return result;
         }
         catch (e) {
@@ -40,14 +41,14 @@ let AppCommandBus = class AppCommandBus extends cqrs_1.CommandBus {
         }
     }
     bind(handler, name) {
-        const broker = new kafka_1.KafkaBroker({ groupId: this.domainName }, true);
+        const broker = new kafka_1.KafkaBroker({ groupId: this.groupIdPrefix + this.domainName }, true);
         broker.rpc(PREFIX + `commands.${this.domainName}.${name}`, (msg) => new Promise(async (resolve, reject) => {
             try {
                 const result = await handler.execute(msg.data);
                 resolve(result);
             }
             catch (e) {
-                common_1.Logger.error(e.message, e.trace, 'RPC consumer reponse');
+                common_1.Logger.error(e.message, e.trace, "RPC consumer reponse");
                 reject(e);
                 throw e;
             }
@@ -60,7 +61,7 @@ let AppCommandBus = class AppCommandBus extends cqrs_1.CommandBus {
         }
         const target = this.reflectCommandName(handler);
         if (!target) {
-            throw 'INVALID COMMAND TYPE';
+            throw "INVALID COMMAND TYPE";
         }
         this.bind(instance, target.name);
     }

@@ -1,12 +1,8 @@
-import { CommandBus, ICommand } from '@nestjs/cqrs';
-import { ModuleRef } from '@nestjs/core';
-import {
-  Injectable,
-  Logger,
-  HttpException,
-} from '@nestjs/common';
-import { KafkaBroker } from '../brokers/kafka';
-const PREFIX = process.env.BROKER_PREFIX || ""
+import { CommandBus, ICommand } from "@nestjs/cqrs";
+import { ModuleRef } from "@nestjs/core";
+import { Injectable, Logger, HttpException } from "@nestjs/common";
+import { KafkaBroker } from "../brokers/kafka";
+const PREFIX = process.env.BROKER_PREFIX || "";
 @Injectable()
 export class AppCommandBus extends CommandBus {
   constructor(moduleRef: ModuleRef) {
@@ -15,22 +11,28 @@ export class AppCommandBus extends CommandBus {
 
   private _domainName: string;
   set domainName(value: string) {
-    new KafkaBroker({ groupId: value }, true);
+    new KafkaBroker({ groupId: this.groupIdPrefix + value }, true);
     this._domainName = value;
   }
   get domainName() {
     return this._domainName;
   }
 
+  public groupIdPrefix: string = "";
+
   async execute<T extends ICommand>(command: T): Promise<any> {
     console.log(this.domainName);
-    const broker = new KafkaBroker({ groupId: this.domainName }, true);
+    const broker = new KafkaBroker(
+      { groupId: this.groupIdPrefix + this.domainName },
+      true
+    );
     const domainName = (command.constructor as any).domainName;
     const commandName = command.constructor.name;
     try {
       const result: any = await broker.request(
         PREFIX + `commands.${domainName}.${commandName}`,
         { data: command },
+        -1
       );
       return result;
     } catch (e) {
@@ -39,7 +41,10 @@ export class AppCommandBus extends CommandBus {
   }
 
   bind(handler, name) {
-    const broker = new KafkaBroker({ groupId: this.domainName }, true);
+    const broker = new KafkaBroker(
+      { groupId: this.groupIdPrefix + this.domainName },
+      true
+    );
     broker.rpc(
       PREFIX + `commands.${this.domainName}.${name}`,
       (msg: any) =>
@@ -49,11 +54,11 @@ export class AppCommandBus extends CommandBus {
             const result = await handler.execute(msg.data);
             resolve(result);
           } catch (e) {
-            Logger.error(e.message, e.trace, 'RPC consumer reponse');
+            Logger.error(e.message, e.trace, "RPC consumer reponse");
             reject(e);
             throw e;
           }
-        }),
+        })
     );
   }
 
@@ -64,7 +69,7 @@ export class AppCommandBus extends CommandBus {
     }
     const target = (this as any).reflectCommandName(handler);
     if (!target) {
-      throw 'INVALID COMMAND TYPE';
+      throw "INVALID COMMAND TYPE";
     }
     this.bind(instance, target.name);
   }

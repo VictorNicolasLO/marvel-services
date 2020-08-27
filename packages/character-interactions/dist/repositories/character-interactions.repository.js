@@ -9,10 +9,10 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.CharacterInteractionsRepository = void 0;
 const common_1 = require("@nestjs/common");
 const infrastructure_1 = require("@marvel/infrastructure");
 const character_interaction_model_1 = require("../models/character-interaction.model");
+const cqrs_1 = require("@nestjs/cqrs");
 let CharacterInteractionsRepository = class CharacterInteractionsRepository extends infrastructure_1.GenericRepository {
     constructor(ep) {
         super(new infrastructure_1.MongoDriver("character-interactions"), character_interaction_model_1.CharacterInteractionModel, ep);
@@ -21,7 +21,7 @@ let CharacterInteractionsRepository = class CharacterInteractionsRepository exte
 };
 CharacterInteractionsRepository = __decorate([
     common_1.Injectable(),
-    __metadata("design:paramtypes", [infrastructure_1.AppEventPublisher])
+    __metadata("design:paramtypes", [cqrs_1.EventPublisher])
 ], CharacterInteractionsRepository);
 exports.CharacterInteractionsRepository = CharacterInteractionsRepository;
 //# sourceMappingURL=character-interactions.repository.js.map

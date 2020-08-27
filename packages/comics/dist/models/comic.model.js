@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.ComicModel = void 0;
 const infrastructure_1 = require("@marvel/infrastructure");
 const comic_created_event_1 = require("../events/aggregate/comic-created.event");
 class ComicModel extends infrastructure_1.Model {

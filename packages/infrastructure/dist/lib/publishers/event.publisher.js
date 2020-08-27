@@ -19,14 +19,15 @@ let AppEventPublisher = class AppEventPublisher extends cqrs_1.EventPublisher {
         super(es);
         this.es = es;
         this.eventClasses = [];
+        this.groupIdPrefix = "";
     }
     setDomainName(domainName) {
-        new kafka_1.KafkaBroker({ groupId: domainName }, true);
+        new kafka_1.KafkaBroker({ groupId: this.groupIdPrefix + domainName }, true);
         this.domainName = domainName;
     }
     publish(event) {
-        const broker = new kafka_1.KafkaBroker({ groupId: this.domainName }, true);
-        let routing = '';
+        const broker = new kafka_1.KafkaBroker({ groupId: this.groupIdPrefix + this.domainName }, true);
+        let routing = "";
         const aggregateId = event.aggregateId;
         if (event.constructor.aggregateName) {
             const aggregateName = event.constructor.aggregateName;
@@ -43,17 +44,18 @@ let AppEventPublisher = class AppEventPublisher extends cqrs_1.EventPublisher {
         }, aggregateId || null);
     }
     bridgeEventsTo(subject) {
-        const broker = new kafka_1.KafkaBroker({ groupId: this.domainName }, true);
+        const broker = new kafka_1.KafkaBroker({ groupId: this.groupIdPrefix + this.domainName }, true);
         const topicsCallbacks = {};
         this.eventClasses.forEach(async (EventClass) => {
             const onEvent = async (msg) => {
+                await new Promise((resolve) => setTimeout(resolve, 1000));
                 console.log(this.domainName);
                 console.log(msg);
                 console.log(msg.type);
                 console.log(EventClass.name);
                 if (msg.type === EventClass.name) {
                     const obj = new EventClass();
-                    await subject.next(Object.setPrototypeOf(msg.data, obj));
+                    return await subject.next(Object.setPrototypeOf(msg.data, obj));
                 }
             };
             if (EventClass.domainName) {
@@ -63,7 +65,11 @@ let AppEventPublisher = class AppEventPublisher extends cqrs_1.EventPublisher {
                 }
                 else {
                     topicsCallbacks[topic] = [onEvent];
-                    broker.subscribeTo(topic, async (message) => topicsCallbacks[topic].forEach((cb) => cb(message)));
+                    broker.subscribeTo(topic, async (message) => {
+                        await Promise.all(topicsCallbacks[topic].map(async (cb) => {
+                            await cb(message);
+                        }));
+                    });
                 }
             }
             else if (EventClass.aggregateName) {
@@ -73,7 +79,9 @@ let AppEventPublisher = class AppEventPublisher extends cqrs_1.EventPublisher {
                 }
                 else {
                     topicsCallbacks[topic] = [onEvent];
-                    broker.subscribeTo(topic, async (message) => topicsCallbacks[topic].forEach((cb) => cb(message)));
+                    broker.subscribeTo(topic, async (message) => {
+                        await Promise.all(topicsCallbacks[topic].map(async (cb) => await cb(message)));
+                    });
                 }
             }
         });

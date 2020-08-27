@@ -1,3 +1,3 @@
 export interface IStatus {
-    lastSync: Date;
+    lastOffset: number;
 }

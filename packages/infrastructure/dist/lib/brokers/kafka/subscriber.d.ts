@@ -1,4 +1,4 @@
-import { Kafka, Admin, EachMessagePayload, ITopicConfig } from 'kafkajs';
+import { Kafka, Admin, EachMessagePayload, ITopicConfig } from "kafkajs";
 export declare class Subscriber {
     private kafka;
     private kafkaClient;

@@ -14,33 +14,33 @@ class KafkaBroker {
         this.subscribeToQueue = [];
         if (instances[options.groupId] && singleton)
             return instances[options.groupId];
-        console.log('INNIT', options.groupId);
+        console.log("INNIT", options.groupId);
         this.init();
         instances[options.groupId] = this;
     }
-    async init() {
-        this.admin = await kafka.admin();
-        this.producer = await kafka.producer();
+    init() {
+        this.admin = kafka.admin();
+        this.producer = kafka.producer();
         this.producer.connect().then(() => {
             console.log(this.options.groupId);
-            console.log('CONNECTED');
+            console.log("CONNECTED");
         });
         this.subscriber = new subscriber_1.Subscriber(kafka, this.admin, this.options.groupId);
-        this.subscribeToQueue.forEach(args => {
+        this.subscribeToQueue.forEach((args) => {
             this.subscribeTo(...args);
         });
         this.kafkaRpc = new rpc_1.Rpc(kafka, this.admin, this.producer, this.subscriber);
     }
-    async request(topic, data) {
-        return await this.kafkaRpc.request(topic, data);
+    async request(topic, data, acks) {
+        return await this.kafkaRpc.request(topic, data, acks);
     }
     rpc(topic, cb) {
         this.kafkaRpc.rpc(topic, cb);
     }
     subscribeTo(topic, cb) {
         if (this.subscriber)
-            this.subscriber.subscribe(topic, ({ message: { value } }) => {
-                cb(JSON.parse(value.toString('utf-8')));
+            this.subscriber.subscribe(topic, async ({ message: { value } }) => {
+                return await cb(JSON.parse(value.toString("utf-8")));
             });
         else
             this.subscribeToQueue.push([topic, cb]);

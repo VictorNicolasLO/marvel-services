@@ -1,7 +1,7 @@
-import { Kafka, Admin, Producer } from 'kafkajs';
-import { Rpc } from './rpc';
-import { Subscriber } from './subscriber';
-import { defaultEventTopicConfig, kafkaConfig } from './default-config';
+import { Kafka, Admin, Producer } from "kafkajs";
+import { Rpc } from "./rpc";
+import { Subscriber } from "./subscriber";
+import { defaultEventTopicConfig, kafkaConfig } from "./default-config";
 const kafka = new Kafka(kafkaConfig);
 
 let instances = {};
@@ -15,38 +15,38 @@ export class KafkaBroker {
   constructor(private options: { groupId: string }, singleton?: boolean) {
     if (instances[options.groupId] && singleton)
       return instances[options.groupId];
-    console.log('INNIT', options.groupId);
+    console.log("INNIT", options.groupId);
     this.init();
     instances[options.groupId] = this;
   }
 
-  private async init() {
-    this.admin = await kafka.admin();
-    this.producer = await kafka.producer();
+  private init() {
+    this.admin = kafka.admin();
+    this.producer = kafka.producer();
 
     this.producer.connect().then(() => {
       console.log(this.options.groupId);
-      console.log('CONNECTED');
+      console.log("CONNECTED");
     });
     this.subscriber = new Subscriber(kafka, this.admin, this.options.groupId);
-    this.subscribeToQueue.forEach(args => {
+    this.subscribeToQueue.forEach((args) => {
       (this.subscribeTo as any)(...args);
     });
     this.kafkaRpc = new Rpc(kafka, this.admin, this.producer, this.subscriber);
   }
 
-  public async request(topic: string, data: any) {
-    return await this.kafkaRpc.request(topic, data);
+  public async request(topic: string, data: any, acks?: 0 | 1 | -1) {
+    return await this.kafkaRpc.request(topic, data, acks);
   }
 
   public rpc(topic: string, cb: (message: any) => any) {
     this.kafkaRpc.rpc(topic, cb);
   }
 
-  public subscribeTo(topic: string, cb: (message: any) => void) {
+  public subscribeTo(topic: string, cb: (message: any) => Promise<void>) {
     if (this.subscriber)
-      this.subscriber.subscribe(topic, ({ message: { value } }) => {
-        cb(JSON.parse(value.toString('utf-8')));
+      this.subscriber.subscribe(topic, async ({ message: { value } }) => {
+        return await cb(JSON.parse(value.toString("utf-8")));
       });
     else this.subscribeToQueue.push([topic, cb]);
   }

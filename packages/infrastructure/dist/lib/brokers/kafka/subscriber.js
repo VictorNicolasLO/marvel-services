@@ -19,7 +19,7 @@ class Subscriber {
         });
         if (!this.callbacks[topic]) {
             this.callbacks[topic] = [cb];
-            console.log('TOPIC ADDED', topic);
+            console.log("TOPIC ADDED", topic);
             await this.consumer.subscribe({
                 topic,
                 fromBeginning: true,
@@ -32,21 +32,22 @@ class Subscriber {
     async setupConsumer() {
         this.consumer = this.kafka.consumer(default_config_1.defaultConsumerConfig(this.groupId));
         await this.consumer.connect();
-        this.consumer.on('consumer.crash', error => {
+        this.consumer.on("consumer.crash", (error) => {
             throw error;
         });
-        console.log('CONSUMER CONNECTED');
+        console.log("CONSUMER CONNECTED");
     }
     async runConsumer() {
-        console.log('CONSUMER RUNNING');
+        console.log("CONSUMER RUNNING");
         await this.consumer.run({
             autoCommit: true,
             eachMessage: async (message) => {
-                console.log('llego');
+                console.log("llego");
                 console.log(message.partition, message.topic);
-                this.callbacks[message.topic].forEach(cb => {
-                    cb(message);
-                });
+                await Promise.all(this.callbacks[message.topic].map(async (cb) => {
+                    return await cb(message);
+                }));
+                console.log("FINISH");
             },
         });
     }

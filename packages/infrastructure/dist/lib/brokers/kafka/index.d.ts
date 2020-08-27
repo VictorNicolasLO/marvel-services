@@ -10,8 +10,8 @@ export declare class KafkaBroker {
         groupId: string;
     }, singleton?: boolean);
     private init;
-    request(topic: string, data: any): Promise<unknown>;
+    request(topic: string, data: any, acks?: 0 | 1 | -1): Promise<unknown>;
     rpc(topic: string, cb: (message: any) => any): void;
-    subscribeTo(topic: string, cb: (message: any) => void): void;
+    subscribeTo(topic: string, cb: (message: any) => Promise<void>): void;
     publish(topic: string, message: any, key: string): Promise<void>;
 }

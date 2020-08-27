@@ -1,37 +1,43 @@
-import { QueryBus, IQuery, IQueryResult } from '@nestjs/cqrs';
+import { QueryBus, IQuery, IQueryResult } from "@nestjs/cqrs";
 import {
   Injectable,
   Logger,
   BadRequestException,
   OnModuleInit,
-} from '@nestjs/common';
+} from "@nestjs/common";
 
-import { KafkaBroker } from '../brokers/kafka';
+import { KafkaBroker } from "../brokers/kafka";
 
-const PREFIX = process.env.BROKER_PREFIX || ""
+const PREFIX = process.env.BROKER_PREFIX || "";
 
 @Injectable()
 export class AppQueryBus extends QueryBus {
   private handlersClasses: any[];
   private _domainName: string;
   set domainName(value: string) {
-    new KafkaBroker({ groupId: value }, true);
+    new KafkaBroker({ groupId: this.groupIdPrefix + value }, true);
     this._domainName = value;
   }
   get domainName() {
     return this._domainName;
   }
 
+  public groupIdPrefix: string = "";
+
   async execute<T extends IQuery, TResult extends IQueryResult>(
-    command: T,
+    command: T
   ): Promise<TResult> {
-    const broker = new KafkaBroker({ groupId: this.domainName }, true);
+    const broker = new KafkaBroker(
+      { groupId: this.groupIdPrefix + this.domainName },
+      true
+    );
     const domainName = (command.constructor as any).domainName;
     const commandName = command.constructor.name;
     try {
       const result: any = await broker.request(
         PREFIX + `queries.${domainName}.${commandName}`,
         { data: command },
+        0
       );
       return result;
     } catch (e) {
@@ -46,13 +52,16 @@ export class AppQueryBus extends QueryBus {
     }
     const target = (this as any).reflectQueryName(handler);
     if (!target) {
-      throw 'INVALID QUERY';
+      throw "INVALID QUERY";
     }
     this.bind(instance, target.name);
   }
 
   bind(handler, name) {
-    const broker = new KafkaBroker({ groupId: this.domainName }, true);
+    const broker = new KafkaBroker(
+      { groupId: this.groupIdPrefix + this.domainName },
+      true
+    );
     broker.rpc(
       PREFIX + `queries.${this.domainName}.${name}`,
       (msg: any) =>
@@ -62,11 +71,11 @@ export class AppQueryBus extends QueryBus {
             const result = await handler.execute(msg.data);
             resolve(result);
           } catch (e) {
-            Logger.error(e.message, e.trace, 'RPC consumer reponse');
+            Logger.error(e.message, e.trace, "RPC consumer reponse");
             reject(e);
             throw e;
           }
-        }),
+        })
     );
   }
 }

@@ -11,6 +11,9 @@ class GenericQueryKeyValueRepository {
     async get(key) {
         return await this.driver.get(key);
     }
+    async getAndLock(key) {
+        return await this.driver.getAndLock(key);
+    }
 }
 exports.GenericQueryKeyValueRepository = GenericQueryKeyValueRepository;
 //# sourceMappingURL=generic-query-key-value-repository.js.map

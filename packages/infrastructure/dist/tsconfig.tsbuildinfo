@@ -161,44 +161,39 @@
         "signature": "d2f31f19e1ba6ed59be9259d660a239d9a3fcbbc8e038c6b2009bde34b175fed",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts": {
         "version": "0381ff3106ae2cd28e7cdf6b8d594d8722b27703ee0f4d1e467344fd73db52aa",
         "signature": "0381ff3106ae2cd28e7cdf6b8d594d8722b27703ee0f4d1e467344fd73db52aa",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-bus.interface.d.ts": {
-        "version": "a6feee8f2b73a235d0452e15ef2cfab6fd9e60c9f344c2b57a142efde8413cdc",
-        "signature": "a6feee8f2b73a235d0452e15ef2cfab6fd9e60c9f344c2b57a142efde8413cdc",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-bus.interface.d.ts": {
+        "version": "de6102ad3eada4d095970c9d4d633753acaed5318a284e692b2d92232ee9bb92",
+        "signature": "de6102ad3eada4d095970c9d4d633753acaed5318a284e692b2d92232ee9bb92",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts": {
-        "version": "a366b8bffd53315e2deedeb4dec419d26802a7696f869088c4a8aba66fa82234",
-        "signature": "a366b8bffd53315e2deedeb4dec419d26802a7696f869088c4a8aba66fa82234",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts": {
+        "version": "dbd6f64edfedd30bc957cf8271f9f05f3926d0b44a8b0458fc00148f23af6b91",
+        "signature": "dbd6f64edfedd30bc957cf8271f9f05f3926d0b44a8b0458fc00148f23af6b91",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-publisher.interface.d.ts": {
-        "version": "5199552cfaf38433b0998a825bb92eec050a4efd723725d1f6cb96ca3bd4d831",
-        "signature": "5199552cfaf38433b0998a825bb92eec050a4efd723725d1f6cb96ca3bd4d831",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts": {
         "version": "6e3bd4c8b83d57c91a46908e299b9415ac7b1cbc0839812bd9673703180cce04",
         "signature": "6e3bd4c8b83d57c91a46908e299b9415ac7b1cbc0839812bd9673703180cce04",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-bus.interface.d.ts": {
-        "version": "47e67f5285c645651374a15629f95f812185e5214c0de1e7eeb72d00286e70e4",
-        "signature": "47e67f5285c645651374a15629f95f812185e5214c0de1e7eeb72d00286e70e4",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-bus.interface.d.ts": {
+        "version": "7475dcc4efe8634ca446a0999408fa6a8088c97884da87d86d02c450d0449bbb",
+        "signature": "7475dcc4efe8634ca446a0999408fa6a8088c97884da87d86d02c450d0449bbb",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts": {
         "version": "e5274b692c78bfb8e2592f398af376ba917b8dfd85d9876cde7501baa8a76726",
         "signature": "e5274b692c78bfb8e2592f398af376ba917b8dfd85d9876cde7501baa8a76726",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-publisher.interface.d.ts": {
-        "version": "5c9d20431e55c7f94b888f8e7b2479ba935f9e1e73f23c7d15af03656bd157c7",
-        "signature": "5c9d20431e55c7f94b888f8e7b2479ba935f9e1e73f23c7d15af03656bd157c7",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-publisher.interface.d.ts": {
+        "version": "3867801be88b84b2669fc93bdabc5976769fcab2463cae4c77f7c197af03794d",
+        "signature": "3867801be88b84b2669fc93bdabc5976769fcab2463cae4c77f7c197af03794d",
         "affectsGlobalScope": false
       },
       "../../../node_modules/rxjs/internal/Subscription.d.ts": {
@@ -521,49 +516,44 @@
         "signature": "a588d0765b1d18bf00a498b75a83e095aef75a9300b6c1e91cbf39e408f2fe2f",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/message-source.interface.d.ts": {
-        "version": "b7febc27fee5d9bfc84a8ed4a4e8ae6bf8419c4badd92b60fe73ecb4d0eed600",
-        "signature": "b7febc27fee5d9bfc84a8ed4a4e8ae6bf8419c4badd92b60fe73ecb4d0eed600",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/message-source.interface.d.ts": {
+        "version": "23a9982b318654d89eefd54d072b4451048b0b8d08fb9173d7e60ebf56f26ba9",
+        "signature": "23a9982b318654d89eefd54d072b4451048b0b8d08fb9173d7e60ebf56f26ba9",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts": {
         "version": "5eb2a99ec89e7e945e49823fe9d4380edad7b24de487eee9a16097c3078137eb",
         "signature": "5eb2a99ec89e7e945e49823fe9d4380edad7b24de487eee9a16097c3078137eb",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-bus.interface.d.ts": {
-        "version": "7cbb0e3476330aec52d4a0e6f5a0b867646f0e1be58088801b74c1f9019b1533",
-        "signature": "7cbb0e3476330aec52d4a0e6f5a0b867646f0e1be58088801b74c1f9019b1533",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-bus.interface.d.ts": {
+        "version": "94a91d9a2b5796e5d503bcffcc8de6fab1ceff2f7a38a13d18fa8c94a8f82c0b",
+        "signature": "94a91d9a2b5796e5d503bcffcc8de6fab1ceff2f7a38a13d18fa8c94a8f82c0b",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts": {
         "version": "8392c03dea3eaf207cf6102a0bafe514d08038a49f0a40b591444c2248f3e5d2",
         "signature": "8392c03dea3eaf207cf6102a0bafe514d08038a49f0a40b591444c2248f3e5d2",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-publisher.interface.d.ts": {
-        "version": "4ffeb1789d4714fc78ebf4df4ab367b8fc0a8deed5b38b11c41ea60637576042",
-        "signature": "4ffeb1789d4714fc78ebf4df4ab367b8fc0a8deed5b38b11c41ea60637576042",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-result.interface.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-result.interface.d.ts": {
         "version": "26c82a5ade313319d2cdd8784db64f687b4e61e7b4c60e0e56564f33dd5b1dd9",
         "signature": "26c82a5ade313319d2cdd8784db64f687b4e61e7b4c60e0e56564f33dd5b1dd9",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/saga.type.d.ts": {
-        "version": "0a0add89a43d51a9eb233dff01d00a1d50af884d43669b91d8f894ec4400f951",
-        "signature": "0a0add89a43d51a9eb233dff01d00a1d50af884d43669b91d8f894ec4400f951",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/saga.type.d.ts": {
+        "version": "791de79339d2ff57852fa555fafb7aee3e6c995b84333da0a14804052f5636b6",
+        "signature": "791de79339d2ff57852fa555fafb7aee3e6c995b84333da0a14804052f5636b6",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts": {
-        "version": "84b46f0453c9f23e4b62aa1beb5b95ad049bb062f213bdfb67ec016904090c81",
-        "signature": "84b46f0453c9f23e4b62aa1beb5b95ad049bb062f213bdfb67ec016904090c81",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts": {
+        "version": "17ed5c800d15e1418cda130049659ad291a677190c83e9303c76de530e83e7c0",
+        "signature": "17ed5c800d15e1418cda130049659ad291a677190c83e9303c76de530e83e7c0",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts": {
-        "version": "6b5ea0d147fbd3f6f3239f9707e49e16b74ce9e57287f502441fd9be08d59cd6",
-        "signature": "6b5ea0d147fbd3f6f3239f9707e49e16b74ce9e57287f502441fd9be08d59cd6",
+      "../../../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts": {
+        "version": "5e6412eacaca50288fe176a00cb44db94e1493a8fccdec2ea08c75ac68e87f0f",
+        "signature": "5e6412eacaca50288fe176a00cb44db94e1493a8fccdec2ea08c75ac68e87f0f",
         "affectsGlobalScope": false
       },
       "../../../node_modules/reflect-metadata/index.d.ts": {
@@ -1121,7 +1111,7 @@
         "signature": "17d0601882b9ab77dc854b7f5105f437a5f9d22210f40c729814844dd540570d",
         "affectsGlobalScope": false
       },
-      "../../../node_modules/axios/index.d.ts": {
+      "../../../node_modules/@nestjs/common/node_modules/axios/index.d.ts": {
         "version": "e7df7eb51c5090db4bdcdbf9efe053530dff0e33796f40b08b1a3be6c3a351d0",
         "signature": "e7df7eb51c5090db4bdcdbf9efe053530dff0e33796f40b08b1a3be6c3a351d0",
         "affectsGlobalScope": false
@@ -1421,127 +1411,127 @@
         "signature": "7b5ed961a0e03965299591d73de8b8c41e8a68105ff4fc07a240b0dfb94a5a3d",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts": {
-        "version": "ac7815e4f927feac26a3c73640aaeb87876472a135232b5a10bc6f918a1444c3",
-        "signature": "ac7815e4f927feac26a3c73640aaeb87876472a135232b5a10bc6f918a1444c3",
+      "../../../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts": {
+        "version": "58a9a103ce6b2b946e183f21db12bc79541b78ad3c83dbe80139eebc0a8510d1",
+        "signature": "58a9a103ce6b2b946e183f21db12bc79541b78ad3c83dbe80139eebc0a8510d1",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/command-bus.d.ts": {
-        "version": "2719db8cd57a000ab82250236d3647e552a8949c4ad97564c7cb4cc4ca098d54",
-        "signature": "2719db8cd57a000ab82250236d3647e552a8949c4ad97564c7cb4cc4ca098d54",
+      "../../../node_modules/@nestjs/cqrs/dist/command-bus.d.ts": {
+        "version": "2cd2b901c28757e1f8fdf2a89d8a2f4b82180fb99a531e8354ae17b29f98ae13",
+        "signature": "2cd2b901c28757e1f8fdf2a89d8a2f4b82180fb99a531e8354ae17b29f98ae13",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/utils/index.d.ts": {
-        "version": "ee712c31249de1064ec4d9cd4577e5f312a9c3388fd2d48851465ae8abb9bab4",
-        "signature": "ee712c31249de1064ec4d9cd4577e5f312a9c3388fd2d48851465ae8abb9bab4",
+      "../../../node_modules/@nestjs/cqrs/dist/event-bus.d.ts": {
+        "version": "64dc9bdf443dc8d46d7684219729fa8e8f5c09e122367f5695c45f492627a0dc",
+        "signature": "64dc9bdf443dc8d46d7684219729fa8e8f5c09e122367f5695c45f492627a0dc",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/event-bus.d.ts": {
-        "version": "fa6051c50415281dc1b47677595c2c1a6f78cd3a36c5b96079cd2423736db8ff",
-        "signature": "fa6051c50415281dc1b47677595c2c1a6f78cd3a36c5b96079cd2423736db8ff",
+      "../../../node_modules/@nestjs/cqrs/dist/query-bus.d.ts": {
+        "version": "bc05c2e3ff585f8b5f52a7b1029674e1ab16e2b6fdbecebb31dee996e2a6497f",
+        "signature": "bc05c2e3ff585f8b5f52a7b1029674e1ab16e2b6fdbecebb31dee996e2a6497f",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/query-bus.d.ts": {
-        "version": "bf593a110ad99fae3e00219145c28bdc203f5b76f275c494e74b29ce576e1aa6",
-        "signature": "bf593a110ad99fae3e00219145c28bdc203f5b76f275c494e74b29ce576e1aa6",
-        "affectsGlobalScope": false
-      },
-      "../node_modules/@nestjs/cqrs/dist/interfaces/cqrs-options.interface.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/cqrs-options.interface.d.ts": {
         "version": "aa69b42f4c46bc294337b5fb24aa1820e64834d5aa88d0cf345c408dec8bd277",
         "signature": "aa69b42f4c46bc294337b5fb24aa1820e64834d5aa88d0cf345c408dec8bd277",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/services/explorer.service.d.ts": {
-        "version": "0ee7ab8812df5f1a7c4cb5f596167c06ff4868ca07711d6c8a92085e14144344",
-        "signature": "0ee7ab8812df5f1a7c4cb5f596167c06ff4868ca07711d6c8a92085e14144344",
+      "../../../node_modules/@nestjs/cqrs/dist/services/explorer.service.d.ts": {
+        "version": "4f4b6a47d45b212edf86ef69ef20f12d6f34d80ae3a868ebb89b9d2ef647ba47",
+        "signature": "4f4b6a47d45b212edf86ef69ef20f12d6f34d80ae3a868ebb89b9d2ef647ba47",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/cqrs.module.d.ts": {
-        "version": "a28f1e666110775bd19b8ca62e9689ed361cbc0c4073c8849482ce3e4c5ebf26",
-        "signature": "a28f1e666110775bd19b8ca62e9689ed361cbc0c4073c8849482ce3e4c5ebf26",
+      "../../../node_modules/@nestjs/cqrs/dist/cqrs.module.d.ts": {
+        "version": "bb17e20258b31ef110ca7e15652035eb65f0bb3bb9c8adb34397754e826ee8dc",
+        "signature": "bb17e20258b31ef110ca7e15652035eb65f0bb3bb9c8adb34397754e826ee8dc",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/decorators/command-handler.decorator.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/command-handler.decorator.d.ts": {
         "version": "440721f9f8fb6c24010638df81821dc14dc163ec6783625d0bdab1e045b5ef38",
         "signature": "440721f9f8fb6c24010638df81821dc14dc163ec6783625d0bdab1e045b5ef38",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/decorators/events-handler.decorator.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/events-handler.decorator.d.ts": {
         "version": "3188612e26bb028117778ee07c38b17e5d510f8d3f5883d642bf957ba4c3470b",
         "signature": "3188612e26bb028117778ee07c38b17e5d510f8d3f5883d642bf957ba4c3470b",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/decorators/query-handler.decorator.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/query-handler.decorator.d.ts": {
         "version": "4d8448e2d95a6eff8d843da1e2878d187dc1a5acaa2f230397e18f7b14ed4e05",
         "signature": "4d8448e2d95a6eff8d843da1e2878d187dc1a5acaa2f230397e18f7b14ed4e05",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/decorators/saga.decorator.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/saga.decorator.d.ts": {
         "version": "135abfb439cdbfe31906ca0d83263c015c20bd66c435975b80bf32d9f351d62d",
         "signature": "135abfb439cdbfe31906ca0d83263c015c20bd66c435975b80bf32d9f351d62d",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/decorators/index.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/index.d.ts": {
         "version": "25332f39ac08a905cc4b8ddc11f2f30603607e91fdebe3a5ded251e175f6c12b",
         "signature": "25332f39ac08a905cc4b8ddc11f2f30603607e91fdebe3a5ded251e175f6c12b",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/event-publisher.d.ts": {
-        "version": "571b7127b87c1747a0411caad5d7f7df47146ee256261e90916d2af30cd602df",
-        "signature": "571b7127b87c1747a0411caad5d7f7df47146ee256261e90916d2af30cd602df",
+      "../../../node_modules/@nestjs/cqrs/dist/event-publisher.d.ts": {
+        "version": "0d00c8b41fda7bee1d444d91f1b5a6f237f02866d4ca55325e7ff11b493b27c8",
+        "signature": "0d00c8b41fda7bee1d444d91f1b5a6f237f02866d4ca55325e7ff11b493b27c8",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/exceptions/command-not-found.exception.d.ts": {
-        "version": "124463eb27255384ce60cfcef7bc25a4359a55259c06ba71c9f0829e7b8a06c3",
-        "signature": "124463eb27255384ce60cfcef7bc25a4359a55259c06ba71c9f0829e7b8a06c3",
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/command-not-found.exception.d.ts": {
+        "version": "ed16c092ea2345781344831776bbb131a0eb88808fb96b572b8a8c34dc5ad014",
+        "signature": "ed16c092ea2345781344831776bbb131a0eb88808fb96b572b8a8c34dc5ad014",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-command-handler.exception.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-command-handler.exception.d.ts": {
         "version": "91b03102b008c1bfa7be3b2f4649b9588bfa62418be82393c52ef1625ab72a16",
         "signature": "91b03102b008c1bfa7be3b2f4649b9588bfa62418be82393c52ef1625ab72a16",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-events-handler.exception.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-events-handler.exception.d.ts": {
         "version": "2cdb9312c51f7ddec069354630c4bb1d12612ded5408e78cdedcc97d0b416b01",
         "signature": "2cdb9312c51f7ddec069354630c4bb1d12612ded5408e78cdedcc97d0b416b01",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-query-handler.exception.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-query-handler.exception.d.ts": {
         "version": "0f76760e928909011ac0381652a046f2451d5e118a14beeec1a9fc06c423d411",
         "signature": "0f76760e928909011ac0381652a046f2451d5e118a14beeec1a9fc06c423d411",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-saga.exception.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-saga.exception.d.ts": {
         "version": "a7cf9e060eb2caa1ed81cb9052861208f968943f88d7e688feb21a26f157d2d2",
         "signature": "a7cf9e060eb2caa1ed81cb9052861208f968943f88d7e688feb21a26f157d2d2",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/exceptions/query-not-found.exception.d.ts": {
-        "version": "18c1ae647fdcb9e0ddc75c04cd08e7b376091f4c38952b1769a85450bde44fad",
-        "signature": "18c1ae647fdcb9e0ddc75c04cd08e7b376091f4c38952b1769a85450bde44fad",
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/query-not-found.exception.d.ts": {
+        "version": "2dd1f0d0852a7a7e6b101828c54dbd246b52b42ed879c45816c22cd09c79fd14",
+        "signature": "2dd1f0d0852a7a7e6b101828c54dbd246b52b42ed879c45816c22cd09c79fd14",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/exceptions/index.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/index.d.ts": {
         "version": "dff5b022e5487090a981e1ec7d8765dabc78984ecfad1578d9e3ca046ef0836a",
         "signature": "dff5b022e5487090a981e1ec7d8765dabc78984ecfad1578d9e3ca046ef0836a",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/operators/of-type.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/operators/of-type.d.ts": {
         "version": "723ba498eb0ca8bd5829d4e97198b86971c00c63b26fb0e34fb016cf6445dd7a",
         "signature": "723ba498eb0ca8bd5829d4e97198b86971c00c63b26fb0e34fb016cf6445dd7a",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/operators/index.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/operators/index.d.ts": {
         "version": "3f641ab16c05cec621ed5c04777d2f8656a5b41a35c506b75b594d90adc540b9",
         "signature": "3f641ab16c05cec621ed5c04777d2f8656a5b41a35c506b75b594d90adc540b9",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/dist/index.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/dist/utils/index.d.ts": {
+        "version": "ee712c31249de1064ec4d9cd4577e5f312a9c3388fd2d48851465ae8abb9bab4",
+        "signature": "ee712c31249de1064ec4d9cd4577e5f312a9c3388fd2d48851465ae8abb9bab4",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@nestjs/cqrs/dist/index.d.ts": {
         "version": "0f42ae9e85f8733c5e2e804b5e1cad16815e9369c5577308339efa3a88d2b069",
         "signature": "0f42ae9e85f8733c5e2e804b5e1cad16815e9369c5577308339efa3a88d2b069",
         "affectsGlobalScope": false
       },
-      "../node_modules/@nestjs/cqrs/index.d.ts": {
+      "../../../node_modules/@nestjs/cqrs/index.d.ts": {
         "version": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "signature": "8f1241f5d9f0d3d72117768b3c974e462840fbd85026fb66685078945404cf2f",
         "affectsGlobalScope": false
@@ -1827,43 +1817,43 @@
         "affectsGlobalScope": false
       },
       "../lib/brokers/kafka/default-config.ts": {
-        "version": "7721d12c0e546ca44b62de9829f7ad9661b13ce5036910f2df348056684b18a3",
-        "signature": "b09a24195b4b70b6cdabd0226e5bf459e74816200c921c0d6aae0be0422ed503",
+        "version": "4c54c8c3338c341cf7ba460d5ce656ffc138fa62d9f3a1c43c5142b5c553daf7",
+        "signature": "18b68e9ee3adba5144e6df1d4c61e79728be26a3fa2850b7ce5b1183efcb4352",
         "affectsGlobalScope": false
       },
       "../lib/brokers/kafka/subscriber.ts": {
-        "version": "a688bc7d05cf2bd2e13f70807334108df7a1e5d48edff02c7b9df005ba9bed97",
-        "signature": "72619192602f69c724e55246db3cdbad7269520102c725deddf35125a212d4ee",
+        "version": "54e89f5574a8618c93d975ca67db743b198f69f08e6d18853120c0a43f667499",
+        "signature": "ff172786c049697cc190feae879a63cec09e3f474618b3acf733ce0650f74662",
         "affectsGlobalScope": false
       },
       "../lib/brokers/kafka/rpc.ts": {
-        "version": "293ffb9f132289cb94b3d734b56aec606fbe83b089ae3d94b1daf78f04b0b340",
-        "signature": "31fd786506a1d56f2c63b29add2e412a3ccb2429c241b40b7962c81761287c4a",
+        "version": "a21388dba1b3083b1e6284bab6eb744474b343383a1c46a39a28b80522b0c0fe",
+        "signature": "45e6831620cc591940d924dd4610f92ef3ac7f3accbb68176cfb5f2658364b05",
         "affectsGlobalScope": false
       },
       "../lib/brokers/kafka/index.ts": {
-        "version": "9d85696cc80e4be6ec395570f35dac59e56f90e6136ef7c08a3b214821a9b045",
-        "signature": "e7bd800706786b2e6d037852649f4a121857ad8c0136ae43fe383ad570db5d3f",
+        "version": "1c416ded2025a7de5d2054dadf92ce9e58f9b17ff101a5d5de3fe6349a2fee52",
+        "signature": "00b18e975d732fdbba7b8c9c5ae0af1c34db6edfc888ad469cfc0ec96614c2de",
         "affectsGlobalScope": false
       },
       "../lib/publishers/app-command-bus.ts": {
-        "version": "a9960fa58c78562143e53ac03ead22fe6dad9bf982805b2bb7fedfdc25034651",
-        "signature": "4212c62eea97f7a49497805a887b192e931ffa6aafaf86c0b0c0e02aca1be0e2",
+        "version": "80dad688c85ae34d0f7de48b89f59c376fc5601a650c4ef9e885d239a33fc98f",
+        "signature": "dbc3f3fb4b5e0e4c94d6f0225a3a2d64f14158e888a4e341a0b3017c6fbbe57e",
         "affectsGlobalScope": false
       },
       "../lib/publishers/app-query-bus.ts": {
-        "version": "eb4535ca9e249ee096eabb0d0ac9d51e6cfc5f0a3bb48f22371554713e5f27cd",
-        "signature": "200b6c9e4132c00dda6c6e61d2b6c39a0a93ecf2ee8f0bf6ddb16a56384a805e",
+        "version": "08a78701951a33829936d3c725689b52937595fb13fa34cd47cba9cb82d66f0d",
+        "signature": "c1929dccca1a8e3a48db428354aa63124b587a7f451cc179311fbaccb52bed97",
         "affectsGlobalScope": false
       },
       "../lib/publishers/event.publisher.ts": {
-        "version": "65ada6f8140b0cb49849d5d3d57bea24e88ff92149278b6aec978083f3d86707",
-        "signature": "2b26569a5629badf6a3ed900aed77d0d2ba131871f4d8f04c1657ac52a3fc990",
+        "version": "ac99fdbfb73b74895af678d6d968a16ef308dfe3de8cac2f15bbe68d9c3d58db",
+        "signature": "9825c64c004031361f51e11e2549fe264769a377205bb73afaa9f1043fe1fb24",
         "affectsGlobalScope": false
       },
       "../lib/db-drivers/db-driver.ts": {
-        "version": "1a28247eac3e1297a9f8bce246fffbdeb655fd3086dbec63e75583a8bfdee807",
-        "signature": "79b4513f89d7e6185582ed00082365deab7255829ac889889c231342bb30884d",
+        "version": "92afbea201e813ba22dd39db3a1a14258899ad0ee234455dfc791e171489cf82",
+        "signature": "66337a32f120bf833ef4891166db23a2aa0f20a4ef6711bc934e088864e0e652",
         "affectsGlobalScope": false
       },
       "../lib/repositories/generic-query-repository.ts": {
@@ -1872,8 +1862,8 @@
         "affectsGlobalScope": false
       },
       "../lib/repositories/generic-query-key-value-repository.ts": {
-        "version": "29ac3b1400ec3c72fc0ca35dd3944fb71b7189be3d1fdeb81aea464a87fd24ce",
-        "signature": "c9b18b22189d3d36bab7fa919e58ecc523a82f317437055fc2ffffd947523a07",
+        "version": "4847fe704fbd77e3d876d35cc45e2a07039c1de3cfbc84f2fe7aeff6b59f5fb6",
+        "signature": "2670dd380d7b46210bc404b0a3c2e6e8ee4f5c60f8289d538cd6e131b9ec824d",
         "affectsGlobalScope": false
       },
       "../lib/repositories/generic-repository.ts": {
@@ -1886,9 +1876,19 @@
         "signature": "eeb4e8b48dc0d5e8fad71a7cf7824b19eaf998607871620f259c84a7e7dac64e",
         "affectsGlobalScope": false
       },
+      "../../../node_modules/@types/bluebird/index.d.ts": {
+        "version": "1a6100f908d642fe1c74d1354b0e12ee647655b8d355159a1bb4c62ae874ccea",
+        "signature": "1a6100f908d642fe1c74d1354b0e12ee647655b8d355159a1bb4c62ae874ccea",
+        "affectsGlobalScope": false
+      },
+      "../../../node_modules/@types/redlock/index.d.ts": {
+        "version": "3bc4c9ca353f42e4eebf9986974e7bcfb7bc7eadb7a9da67c84f6bc123ce18e6",
+        "signature": "3bc4c9ca353f42e4eebf9986974e7bcfb7bc7eadb7a9da67c84f6bc123ce18e6",
+        "affectsGlobalScope": false
+      },
       "../lib/db-drivers/redis-driver.ts": {
-        "version": "ccba65beb6bf38a11caf72deb24a1ef55a3109f2c27c971fef7712146dd5cd39",
-        "signature": "3bb425a0860e460427b268e7c639fa32dae8b13d7673f620878628517c323474",
+        "version": "913915e9e40f10f6a9e178f50b6b7a7a01353a1d2149b45ba8aa6ab5e814a649",
+        "signature": "2f32a09bd4668e4a177dd6c7d577929fc7d5584a6740a95bf3e30123d5c5cf10",
         "affectsGlobalScope": false
       },
       "../lib/db-drivers/mongo-driver.ts": {
@@ -1909,11 +1909,6 @@
       "../index.ts": {
         "version": "146d7a3acc62c37f11682baaad76c41c60619fecf943ea67e867fd4dcc0bace1",
         "signature": "efaaf25a2aaaddf24136508b35b58012f139e0544bc9acaec3d6ecaa2e03bfc9",
-        "affectsGlobalScope": false
-      },
-      "../lib/brokers/kafka/index_bak.ts": {
-        "version": "d6fef967f5d4a1a908a95aed9731f7694c52b40cfb2d122ce0c4dc5f0d782e53",
-        "signature": "e7bd800706786b2e6d037852649f4a121857ad8c0136ae43fe383ad570db5d3f",
         "affectsGlobalScope": false
       },
       "../lib/brokers/pulsar/utils.ts": {
@@ -2579,13 +2574,13 @@
         "../../../node_modules/@types/node/util.d.ts"
       ],
       "../../../node_modules/@nestjs/common/http/http.service.d.ts": [
+        "../../../node_modules/@nestjs/common/node_modules/axios/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/axios/index.d.ts",
         "../../../node_modules/rxjs/index.d.ts"
       ],
       "../../../node_modules/@nestjs/common/http/index.d.ts": [
@@ -2601,13 +2596,13 @@
       ],
       "../../../node_modules/@nestjs/common/http/interfaces/http-module.interface.d.ts": [
         "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/common/node_modules/axios/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/axios/index.d.ts"
+        "../../../node_modules/@types/node/util.d.ts"
       ],
       "../../../node_modules/@nestjs/common/http/interfaces/index.d.ts": [
         "../../../node_modules/@nestjs/common/http/interfaces/http-module.interface.d.ts",
@@ -3127,6 +3122,14 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/rxjs/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/common/node_modules/axios/index.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
       ],
       "../../../node_modules/@nestjs/common/pipes/default-value.pipe.d.ts": [
         "../../../node_modules/@nestjs/common/index.d.ts",
@@ -3675,6 +3678,427 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts"
       ],
+      "../../../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/command-bus.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/core/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/cqrs.module.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/command-bus.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/event-bus.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/query-bus.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/services/explorer.service.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/command-handler.decorator.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/events-handler.decorator.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/index.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/decorators/command-handler.decorator.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/decorators/events-handler.decorator.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/decorators/query-handler.decorator.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/decorators/saga.decorator.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/query-handler.decorator.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/saga.decorator.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/event-bus.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/core/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/command-bus.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/rxjs/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/event-publisher.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/event-bus.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/command-not-found.exception.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/index.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/exceptions/command-not-found.exception.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-command-handler.exception.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-events-handler.exception.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-query-handler.exception.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-saga.exception.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/exceptions/query-not-found.exception.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-command-handler.exception.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-events-handler.exception.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-query-handler.exception.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-saga.exception.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/query-not-found.exception.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/index.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/command-bus.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/cqrs.module.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/decorators/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/event-bus.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/event-publisher.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/exceptions/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/operators/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/query-bus.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/utils/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-bus.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/cqrs-options.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-bus.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-publisher.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/message-source.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/rxjs/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-bus.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-bus.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-publisher.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/message-source.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-bus.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-result.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/saga.type.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-bus.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-result.interface.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/saga.type.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/rxjs/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/operators/index.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/operators/of-type.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/operators/of-type.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/rxjs/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/query-bus.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/core/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/services/explorer.service.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/core/injector/instance-wrapper.d.ts",
+        "../../../node_modules/@nestjs/core/injector/module.d.ts",
+        "../../../node_modules/@nestjs/core/injector/modules-container.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/cqrs-options.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/utils/index.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/rxjs/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/index.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@types/bluebird/index.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
       "../../../node_modules/@types/http-assert/index.d.ts": [
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -4213,7 +4637,9 @@
         "../../../node_modules/@types/node/ts3.7/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts"
       ],
-      "../../../node_modules/@types/uuid/index.d.ts": [
+      "../../../node_modules/@types/redlock/index.d.ts": [
+        "../../../node_modules/@types/bluebird/index.d.ts",
+        "../../../node_modules/@types/node/events.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -4221,7 +4647,7 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts"
       ],
-      "../../../node_modules/axios/index.d.ts": [
+      "../../../node_modules/@types/uuid/index.d.ts": [
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -5253,18 +5679,6 @@
         "../lib/brokers/kafka/rpc.ts",
         "../lib/brokers/kafka/subscriber.ts"
       ],
-      "../lib/brokers/kafka/index_bak.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/kafkajs/types/index.d.ts",
-        "../lib/brokers/kafka/default-config.ts",
-        "../lib/brokers/kafka/rpc.ts",
-        "../lib/brokers/kafka/subscriber.ts"
-      ],
       "../lib/brokers/kafka/rpc.ts": [
         "../../../node_modules/@nestjs/common/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
@@ -5350,6 +5764,7 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/redis/index.d.ts",
+        "../../../node_modules/@types/redlock/index.d.ts",
         "../lib/db-drivers/db-driver.ts"
       ],
       "../lib/events/aggregate-event.ts": [
@@ -5370,6 +5785,7 @@
       ],
       "../lib/model.ts": [
         "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -5378,34 +5794,34 @@
         "../../../node_modules/@types/node/ts3.7/assert.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/uuid/index.d.ts",
-        "../lib/asserts.ts",
-        "../node_modules/@nestjs/cqrs/index.d.ts"
+        "../lib/asserts.ts"
       ],
       "../lib/publishers/app-command-bus.ts": [
         "../../../node_modules/@nestjs/common/index.d.ts",
         "../../../node_modules/@nestjs/core/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
-        "../lib/brokers/kafka/index.ts",
-        "../node_modules/@nestjs/cqrs/index.d.ts"
+        "../lib/brokers/kafka/index.ts"
       ],
       "../lib/publishers/app-query-bus.ts": [
         "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
-        "../lib/brokers/kafka/index.ts",
-        "../node_modules/@nestjs/cqrs/index.d.ts"
+        "../lib/brokers/kafka/index.ts"
       ],
       "../lib/publishers/event.publisher.ts": [
         "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -5413,8 +5829,7 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/rxjs/index.d.ts",
-        "../lib/brokers/kafka/index.ts",
-        "../node_modules/@nestjs/cqrs/index.d.ts"
+        "../lib/brokers/kafka/index.ts"
       ],
       "../lib/repositories/generic-query-key-value-repository.ts": [
         "../../../node_modules/@types/node/fs.d.ts",
@@ -5436,6 +5851,7 @@
         "../lib/db-drivers/db-driver.ts"
       ],
       "../lib/repositories/generic-repository.ts": [
+        "../../../node_modules/@nestjs/cqrs/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -5443,444 +5859,7 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
         "../lib/db-drivers/db-driver.ts",
-        "../lib/model.ts",
-        "../node_modules/@nestjs/cqrs/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/command-bus.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@nestjs/core/index.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/reflect-metadata/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/cqrs.module.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/command-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/event-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/query-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/services/explorer.service.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/decorators/command-handler.decorator.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/reflect-metadata/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/decorators/events-handler.decorator.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/reflect-metadata/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/decorators/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/decorators/command-handler.decorator.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/decorators/events-handler.decorator.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/decorators/query-handler.decorator.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/decorators/saga.decorator.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/decorators/query-handler.decorator.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/reflect-metadata/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/decorators/saga.decorator.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/reflect-metadata/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/event-bus.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@nestjs/core/index.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/rxjs/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/command-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/utils/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/event-publisher.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/event-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/exceptions/command-not-found.exception.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/exceptions/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/exceptions/command-not-found.exception.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-command-handler.exception.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-events-handler.exception.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-query-handler.exception.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-saga.exception.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/exceptions/query-not-found.exception.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-command-handler.exception.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-events-handler.exception.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-query-handler.exception.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-saga.exception.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/exceptions/query-not-found.exception.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/command-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/cqrs.module.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/decorators/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/event-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/event-publisher.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/exceptions/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/operators/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/query-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/utils/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-bus.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-publisher.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/cqrs-options.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-bus.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-publisher.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/message-source.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/rxjs/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-bus.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-publisher.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-bus.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-publisher.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/message-source.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-bus.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-publisher.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-result.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/saga.type.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-bus.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-publisher.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-result.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/saga.type.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/rxjs/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/operators/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/operators/of-type.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/operators/of-type.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/rxjs/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/query-bus.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@nestjs/core/index.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/reflect-metadata/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/services/explorer.service.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@nestjs/core/injector/instance-wrapper.d.ts",
-        "../../../node_modules/@nestjs/core/injector/module.d.ts",
-        "../../../node_modules/@nestjs/core/injector/modules-container.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/cqrs-options.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/utils/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/rxjs/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/index.d.ts"
+        "../lib/model.ts"
       ]
     },
     "exportedModulesMap": {
@@ -7049,6 +7028,14 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/rxjs/index.d.ts"
       ],
+      "../../../node_modules/@nestjs/common/node_modules/axios/index.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
       "../../../node_modules/@nestjs/common/pipes/default-value.pipe.d.ts": [
         "../../../node_modules/@nestjs/common/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
@@ -7595,6 +7582,427 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts"
       ],
+      "../../../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/command-bus.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/core/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/cqrs.module.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/command-bus.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/event-bus.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/query-bus.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/services/explorer.service.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/command-handler.decorator.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/events-handler.decorator.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/index.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/decorators/command-handler.decorator.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/decorators/events-handler.decorator.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/decorators/query-handler.decorator.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/decorators/saga.decorator.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/query-handler.decorator.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/saga.decorator.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/event-bus.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/core/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/command-bus.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/rxjs/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/event-publisher.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/event-bus.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/command-not-found.exception.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/index.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/exceptions/command-not-found.exception.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-command-handler.exception.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-events-handler.exception.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-query-handler.exception.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-saga.exception.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/exceptions/query-not-found.exception.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-command-handler.exception.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-events-handler.exception.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-query-handler.exception.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-saga.exception.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/query-not-found.exception.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/index.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/command-bus.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/cqrs.module.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/decorators/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/event-bus.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/event-publisher.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/exceptions/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/operators/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/query-bus.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/utils/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-bus.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/cqrs-options.interface.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-bus.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-publisher.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/message-source.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/rxjs/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-bus.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-bus.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-publisher.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/message-source.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-bus.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-result.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/saga.type.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-bus.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-result.interface.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/saga.type.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/rxjs/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/operators/index.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/operators/of-type.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/operators/of-type.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/rxjs/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/query-bus.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/core/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/reflect-metadata/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/services/explorer.service.d.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../../node_modules/@nestjs/core/injector/instance-wrapper.d.ts",
+        "../../../node_modules/@nestjs/core/injector/module.d.ts",
+        "../../../node_modules/@nestjs/core/injector/modules-container.d.ts",
+        "../../../node_modules/@nestjs/cqrs/dist/interfaces/cqrs-options.interface.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/utils/index.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/rxjs/index.d.ts"
+      ],
+      "../../../node_modules/@nestjs/cqrs/index.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/dist/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
+      "../../../node_modules/@types/bluebird/index.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts",
+        "../../../node_modules/@types/node/util.d.ts"
+      ],
       "../../../node_modules/@types/http-assert/index.d.ts": [
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -8133,7 +8541,9 @@
         "../../../node_modules/@types/node/ts3.7/index.d.ts",
         "../../../node_modules/@types/node/util.d.ts"
       ],
-      "../../../node_modules/@types/uuid/index.d.ts": [
+      "../../../node_modules/@types/redlock/index.d.ts": [
+        "../../../node_modules/@types/bluebird/index.d.ts",
+        "../../../node_modules/@types/node/events.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -8141,7 +8551,7 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts"
       ],
-      "../../../node_modules/axios/index.d.ts": [
+      "../../../node_modules/@types/uuid/index.d.ts": [
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -9160,14 +9570,14 @@
       ],
       "../lib/publishers/app-command-bus.ts": [
         "../../../node_modules/@nestjs/core/index.d.ts",
-        "../node_modules/@nestjs/cqrs/index.d.ts"
+        "../../../node_modules/@nestjs/cqrs/index.d.ts"
       ],
       "../lib/publishers/app-query-bus.ts": [
-        "../node_modules/@nestjs/cqrs/index.d.ts"
+        "../../../node_modules/@nestjs/cqrs/index.d.ts"
       ],
       "../lib/publishers/event.publisher.ts": [
-        "../../../node_modules/rxjs/index.d.ts",
-        "../node_modules/@nestjs/cqrs/index.d.ts"
+        "../../../node_modules/@nestjs/cqrs/index.d.ts",
+        "../../../node_modules/rxjs/index.d.ts"
       ],
       "../lib/repositories/generic-query-key-value-repository.ts": [
         "../lib/db-drivers/db-driver.ts"
@@ -9179,436 +9589,6 @@
         "../lib/db-drivers/db-driver.ts",
         "../lib/model.ts",
         "../node_modules/@nestjs/cqrs/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/command-bus.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@nestjs/core/index.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/cqrs.module.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/command-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/event-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/query-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/services/explorer.service.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/decorators/command-handler.decorator.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/decorators/events-handler.decorator.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/decorators/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/decorators/command-handler.decorator.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/decorators/events-handler.decorator.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/decorators/query-handler.decorator.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/decorators/saga.decorator.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/decorators/query-handler.decorator.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/decorators/saga.decorator.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/event-bus.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@nestjs/core/index.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/rxjs/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/command-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/utils/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/event-publisher.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/event-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/exceptions/command-not-found.exception.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/exceptions/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/exceptions/command-not-found.exception.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-command-handler.exception.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-events-handler.exception.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-query-handler.exception.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-saga.exception.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/exceptions/query-not-found.exception.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-command-handler.exception.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-events-handler.exception.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-query-handler.exception.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-saga.exception.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/exceptions/query-not-found.exception.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/command-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/cqrs.module.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/decorators/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/event-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/event-publisher.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/exceptions/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/operators/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/query-bus.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/utils/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-bus.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-publisher.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/cqrs-options.interface.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-bus.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-publisher.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/message-source.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/rxjs/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-bus.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-publisher.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-bus.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-publisher.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/message-source.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-bus.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-publisher.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-result.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/saga.type.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-bus.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-publisher.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-result.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/interfaces/saga.type.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/rxjs/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/operators/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/operators/of-type.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/operators/of-type.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/rxjs/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/query-bus.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@nestjs/core/index.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/services/explorer.service.d.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@nestjs/core/injector/instance-wrapper.d.ts",
-        "../../../node_modules/@nestjs/core/injector/module.d.ts",
-        "../../../node_modules/@nestjs/core/injector/modules-container.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/cqrs-options.interface.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/utils/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/rxjs/index.d.ts"
-      ],
-      "../node_modules/@nestjs/cqrs/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../node_modules/@nestjs/cqrs/dist/index.d.ts"
       ]
     },
     "semanticDiagnosticsPerFile": [
@@ -9730,6 +9710,7 @@
       "../../../node_modules/@nestjs/common/interfaces/scope-options.interface.d.ts",
       "../../../node_modules/@nestjs/common/interfaces/type.interface.d.ts",
       "../../../node_modules/@nestjs/common/interfaces/websockets/web-socket-adapter.interface.d.ts",
+      "../../../node_modules/@nestjs/common/node_modules/axios/index.d.ts",
       "../../../node_modules/@nestjs/common/pipes/default-value.pipe.d.ts",
       "../../../node_modules/@nestjs/common/pipes/index.d.ts",
       "../../../node_modules/@nestjs/common/pipes/parse-array.pipe.d.ts",
@@ -9781,6 +9762,47 @@
       "../../../node_modules/@nestjs/core/router/request/request-constants.d.ts",
       "../../../node_modules/@nestjs/core/services/index.d.ts",
       "../../../node_modules/@nestjs/core/services/reflector.service.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/command-bus.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/cqrs.module.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/command-handler.decorator.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/events-handler.decorator.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/index.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/query-handler.decorator.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/decorators/saga.decorator.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/event-bus.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/event-publisher.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/command-not-found.exception.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/index.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-command-handler.exception.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-events-handler.exception.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-query-handler.exception.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/invalid-saga.exception.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/exceptions/query-not-found.exception.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/index.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-bus.interface.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/cqrs-options.interface.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-bus.interface.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event-publisher.interface.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/events/message-source.interface.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-bus.interface.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-result.interface.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/interfaces/saga.type.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/operators/index.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/operators/of-type.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/query-bus.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/services/explorer.service.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/utils/index.d.ts",
+      "../../../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts",
+      "../../../node_modules/@nestjs/cqrs/index.d.ts",
+      "../../../node_modules/@types/bluebird/index.d.ts",
       "../../../node_modules/@types/http-assert/index.d.ts",
       "../../../node_modules/@types/md5/index.d.ts",
       "../../../node_modules/@types/node/async_hooks.d.ts",
@@ -9836,8 +9858,8 @@
       "../../../node_modules/@types/node/worker_threads.d.ts",
       "../../../node_modules/@types/node/zlib.d.ts",
       "../../../node_modules/@types/redis/index.d.ts",
+      "../../../node_modules/@types/redlock/index.d.ts",
       "../../../node_modules/@types/uuid/index.d.ts",
-      "../../../node_modules/axios/index.d.ts",
       "../../../node_modules/kafkajs/types/index.d.ts",
       "../../../node_modules/reflect-metadata/index.d.ts",
       "../../../node_modules/rxjs/index.d.ts",
@@ -9940,7 +9962,6 @@
       "../lib/asserts.ts",
       "../lib/brokers/kafka/default-config.ts",
       "../lib/brokers/kafka/index.ts",
-      "../lib/brokers/kafka/index_bak.ts",
       "../lib/brokers/kafka/rpc.ts",
       "../lib/brokers/kafka/subscriber.ts",
       "../lib/brokers/pulsar/index.ts",
@@ -9958,49 +9979,7 @@
       "../lib/publishers/event.publisher.ts",
       "../lib/repositories/generic-query-key-value-repository.ts",
       "../lib/repositories/generic-query-repository.ts",
-      "../lib/repositories/generic-repository.ts",
-      "../node_modules/@nestjs/cqrs/dist/aggregate-root.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/command-bus.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/cqrs.module.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/decorators/command-handler.decorator.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/decorators/events-handler.decorator.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/decorators/index.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/decorators/query-handler.decorator.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/decorators/saga.decorator.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/event-bus.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/event-publisher.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/exceptions/command-not-found.exception.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/exceptions/index.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-command-handler.exception.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-events-handler.exception.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-query-handler.exception.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/exceptions/invalid-saga.exception.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/exceptions/query-not-found.exception.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/index.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-bus.interface.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-handler.interface.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command-publisher.interface.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/commands/command.interface.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/cqrs-options.interface.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-bus.interface.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-handler.interface.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event-publisher.interface.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/event.interface.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/events/message-source.interface.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/index.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-bus.interface.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-handler.interface.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-publisher.interface.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query-result.interface.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/queries/query.interface.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/interfaces/saga.type.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/operators/index.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/operators/of-type.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/query-bus.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/services/explorer.service.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/utils/index.d.ts",
-      "../node_modules/@nestjs/cqrs/dist/utils/observable-bus.d.ts",
-      "../node_modules/@nestjs/cqrs/index.d.ts"
+      "../lib/repositories/generic-repository.ts"
     ]
   },
   "version": "3.9.7"

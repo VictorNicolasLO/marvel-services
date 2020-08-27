@@ -9,9 +9,11 @@ export class CreateCharacterInteractionHandler
   constructor(private readonly repository: CharacterInteractionsRepository) {}
 
   async execute(command: CreateCharacterInteractionCommand) {
+    console.log("HANDLER");
     const characterInteractionExist = await this.repository.findOne({
       id: command.characterInteractionDto.id,
     });
+    console.log(characterInteractionExist);
     if (characterInteractionExist) {
       throw new BadRequestException("characterInteractionExist already exist");
     }

@@ -1,12 +1,12 @@
-import { v1 as uuid } from 'uuid';
+import { v1 as uuid } from "uuid";
 import {
   defaultReplyTopic,
   defaultReplyConsumerconfig,
   defaultRequestTopic,
-} from './default-config';
-import { Kafka, Admin, Consumer, EachMessagePayload, Producer } from 'kafkajs';
-import { RequestTimeoutException } from '@nestjs/common';
-import { Subscriber } from './subscriber';
+} from "./default-config";
+import { Kafka, Admin, Consumer, EachMessagePayload, Producer } from "kafkajs";
+import { RequestTimeoutException } from "@nestjs/common";
+import { Subscriber } from "./subscriber";
 
 export class Rpc {
   private consumer: Consumer;
@@ -17,7 +17,7 @@ export class Rpc {
     private kafka: Kafka,
     private kafkaClient: Admin,
     private producer: Producer,
-    private subscriber: Subscriber,
+    private subscriber: Subscriber
   ) {
     this.init();
   }
@@ -28,10 +28,10 @@ export class Rpc {
       topics: [defaultReplyTopic(this.replyTopic)],
     });
     this.setupReplyConsumer();
-    process.on('exit', async () => {
+    process.on("exit", async () => {
       this.consumer.disconnect();
       await this.kafkaClient.deleteTopics({ topics: [this.replyTopic] });
-      console.log('Goodbye!');
+      console.log("Goodbye!");
     });
   }
 
@@ -39,7 +39,7 @@ export class Rpc {
     this.consumer = this.kafka.consumer(defaultReplyConsumerconfig());
 
     await this.consumer.connect();
-    this.consumer.on('consumer.crash', error => {
+    this.consumer.on("consumer.crash", (error) => {
       throw error;
     });
 
@@ -49,12 +49,12 @@ export class Rpc {
 
     await this.consumer.run({
       autoCommit: true,
-      eachMessage: async message => {
+      eachMessage: async (message) => {
         const {
           message: { value },
         } = message;
         const { error, response, requestId } = JSON.parse(
-          value.toString('utf-8'),
+          value.toString("utf-8")
         );
         const { timeoutId, resolve, reject } = this.pendingResponses[requestId];
         clearTimeout(timeoutId);
@@ -67,9 +67,9 @@ export class Rpc {
   public rpc(topic: string, cb: (data: any) => any) {
     this.subscriber.subscribe(
       topic,
-      async payload => {
+      async (payload) => {
         const { data, replyTopic, requestId } = JSON.parse(
-          payload.message.value.toString('utf-8'),
+          payload.message.value.toString("utf-8")
         );
         try {
           const response = await cb(data);
@@ -102,11 +102,11 @@ export class Rpc {
           });
         }
       },
-      defaultRequestTopic(topic),
+      defaultRequestTopic(topic)
     );
   }
 
-  request(topic: string, data: any) {
+  request(topic: string, data: any, acks: 0 | 1 | -1) {
     return new Promise(async (resolve, reject) => {
       const run = async () => {
         const requestId = uuid();
@@ -122,12 +122,12 @@ export class Rpc {
               }),
             },
           ],
-          acks: 0,
+          acks,
         });
 
         const timeoutId = setTimeout(() => {
           reject(
-            new RequestTimeoutException(`Request time out for topic ${topic}`),
+            new RequestTimeoutException(`Request time out for topic ${topic}`)
           );
         }, ((process.env.REQUEST_TIME_OUT as unknown) as number) || 30000);
         this.pendingResponses[requestId] = { resolve, timeoutId, reject };
