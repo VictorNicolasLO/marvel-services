@@ -47,7 +47,6 @@ let MarvelComicsCronService = MarvelComicsCronService_1 = class MarvelComicsCron
                 result = await this.marvelApi.getComics({
                     limit: BATCH_NUMBER,
                     offset,
-                    orderBy: "onsaleDate",
                     characters: CHARACTERS,
                 });
                 console.log(result);
@@ -69,7 +68,7 @@ let MarvelComicsCronService = MarvelComicsCronService_1 = class MarvelComicsCron
                     }))
                         .catch(() => { });
                 });
-                offset += result.data.count + 1;
+                offset += result.data.count;
                 await this.syncStatusRepository.put("status", { lastOffset: offset });
             } while (result.data.count > 0);
             this.loading = false;

@@ -24,7 +24,7 @@ let SearchCharacterInteractionModule = class SearchCharacterInteractionModule {
     }
     onModuleInit() {
         this.event$.register([character_interaction_created_handler_1.CharacterInteractionCreatedHandler]);
-        this.eventPublisher.groupIdPrefix = "v2";
+        this.eventPublisher.groupIdPrefix = "v13";
         this.eventPublisher.setDomainName("search-character-interactions");
         this.eventPublisher.registerEvents([character_interactions_1.CharacterInteractionCreatedEvent]);
         this.eventPublisher.bridgeEventsTo(this.event$.subject$);

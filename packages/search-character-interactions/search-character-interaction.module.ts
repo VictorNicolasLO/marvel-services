@@ -32,7 +32,7 @@ export class SearchCharacterInteractionModule implements OnModuleInit {
   onModuleInit() {
     /** ------------ */
     this.event$.register([CharacterInteractionCreatedHandler]);
-    this.eventPublisher.groupIdPrefix = "v2";
+    this.eventPublisher.groupIdPrefix = "v13";
     this.eventPublisher.setDomainName("search-character-interactions");
     this.eventPublisher.registerEvents([CharacterInteractionCreatedEvent]);
     this.eventPublisher.bridgeEventsTo(this.event$.subject$);

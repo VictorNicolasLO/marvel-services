@@ -1618,7 +1618,7 @@
         "signature": "a6255bcc474f63b92f3375c881ac7ed306cb612e1f2d614e1f13f0bf1000b5a2"
       },
       "../marvel-comics-cron.service.ts": {
-        "version": "865852a5eb80ac2e8cc65026e28c3d9c1f8788d8f8676a0fd983e86977627abb",
+        "version": "87131cb32dfde1a75eb908be3775c6923a96041c271ccd2c6cdf67bb8e83cf9b",
         "signature": "04c31feba23538bd5c194240c2150c259a4d4969c142922189ef9417b5c7b97b"
       },
       "../marvel-comics-cron.module.ts": {

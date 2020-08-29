@@ -1478,8 +1478,8 @@
         "signature": "eeb4e8b48dc0d5e8fad71a7cf7824b19eaf998607871620f259c84a7e7dac64e"
       },
       "../../infrastructure/dist/lib/db-drivers/redis-driver.d.ts": {
-        "version": "f8ef46236e22509ad9bddb570243f8775a3f90e5cbdc2bd62a691229bc66fa04",
-        "signature": "f8ef46236e22509ad9bddb570243f8775a3f90e5cbdc2bd62a691229bc66fa04"
+        "version": "3de02636fd4005b0e85a3de53fff13146e029aab94c61ab2111896c132dc8c0f",
+        "signature": "3de02636fd4005b0e85a3de53fff13146e029aab94c61ab2111896c132dc8c0f"
       },
       "../../../node_modules/@types/bson/index.d.ts": {
         "version": "3994ebfd11faa4018d8e1b879190046588f41f5cd60438e642ca39a705c726be",

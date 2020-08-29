@@ -43,7 +43,7 @@ class Subscriber {
             autoCommit: true,
             partitionsConsumedConcurrently: 1000,
             eachMessage: async (message) => {
-                console.log("llego");
+                console.log("New message incoming");
                 console.log(message.partition, message.topic);
                 await Promise.all(this.callbacks[message.topic].map(async (cb) => {
                     return await cb(message);

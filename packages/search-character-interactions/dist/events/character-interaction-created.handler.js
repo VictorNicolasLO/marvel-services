@@ -13,6 +13,8 @@ const cqrs_1 = require("@nestjs/cqrs");
 const character_interactions_1 = require("@marvel/character-interactions");
 const read_character_interactions_repository_1 = require("../repositories/read-character-interactions.repository");
 const generate_name_id_1 = require("../utils/generate-name-id");
+const CAPTAIN_AMERICA_ID = 1009220;
+const IRON_MAN_ID = 1009368;
 let CharacterInteractionCreatedHandler = class CharacterInteractionCreatedHandler {
     constructor(readCharacterInteractionsRepository) {
         this.readCharacterInteractionsRepository = readCharacterInteractionsRepository;
@@ -20,8 +22,13 @@ let CharacterInteractionCreatedHandler = class CharacterInteractionCreatedHandle
     async handle({ characterInteraction }) {
         for (let index = 0; index < characterInteraction.characters.length; index++) {
             const character = characterInteraction.characters[index];
-            const characterToAdd = characterInteraction.characters[index - 1] ||
-                characterInteraction.characters[index + 1];
+            if (parseInt(character.id) !== CAPTAIN_AMERICA_ID &&
+                parseInt(character.id) !== IRON_MAN_ID) {
+                continue;
+            }
+            const characterToAdd = index == 0
+                ? characterInteraction.characters[1]
+                : characterInteraction.characters[0];
             const nameId = generate_name_id_1.generateNameId(character.name);
             const { value: interactionsFound, unlock, } = await this.readCharacterInteractionsRepository.getAndLock(nameId);
             const comicSummary = {
@@ -29,21 +36,15 @@ let CharacterInteractionCreatedHandler = class CharacterInteractionCreatedHandle
                 image: characterInteraction.comic.image,
             };
             if (interactionsFound) {
-                const characterAlreadyRelatedIndex = interactionsFound.characters.findIndex((character) => character.id === characterToAdd.id);
-                const characterAlreadyRelated = interactionsFound.characters[characterAlreadyRelatedIndex];
-                if (characterAlreadyRelated) {
-                    characterAlreadyRelated.comics.push(comicSummary);
-                    interactionsFound.characters[index] = characterAlreadyRelated;
-                }
-                else {
-                    interactionsFound.characters.push({
-                        comics: [comicSummary],
-                        id: characterToAdd.id,
-                        name: characterToAdd.name,
-                    });
-                }
-                interactionsFound.lastSync = new Date();
-                await this.readCharacterInteractionsRepository.put(nameId, interactionsFound);
+                const characterAlreadyRelated = interactionsFound.characters.find((char) => char.id == characterToAdd.id);
+                const charactersWithoutCharacterRelated = interactionsFound.characters.filter((char) => char.id != characterToAdd.id);
+                const characterRelated = characterAlreadyRelated
+                    ? Object.assign(Object.assign({}, characterAlreadyRelated), { comics: [...characterAlreadyRelated.comics, comicSummary] }) : {
+                    comics: [comicSummary],
+                    id: characterToAdd.id,
+                    name: characterToAdd.name,
+                };
+                await this.readCharacterInteractionsRepository.put(nameId, Object.assign(Object.assign({}, interactionsFound), { lastSync: new Date(), characters: [...charactersWithoutCharacterRelated, characterRelated] }));
             }
             else {
                 await this.readCharacterInteractionsRepository.put(nameId, {

@@ -10,7 +10,7 @@ const delay_1 = require("../../utils/delay");
 const common_1 = require("@nestjs/common");
 const { promisify } = require("util");
 console.log(process.env.REDIS_URL);
-const LOCK_TIMEOUT = 1000;
+const LOCK_TIMEOUT = 15000;
 const RETRY_DURATION = 100;
 const RETRY_LIMIT = 1000;
 class RedisDriver extends db_driver_1.KeyValueDbDriver {
@@ -26,6 +26,7 @@ class RedisDriver extends db_driver_1.KeyValueDbDriver {
             RedisDriver.putAsync = promisify(RedisDriver.client.set).bind(RedisDriver.client);
             RedisDriver.setnxAsync = promisify(RedisDriver.client.setnx).bind(RedisDriver.client);
             RedisDriver.getsetAsync = promisify(RedisDriver.client.getset).bind(RedisDriver.client);
+            RedisDriver.delAsync = promisify(RedisDriver.client.del).bind(RedisDriver.client);
         }
     }
     put(key, value) {
@@ -36,29 +37,30 @@ class RedisDriver extends db_driver_1.KeyValueDbDriver {
     }
     async getAndLock(key) {
         const lockKey = `lock.${this.prefix}/${key}`;
-        const now = Date.now();
         const checkLock = async () => {
-            const isLockedNx = (await RedisDriver.setnxAsync(lockKey, now + LOCK_TIMEOUT + 1)) === 0;
-            if (!isLockedNx) {
-                return true;
+            const nxValue = parseInt(await RedisDriver.setnxAsync(lockKey, Date.now() + LOCK_TIMEOUT + 1));
+            if (nxValue == 1) {
+                return false;
             }
-            const timeout = await RedisDriver.getAsync(lockKey);
-            if (now > timeout) {
-                const newtimeout = await RedisDriver.getsetAsync(lockKey, now + LOCK_TIMEOUT + 1);
-                if (newtimeout !== timeout) {
+            const timeOutString = await RedisDriver.getAsync(lockKey);
+            const timeout = parseInt(timeOutString ? timeOutString : "0");
+            if (Date.now() > timeout) {
+                const newtimeoutString = await RedisDriver.getsetAsync(lockKey, Date.now() + LOCK_TIMEOUT + 1);
+                const newtimeout = parseInt(newtimeoutString ? timeOutString : "0");
+                if (newtimeout > timeout) {
                     return true;
                 }
                 return false;
             }
             else {
-                return false;
+                return true;
             }
         };
         const getData = async () => {
             return {
                 value: await this.get(key),
                 unlock: () => {
-                    return RedisDriver.putAsync(lockKey, "");
+                    return RedisDriver.delAsync(lockKey);
                 },
             };
         };

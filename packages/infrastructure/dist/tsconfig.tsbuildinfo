@@ -1817,12 +1817,12 @@
         "affectsGlobalScope": false
       },
       "../lib/brokers/kafka/default-config.ts": {
-        "version": "51cc6331c302f2de89ef31ff60c595b49308e3814dfe6b05018efd13b5c6ffcd",
+        "version": "8582d1a558ab89824c26a43c37cb46f1621ae93478802d8f1be185755b4c36a6",
         "signature": "80ea99b5c45707fb2e6b66e556542120adc9e7f0f6e6d8a759db66f3eaf3bd12",
         "affectsGlobalScope": false
       },
       "../lib/brokers/kafka/subscriber.ts": {
-        "version": "8cde242ba99725b1cd2ba553903645e6228e64972c9fc3d6e9c761cd7505aa39",
+        "version": "1686fa0f1443386b4b10250009e98e822255c6878a61c29cf346f46997ce3b28",
         "signature": "ff172786c049697cc190feae879a63cec09e3f474618b3acf733ce0650f74662",
         "affectsGlobalScope": false
       },
@@ -1852,7 +1852,7 @@
         "affectsGlobalScope": false
       },
       "../lib/publishers/event.publisher.ts": {
-        "version": "5fe69e9b784da4240b4928d1387ffa78cc9306ea8b26dcf27544dbb87715d928",
+        "version": "ccea6bb65d865defc759cb4cd9c6d5708115d77c17b6d0fadf45fddf8b0764ce",
         "signature": "db05acbfa2934ba1edb2ad2c053ed332b176cb09c094bed4fd44fca9c253ddba",
         "affectsGlobalScope": false
       },
@@ -1887,8 +1887,8 @@
         "affectsGlobalScope": false
       },
       "../lib/db-drivers/redis-driver.ts": {
-        "version": "f98aae94d92522e97034e5cfc44fa74d9907a77baac6c480a8f3c14b856079b6",
-        "signature": "f8ef46236e22509ad9bddb570243f8775a3f90e5cbdc2bd62a691229bc66fa04",
+        "version": "a853b7200448a3f147530e5eacc5b09278dffebcd4e68cd21d6fa2dd22447895",
+        "signature": "3de02636fd4005b0e85a3de53fff13146e029aab94c61ab2111896c132dc8c0f",
         "affectsGlobalScope": false
       },
       "../../../node_modules/@types/bson/index.d.ts": {
@@ -1984,6 +1984,7 @@
       "baseUrl": "..",
       "incremental": true,
       "esModuleInterop": true,
+      "watch": true,
       "configFilePath": "../tsconfig.json"
     },
     "referencedMap": {
@@ -6578,13 +6579,13 @@
         "../../../node_modules/@types/node/util.d.ts"
       ],
       "../../../node_modules/@nestjs/common/http/http.service.d.ts": [
+        "../../../node_modules/@nestjs/common/node_modules/axios/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
         "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/axios/index.d.ts",
         "../../../node_modules/rxjs/index.d.ts"
       ],
       "../../../node_modules/@nestjs/common/http/index.d.ts": [
@@ -6600,13 +6601,13 @@
       ],
       "../../../node_modules/@nestjs/common/http/interfaces/http-module.interface.d.ts": [
         "../../../node_modules/@nestjs/common/interfaces/index.d.ts",
+        "../../../node_modules/@nestjs/common/node_modules/axios/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/axios/index.d.ts"
+        "../../../node_modules/@types/node/util.d.ts"
       ],
       "../../../node_modules/@nestjs/common/http/interfaces/index.d.ts": [
         "../../../node_modules/@nestjs/common/http/interfaces/http-module.interface.d.ts",
@@ -6633,7 +6634,8 @@
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/reflect-metadata/index.d.ts"
       ],
       "../../../node_modules/@nestjs/common/interfaces/abstract.interface.d.ts": [
         "../../../node_modules/@types/node/fs.d.ts",
@@ -7437,7 +7439,8 @@
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/process.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts",
-        "../../../node_modules/@types/node/util.d.ts"
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/reflect-metadata/index.d.ts"
       ],
       "../../../node_modules/@nestjs/core/injector/container.d.ts": [
         "../../../node_modules/@nestjs/common/index.d.ts",
@@ -9703,7 +9706,7 @@
         "../lib/db-drivers/db-driver.ts"
       ],
       "../lib/model.ts": [
-        "../node_modules/@nestjs/cqrs/index.d.ts"
+        "../../../node_modules/@nestjs/cqrs/index.d.ts"
       ],
       "../lib/publishers/app-command-bus.ts": [
         "../../../node_modules/@nestjs/core/index.d.ts",

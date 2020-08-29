@@ -5,15 +5,16 @@ import { RequestTimeoutException } from "@nestjs/common";
 const { promisify } = require("util");
 console.log(process.env.REDIS_URL);
 
-const LOCK_TIMEOUT = 1000;
+const LOCK_TIMEOUT = 15000;
 const RETRY_DURATION = 100;
 const RETRY_LIMIT = 1000;
 export class RedisDriver<T> extends KeyValueDbDriver<T> {
   static client: RedisClient;
-  static getAsync: (arg0: string) => string | PromiseLike<string | number>;
+  static getAsync: (arg0: string) => string | PromiseLike<string>;
   static putAsync: (arg0: string, arg1: string) => Promise<any>;
-  static setnxAsync: (arg0: string, arg1: number | string) => Promise<number>;
-  static getsetAsync: (arg0: string, arg1: number | string) => Promise<any>;
+  static setnxAsync: (arg0: string, arg1: number | string) => Promise<string>;
+  static getsetAsync: (arg0: string, arg1: number | string) => Promise<string>;
+  static delAsync: (arg0: string) => Promise<string>;
 
   constructor(private prefix: string) {
     super();
@@ -36,6 +37,9 @@ export class RedisDriver<T> extends KeyValueDbDriver<T> {
       RedisDriver.getsetAsync = promisify(RedisDriver.client.getset).bind(
         RedisDriver.client
       );
+      RedisDriver.delAsync = promisify(RedisDriver.client.del).bind(
+        RedisDriver.client
+      );
     }
   }
 
@@ -51,26 +55,28 @@ export class RedisDriver<T> extends KeyValueDbDriver<T> {
 
   async getAndLock(key: string) {
     const lockKey = `lock.${this.prefix}/${key}`;
-    const now = Date.now();
-
     const checkLock = async () => {
-      const isLockedNx =
-        (await RedisDriver.setnxAsync(lockKey, now + LOCK_TIMEOUT + 1)) === 0;
-      if (!isLockedNx) {
-        return true;
+      const nxValue = parseInt(
+        await RedisDriver.setnxAsync(lockKey, Date.now() + LOCK_TIMEOUT + 1)
+      );
+      if (nxValue == 1) {
+        return false;
       }
-      const timeout = await RedisDriver.getAsync(lockKey);
-      if (now > timeout) {
-        const newtimeout = await RedisDriver.getsetAsync(
+
+      const timeOutString = await RedisDriver.getAsync(lockKey);
+      const timeout = parseInt(timeOutString ? timeOutString : "0");
+      if (Date.now() > timeout) {
+        const newtimeoutString = await RedisDriver.getsetAsync(
           lockKey,
-          now + LOCK_TIMEOUT + 1
+          Date.now() + LOCK_TIMEOUT + 1
         );
-        if (newtimeout !== timeout) {
+        const newtimeout = parseInt(newtimeoutString ? timeOutString : "0");
+        if (newtimeout > timeout) {
           return true;
         }
         return false;
       } else {
-        return false;
+        return true;
       }
     };
 
@@ -78,13 +84,12 @@ export class RedisDriver<T> extends KeyValueDbDriver<T> {
       return {
         value: await this.get(key),
         unlock: () => {
-          return RedisDriver.putAsync(lockKey, "");
+          return RedisDriver.delAsync(lockKey);
         },
       };
     };
 
     const isLocked = await checkLock();
-
     if (!isLocked) {
       return await getData();
     } else {

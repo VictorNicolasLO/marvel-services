@@ -67,10 +67,10 @@ export class AppEventPublisher
     this.eventClasses.forEach(async (EventClass) => {
       const onEvent = (msg) => {
         // Await or not await ? TODO make concurrent feature optional!
-        console.log(this.domainName);
+        /*       console.log(this.domainName);
         console.log(msg);
         console.log(msg.type);
-        console.log(EventClass.name);
+        console.log(EventClass.name); */
         if (msg.type === EventClass.name) {
           const obj = new EventClass();
           return new Promise((resolve, reject) => {

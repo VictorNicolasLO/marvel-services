@@ -49,10 +49,6 @@ let AppEventPublisher = class AppEventPublisher extends cqrs_1.EventPublisher {
         const topicsCallbacks = {};
         this.eventClasses.forEach(async (EventClass) => {
             const onEvent = (msg) => {
-                console.log(this.domainName);
-                console.log(msg);
-                console.log(msg.type);
-                console.log(EventClass.name);
                 if (msg.type === EventClass.name) {
                     const obj = new EventClass();
                     return new Promise((resolve, reject) => {
