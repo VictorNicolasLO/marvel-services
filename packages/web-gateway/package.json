@@ -28,7 +28,6 @@
     "http-assert": "^1.4.1",
     "md5": "^2.3.0",
     "reflect-metadata": "^0.1.13",
-    "rxjs": "^6.6.2",
-    "@marvel/search-character-creators": "1.0.0"
+    "rxjs": "^6.6.2"
   }
 }

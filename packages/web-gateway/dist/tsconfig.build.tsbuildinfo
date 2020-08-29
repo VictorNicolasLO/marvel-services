@@ -1533,14 +1533,17 @@
         "version": "179c05aef5d391bf2e85205f9e17384f91d5dc2a2e687c369caf133c02174b48",
         "signature": "029338c2f08dbc4870ab8653a62b118cd5b566e0c1c4d25527558defb0c380bb"
       },
-      "../../search-character-creators/queries/search-character-creator.query.ts": {
-        "version": "897f6d173602e19808461b67c9513ed2b18876dd1cabe2a3c82b6be08baddb9b"
+      "../../search-character-creators/dist/queries/search-character-creator.query.d.ts": {
+        "version": "e98e04fb2fe86137ff5e1a973f665485347a58727f849ef6a676d6a0081cc12a",
+        "signature": "e98e04fb2fe86137ff5e1a973f665485347a58727f849ef6a676d6a0081cc12a"
       },
-      "../../search-character-creators/queries/impl/get-character-creator-by-name.query.ts": {
-        "version": "d0f9832fb4ce8fb91130e8c4ed8682515012c578690c497d5c33ddb025b96d23"
+      "../../search-character-creators/dist/queries/impl/get-character-creator-by-name.query.d.ts": {
+        "version": "35ef1a01cd9bb7a5ebe373e871858f30d89a6ca69335165d9bf12c09f99e1413",
+        "signature": "35ef1a01cd9bb7a5ebe373e871858f30d89a6ca69335165d9bf12c09f99e1413"
       },
-      "../../search-character-creators/index.ts": {
-        "version": "390f37b038a14b110ab515100da099effdd9769dd74f90d3deb2e53c9663ed00"
+      "../../search-character-creators/dist/index.d.ts": {
+        "version": "390f37b038a14b110ab515100da099effdd9769dd74f90d3deb2e53c9663ed00",
+        "signature": "390f37b038a14b110ab515100da099effdd9769dd74f90d3deb2e53c9663ed00"
       },
       "../controllers/collaborators.controller.ts": {
         "version": "f3e07fc524db2fbe469e76d68ce2fe7025fbe90a1d35ed17ac95006ad794761b",
@@ -5441,7 +5444,7 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../search-character-creators/queries/search-character-creator.query.ts": [
+      "../../search-character-creators/dist/queries/search-character-creator.query.d.ts": [
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -5449,8 +5452,8 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../search-character-creators/queries/impl/get-character-creator-by-name.query.ts": [
-        "../../search-character-creators/queries/search-character-creator.query.ts",
+      "../../search-character-creators/dist/queries/impl/get-character-creator-by-name.query.d.ts": [
+        "../../search-character-creators/dist/queries/search-character-creator.query.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -5458,8 +5461,8 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../search-character-creators/index.ts": [
-        "../../search-character-creators/queries/impl/get-character-creator-by-name.query.ts",
+      "../../search-character-creators/dist/index.d.ts": [
+        "../../search-character-creators/dist/queries/impl/get-character-creator-by-name.query.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -5470,7 +5473,7 @@
       "../controllers/collaborators.controller.ts": [
         "../../../node_modules/@nestjs/common/index.d.ts",
         "../../infrastructure/dist/index.d.ts",
-        "../../search-character-creators/index.ts",
+        "../../search-character-creators/dist/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -9115,6 +9118,32 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../../../node_modules/@types/bluebird/index.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../search-character-creators/dist/index.d.ts": [
+        "../../search-character-creators/dist/queries/impl/get-character-creator-by-name.query.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../search-character-creators/dist/queries/impl/get-character-creator-by-name.query.d.ts": [
+        "../../search-character-creators/dist/queries/search-character-creator.query.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../search-character-creators/dist/queries/search-character-creator.query.d.ts": [
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",

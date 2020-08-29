@@ -23,7 +23,7 @@ import { GetCharacterCreatorByNameHandler } from "./queries/handlers/get-charact
     AppCommandBus,
   ],
 })
-export class SearchCharacterCreatorModule implements OnModuleInit {
+export class SearchCharacterCreatorsModule implements OnModuleInit {
   constructor(
     private readonly query$: AppQueryBus,
     private readonly event$: AppEventBus,

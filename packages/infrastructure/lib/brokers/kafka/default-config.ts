@@ -41,6 +41,8 @@ export const defaultConsumerConfig = (groupId: string): ConsumerConfig => ({
 
 export const defaultReplyConsumerconfig = (): ConsumerConfig => ({
   groupId: uuid(),
+  maxBytesPerPartition: 2147483647,
+  maxBytes: 2147483647,
 });
 
 // -----------------

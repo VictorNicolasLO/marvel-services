@@ -12,12 +12,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const cqrs_1 = require("@nestjs/cqrs");
 const get_character_interaction_by_name_query_1 = require("../impl/get-character-interaction-by-name.query");
 const read_character_interactions_repository_1 = require("../../repositories/read-character-interactions.repository");
+function byteCount(s) {
+    return encodeURI(s).split(/%..|./).length - 1;
+}
 let GetCharacterInteractionByNameHandler = class GetCharacterInteractionByNameHandler {
     constructor(repository) {
         this.repository = repository;
     }
     async execute(query) {
-        return await this.repository.get(query.name);
+        const result = await this.repository.get(query.name);
+        console.log(byteCount(JSON.stringify(result)));
+        return result;
     }
 };
 GetCharacterInteractionByNameHandler = __decorate([

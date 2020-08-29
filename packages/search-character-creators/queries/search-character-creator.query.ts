@@ -1,3 +1,3 @@
 export class SearchCharacterCreatorQuery {
-  static domainName = "search-character-creator";
+  static domainName = "search-character-creators";
 }
