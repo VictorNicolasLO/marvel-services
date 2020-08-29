@@ -1234,16 +1234,20 @@
         "signature": "8e7c4209b5ed087f83698b188f104a72dc80a844b0a6f6e9f0808f3b3498334d"
       },
       "../../infrastructure/dist/lib/publishers/app-command-bus.d.ts": {
-        "version": "552c0edab4b8c5e22f536203dab4631e807f7e733eb6d0b0446a784fa75c6f93",
-        "signature": "552c0edab4b8c5e22f536203dab4631e807f7e733eb6d0b0446a784fa75c6f93"
+        "version": "dbc3f3fb4b5e0e4c94d6f0225a3a2d64f14158e888a4e341a0b3017c6fbbe57e",
+        "signature": "dbc3f3fb4b5e0e4c94d6f0225a3a2d64f14158e888a4e341a0b3017c6fbbe57e"
       },
       "../../infrastructure/dist/lib/publishers/app-query-bus.d.ts": {
-        "version": "200b6c9e4132c00dda6c6e61d2b6c39a0a93ecf2ee8f0bf6ddb16a56384a805e",
-        "signature": "200b6c9e4132c00dda6c6e61d2b6c39a0a93ecf2ee8f0bf6ddb16a56384a805e"
+        "version": "c1929dccca1a8e3a48db428354aa63124b587a7f451cc179311fbaccb52bed97",
+        "signature": "c1929dccca1a8e3a48db428354aa63124b587a7f451cc179311fbaccb52bed97"
+      },
+      "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts": {
+        "version": "3dc45208b4be14fff206d12903e79025da6625f5af70174446dbcd34e0bca867",
+        "signature": "3dc45208b4be14fff206d12903e79025da6625f5af70174446dbcd34e0bca867"
       },
       "../../infrastructure/dist/lib/publishers/event.publisher.d.ts": {
-        "version": "2b26569a5629badf6a3ed900aed77d0d2ba131871f4d8f04c1657ac52a3fc990",
-        "signature": "2b26569a5629badf6a3ed900aed77d0d2ba131871f4d8f04c1657ac52a3fc990"
+        "version": "db05acbfa2934ba1edb2ad2c053ed332b176cb09c094bed4fd44fca9c253ddba",
+        "signature": "db05acbfa2934ba1edb2ad2c053ed332b176cb09c094bed4fd44fca9c253ddba"
       },
       "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts": {
         "version": "66337a32f120bf833ef4891166db23a2aa0f20a4ef6711bc934e088864e0e652",
@@ -1258,8 +1262,8 @@
         "signature": "2670dd380d7b46210bc404b0a3c2e6e8ee4f5c60f8289d538cd6e131b9ec824d"
       },
       "../../infrastructure/dist/lib/repositories/generic-repository.d.ts": {
-        "version": "59a66a5fcc815f7e710cb8edca1da8a30b1c6672019355750941e2e9ee6891a9",
-        "signature": "59a66a5fcc815f7e710cb8edca1da8a30b1c6672019355750941e2e9ee6891a9"
+        "version": "e3dbe0fac39e33ed1b821237c199c1d6065ddc60de7148f929215cc30be5882a",
+        "signature": "e3dbe0fac39e33ed1b821237c199c1d6065ddc60de7148f929215cc30be5882a"
       },
       "../../infrastructure/dist/lib/db-drivers/redis-driver.d.ts": {
         "version": "2f32a09bd4668e4a177dd6c7d577929fc7d5584a6740a95bf3e30123d5c5cf10",
@@ -1277,9 +1281,13 @@
         "version": "4ee0bf308e31c445c7b054e832fec130a6dedab3fe29c993950fd05944024785",
         "signature": "4ee0bf308e31c445c7b054e832fec130a6dedab3fe29c993950fd05944024785"
       },
+      "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts": {
+        "version": "da4a80ce94198750d9cab9b9d4ee01ec25d30522e857afe485dffa60b13d9929",
+        "signature": "da4a80ce94198750d9cab9b9d4ee01ec25d30522e857afe485dffa60b13d9929"
+      },
       "../../infrastructure/dist/index.d.ts": {
-        "version": "efaaf25a2aaaddf24136508b35b58012f139e0544bc9acaec3d6ecaa2e03bfc9",
-        "signature": "efaaf25a2aaaddf24136508b35b58012f139e0544bc9acaec3d6ecaa2e03bfc9"
+        "version": "56a22e1e6d70bdacff96a68beedefd655bfced53bf9a3c35d002dea6e15cf2df",
+        "signature": "56a22e1e6d70bdacff96a68beedefd655bfced53bf9a3c35d002dea6e15cf2df"
       },
       "../models/interfaces/icomic.ts": {
         "version": "2cc92fb8b6bc5442a3340196052eb320bff66706fec88d982e6a0910046990d8",
@@ -1298,8 +1306,8 @@
         "signature": "df87be676b5d62b7503f35d9d10df6ce09d1376dfe00f910f43b8cf59cbd8afb"
       },
       "../repositories/comics.repository.ts": {
-        "version": "525cb7b28779ccfcb87f9fc16b555b3686e2aec89e3c6b190176e1fdd9f4a62f",
-        "signature": "c80880a57919e59bfeb6b04ff7aab9eab29c5fbe66b71e6e77e03dd601b1b1f8"
+        "version": "633ddf2303bad629f25a54407f655f11e7b99645540295244093831643175b5d",
+        "signature": "7adb3f5b64881626762cb5ff1379a17ddbb36f7e570f0c16fab4a7bb5ba3b86a"
       },
       "../commands/comics-command.ts": {
         "version": "66ef1d9c58a6c83b8a36015dabffd0b2225a69248df3a92e196aea3a89156236",
@@ -1318,12 +1326,12 @@
         "signature": "07c76c857f73c50a002240dd64fc672c26e0202af294762338adff9d35ee1e7a"
       },
       "../commands/handlers/create-comic.handler.ts": {
-        "version": "939958b9d3e34bc2ae7209b796bebbeb5f188dc06d55f9c9949a12d003ef1546",
-        "signature": "1d892bad7d5b3ab22f597fe5c2dc9116a29f0f0abbb36a1bf4bb0b65a0258187"
+        "version": "8e9d255307a793ac8bc1624edbf01b92a7ce0cf907809fc2580df80f37a498b1",
+        "signature": "67e5c0c1eeca5450e1cd3061a8e6f6fefb0e492b74b113ba740e2c1b676df108"
       },
       "../comics.module.ts": {
-        "version": "af8169484ec9b1d7376a9ed482eaa787f6de6cadd1bd8f67c74d908380a93822",
-        "signature": "8b3aa479b743c37e770ce434a3403e31570ef9360f2320e31a19083ead40328e"
+        "version": "1be93d2f8a6fca09b4a7f714b6f975f64b98c87a3bc995294867fd5ec24e190f",
+        "signature": "7f3444f4e057d33ed9f736feff42381144d517ec7719909fb90b6f0c4a92650f"
       },
       "../config.ts": {
         "version": "373b92323d837ea58719e61b7c7836ddc1289feff6106a84fb6812e2278a8f9a",
@@ -4710,9 +4718,21 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/index.d.ts",
+        "../../infrastructure/dist/lib/publishers/app-command-bus.d.ts",
+        "../../../node_modules/@nestjs/core/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../../infrastructure/dist/lib/publishers/event.publisher.d.ts": [
         "../../../node_modules/@nestjs/cqrs/index.d.ts",
         "../../../node_modules/rxjs/index.d.ts",
+        "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -4749,7 +4769,7 @@
       "../../infrastructure/dist/lib/repositories/generic-repository.d.ts": [
         "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts",
         "../../infrastructure/dist/lib/model.d.ts",
-        "../../../node_modules/@nestjs/cqrs/index.d.ts",
+        "../../infrastructure/dist/lib/publishers/event.publisher.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -4791,11 +4811,20 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../../infrastructure/dist/index.d.ts": [
         "../../infrastructure/dist/lib/model.d.ts",
         "../../infrastructure/dist/lib/publishers/app-command-bus.d.ts",
         "../../infrastructure/dist/lib/publishers/app-query-bus.d.ts",
         "../../infrastructure/dist/lib/publishers/event.publisher.d.ts",
+        "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts",
         "../../infrastructure/dist/lib/repositories/generic-query-repository.d.ts",
         "../../infrastructure/dist/lib/repositories/generic-query-key-value-repository.d.ts",
         "../../infrastructure/dist/lib/repositories/generic-repository.d.ts",
@@ -4803,6 +4832,7 @@
         "../../infrastructure/dist/lib/db-drivers/mongo-driver.d.ts",
         "../../infrastructure/dist/lib/events/aggregate-event.d.ts",
         "../../infrastructure/dist/lib/events/domain-event.d.ts",
+        "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -4853,7 +4883,6 @@
         "../../infrastructure/dist/index.d.ts",
         "../models/interfaces/icomic.ts",
         "../models/comic.model.ts",
-        "../../../node_modules/@nestjs/cqrs/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -4904,6 +4933,7 @@
         "../repositories/comics.repository.ts",
         "../events/domain/comic-created.event.ts",
         "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../infrastructure/dist/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -5827,20 +5857,19 @@
       ],
       "../comics.module.ts": [
         "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../../node_modules/@nestjs/cqrs/index.d.ts",
         "../../infrastructure/dist/index.d.ts"
       ],
       "../commands/handlers/create-comic.handler.ts": [
         "../../../node_modules/@nestjs/cqrs/index.d.ts",
         "../commands/impl/create-comic.command.ts",
         "../repositories/comics.repository.ts",
+        "../../infrastructure/dist/index.d.ts",
         "../models/interfaces/icomic.ts"
       ],
       "../repositories/comics.repository.ts": [
         "../../infrastructure/dist/index.d.ts",
         "../models/interfaces/icomic.ts",
-        "../models/comic.model.ts",
-        "../../../node_modules/@nestjs/cqrs/index.d.ts"
+        "../models/comic.model.ts"
       ],
       "../../../node_modules/@nestjs/cqrs/dist/operators/of-type.d.ts": [
         "../../../node_modules/@nestjs/common/index.d.ts",
@@ -5890,10 +5919,10 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../infrastructure/dist/lib/repositories/generic-repository.d.ts": [
-        "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts",
-        "../../infrastructure/dist/lib/model.d.ts",
+      "../../infrastructure/dist/lib/publishers/event.publisher.d.ts": [
         "../../../node_modules/@nestjs/cqrs/index.d.ts",
+        "../../../node_modules/rxjs/index.d.ts",
+        "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -5906,6 +5935,7 @@
         "../../infrastructure/dist/lib/publishers/app-command-bus.d.ts",
         "../../infrastructure/dist/lib/publishers/app-query-bus.d.ts",
         "../../infrastructure/dist/lib/publishers/event.publisher.d.ts",
+        "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts",
         "../../infrastructure/dist/lib/repositories/generic-query-repository.d.ts",
         "../../infrastructure/dist/lib/repositories/generic-query-key-value-repository.d.ts",
         "../../infrastructure/dist/lib/repositories/generic-repository.d.ts",
@@ -5913,6 +5943,7 @@
         "../../infrastructure/dist/lib/db-drivers/mongo-driver.d.ts",
         "../../infrastructure/dist/lib/events/aggregate-event.d.ts",
         "../../infrastructure/dist/lib/events/domain-event.d.ts",
+        "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -5943,9 +5974,21 @@
         "../events/comic-aggregate-event.ts",
         "../models/interfaces/icomic.ts"
       ],
-      "../../infrastructure/dist/lib/publishers/event.publisher.d.ts": [
+      "../../infrastructure/dist/lib/repositories/generic-repository.d.ts": [
+        "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts",
+        "../../infrastructure/dist/lib/model.d.ts",
+        "../../infrastructure/dist/lib/publishers/event.publisher.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts": [
         "../../../node_modules/@nestjs/cqrs/index.d.ts",
-        "../../../node_modules/rxjs/index.d.ts",
+        "../../infrastructure/dist/lib/publishers/app-command-bus.d.ts",
+        "../../../node_modules/@nestjs/core/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -8779,6 +8822,14 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../../infrastructure/dist/lib/events/domain-event.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts": [
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",

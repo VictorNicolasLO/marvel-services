@@ -18,13 +18,11 @@ let CreateCharacterInteractionHandler = class CreateCharacterInteractionHandler 
         this.repository = repository;
     }
     async execute(command) {
-        console.log("HANDLER");
         const characterInteractionExist = await this.repository.findOne({
             id: command.characterInteractionDto.id,
         });
-        console.log(characterInteractionExist);
         if (characterInteractionExist) {
-            throw new common_1.BadRequestException("characterInteractionExist already exist");
+            throw new common_1.BadRequestException(`characterInteractionExist with id: ${command.characterInteractionDto.id} already exist`);
         }
         const characterInteraction = await this.repository.create(command.characterInteractionDto);
         return characterInteraction.toDto();

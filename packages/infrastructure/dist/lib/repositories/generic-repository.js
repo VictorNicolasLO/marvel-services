@@ -6,27 +6,27 @@ class GenericRepository {
         this.driver = driver;
         this.eventPublisher = eventPublisher;
         const ModelClass = this.eventPublisher.mergeClassContext(RawModelClass);
-        this.find = async (filter) => (await driver.find(filter)).map(obj => new ModelClass(obj, { isInRepository: true }));
-        this.findOne = async (filter) => {
-            const dto = await driver.findOne(filter);
+        this.find = async (filter) => (await driver.find(filter)).map((obj) => new ModelClass(obj, { isInRepository: true }));
+        this.findOne = async (filter, options) => {
+            const dto = await driver.findOne(filter, options);
             if (dto) {
                 return new ModelClass(dto, { isInRepository: true });
             }
             else
                 return null;
         };
-        this.findById = async (id) => {
-            const dto = await driver.findById(id);
+        this.findById = async (id, options) => {
+            const dto = await driver.findById(id, options);
             if (dto)
                 return new ModelClass(dto, { isInRepository: true });
             else
                 return null;
         };
-        this.create = async (dto) => {
+        this.create = async (dto, options) => {
             const model = new ModelClass(dto);
             if (model.create)
                 model.create();
-            await driver.insert(model.toDto());
+            await driver.insert(model.toDto(), options);
             model.commit();
             model.__isInRepository = true;
             return model;
@@ -55,6 +55,7 @@ class GenericRepository {
             model.commit();
             return model;
         };
+        this.transaction = this.driver.transaction;
     }
 }
 exports.GenericRepository = GenericRepository;

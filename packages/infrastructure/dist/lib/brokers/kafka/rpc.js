@@ -83,7 +83,9 @@ class Rpc {
                     acks: 0,
                 });
             }
-        }, default_config_1.defaultRequestTopic(topic));
+        }, topic.startsWith("command")
+            ? default_config_1.defaultCommandTopic(topic)
+            : default_config_1.defaultRequestTopic(topic));
     }
     request(topic, data, acks) {
         return new Promise(async (resolve, reject) => {
@@ -113,7 +115,11 @@ class Rpc {
             else {
                 console.log(topic);
                 await this.kafkaClient.createTopics({
-                    topics: [default_config_1.defaultRequestTopic(topic)],
+                    topics: [
+                        topic.startsWith("command")
+                            ? default_config_1.defaultRequestTopic(topic)
+                            : default_config_1.defaultRequestTopic(topic),
+                    ],
                 });
                 run();
                 this.createdTopics[topic] = true;

@@ -41,6 +41,7 @@ class Subscriber {
         console.log("CONSUMER RUNNING");
         await this.consumer.run({
             autoCommit: true,
+            partitionsConsumedConcurrently: 1000,
             eachMessage: async (message) => {
                 console.log("llego");
                 console.log(message.partition, message.topic);

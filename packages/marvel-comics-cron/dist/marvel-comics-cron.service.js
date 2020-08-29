@@ -29,6 +29,9 @@ let MarvelComicsCronService = MarvelComicsCronService_1 = class MarvelComicsCron
         this.logger = new common_1.Logger(MarvelComicsCronService_1.name);
         this.loading = false;
     }
+    onModuleInit() {
+        this.handleCron();
+    }
     async handleCron() {
         this.logger.log("Try job");
         if (!this.loading) {
@@ -75,7 +78,7 @@ let MarvelComicsCronService = MarvelComicsCronService_1 = class MarvelComicsCron
     }
 };
 __decorate([
-    schedule_1.Cron(schedule_1.CronExpression.EVERY_5_SECONDS),
+    schedule_1.Cron(schedule_1.CronExpression.EVERY_HOUR),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
     __metadata("design:returntype", Promise)

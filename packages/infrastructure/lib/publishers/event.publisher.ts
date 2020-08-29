@@ -8,6 +8,7 @@ import {
 import { Subject, async } from "rxjs";
 import { Injectable } from "@nestjs/common";
 import { KafkaBroker } from "../brokers/kafka";
+import { AppEventBus } from "./app-event-bus";
 
 const PREFIX = process.env.BROKER_PREFIX || "";
 
@@ -17,7 +18,7 @@ export class AppEventPublisher
   implements IEventPublisher, IMessageSource {
   domainName: string;
   eventClasses: any[] = [];
-  constructor(private es: EventBus) {
+  constructor(private es: AppEventBus) {
     super(es);
   }
 
@@ -61,18 +62,25 @@ export class AppEventPublisher
       true
     );
     const topicsCallbacks: {
-      [topic: string]: ((msg: any) => Promise<void>)[];
+      [topic: string]: ((msg: any) => any)[];
     } = {};
     this.eventClasses.forEach(async (EventClass) => {
-      const onEvent = async (msg) => {
-        // Await or not await ?
+      const onEvent = (msg) => {
+        // Await or not await ? TODO make concurrent feature optional!
         console.log(this.domainName);
         console.log(msg);
         console.log(msg.type);
         console.log(EventClass.name);
         if (msg.type === EventClass.name) {
           const obj = new EventClass();
-          return await subject.next(Object.setPrototypeOf(msg.data, obj));
+          return new Promise((resolve, reject) => {
+            subject.next(
+              Object.setPrototypeOf(
+                { ...msg.data, __promise: { resolve, reject } },
+                obj
+              )
+            );
+          });
         }
       };
 
@@ -109,5 +117,21 @@ export class AppEventPublisher
 
   public registerEvents(eventClasses: any[]) {
     this.eventClasses = eventClasses;
+  }
+
+  mergeClassContext(metatype): any {
+    const eventBus = this.es;
+    return class extends metatype {
+      publish(event) {
+        eventBus.publish(event);
+      }
+    };
+  }
+  mergeObjectContext(object) {
+    const eventBus = this.es;
+    object.publish = (event) => {
+      eventBus.publish(event);
+    };
+    return object;
   }
 }

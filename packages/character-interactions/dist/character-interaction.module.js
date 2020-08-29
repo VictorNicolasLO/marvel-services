@@ -17,7 +17,7 @@ const create_character_interaction_handler_1 = require("./commands/handlers/crea
 const comics_1 = require("@marvel/comics");
 const comics_saga_1 = require("./sagas/comics.saga");
 const DOMAIN_NAME = "character-interactions";
-const GROUP_ID_PREFIX = "v7";
+const SUBFIX = "v4";
 let CharacterInteractionModule = class CharacterInteractionModule {
     constructor(command$, event$, eventPublisher) {
         this.command$ = command$;
@@ -25,13 +25,12 @@ let CharacterInteractionModule = class CharacterInteractionModule {
         this.eventPublisher = eventPublisher;
     }
     onModuleInit() {
-        this.eventPublisher.groupIdPrefix = GROUP_ID_PREFIX;
+        this.eventPublisher.groupIdPrefix = SUBFIX;
         this.eventPublisher.setDomainName(DOMAIN_NAME);
         this.eventPublisher.registerEvents([comics_1.ComicCreatedEventDomain]);
         this.eventPublisher.bridgeEventsTo(this.event$.subject$);
         this.event$.publisher = this.eventPublisher;
         this.event$.registerSagas([comics_saga_1.ComicsSaga]);
-        this.command$.groupIdPrefix = GROUP_ID_PREFIX;
         this.command$.domainName = DOMAIN_NAME;
         this.command$.register([create_character_interaction_handler_1.CreateCharacterInteractionHandler]);
     }
@@ -45,10 +44,11 @@ CharacterInteractionModule = __decorate([
             infrastructure_1.AppCommandBus,
             create_character_interaction_handler_1.CreateCharacterInteractionHandler,
             comics_saga_1.ComicsSaga,
+            infrastructure_1.AppEventBus,
         ],
     }),
     __metadata("design:paramtypes", [infrastructure_1.AppCommandBus,
-        cqrs_1.EventBus,
+        infrastructure_1.AppEventBus,
         infrastructure_1.AppEventPublisher])
 ], CharacterInteractionModule);
 exports.CharacterInteractionModule = CharacterInteractionModule;

@@ -6,48 +6,78 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.RedisDriver = void 0;
 const db_driver_1 = require("./db-driver");
 const redis_1 = __importDefault(require("redis"));
-const redlock_1 = __importDefault(require("redlock"));
+const delay_1 = require("../../utils/delay");
+const common_1 = require("@nestjs/common");
 const { promisify } = require("util");
 console.log(process.env.REDIS_URL);
-let client;
-let getAsync;
-let putAsync;
-let redLock;
+const LOCK_TIMEOUT = 1000;
+const RETRY_DURATION = 100;
+const RETRY_LIMIT = 1000;
 class RedisDriver extends db_driver_1.KeyValueDbDriver {
     constructor(prefix) {
         super();
         this.prefix = prefix;
-        if (!client) {
-            client = redis_1.default.createClient({
+        if (!RedisDriver.client) {
+            RedisDriver.client = redis_1.default.createClient({
                 url: process.env.REDIS_URL || "localhost",
             });
-            getAsync = promisify(client.get).bind(client);
-            putAsync = promisify(client.set).bind(client);
-            redLock = new redlock_1.default([client], {
-                retryCount: 1000,
-                retryDelay: 500,
-            });
+            RedisDriver.getAsync = promisify(RedisDriver.client.get).bind(RedisDriver.client);
+            RedisDriver.putAsync = promisify(RedisDriver.client.set).bind(RedisDriver.client);
+            RedisDriver.putAsync = promisify(RedisDriver.client.set).bind(RedisDriver.client);
+            RedisDriver.setnxAsync = promisify(RedisDriver.client.setnx).bind(RedisDriver.client);
+            RedisDriver.getsetAsync = promisify(RedisDriver.client.getset).bind(RedisDriver.client);
         }
     }
     put(key, value) {
-        return putAsync(`${this.prefix}/${key}`, JSON.stringify(value));
+        return RedisDriver.putAsync(`${this.prefix}/${key}`, JSON.stringify(value));
     }
     async get(key) {
-        return JSON.parse(await getAsync(`${this.prefix}/${key}`));
+        return JSON.parse((await RedisDriver.getAsync(`${this.prefix}/${key}`)));
     }
     async getAndLock(key) {
-        const lockedResource = await redLock.lock(`${this.prefix}/${key}`, 1000);
-        let value;
-        try {
-            value = JSON.parse(lockedResource.value);
-        }
-        catch (e) {
-            value = null;
-        }
-        return {
-            value,
-            unlock: lockedResource.unlock.bind(lockedResource),
+        const lockKey = `lock.${this.prefix}/${key}`;
+        const now = Date.now();
+        const checkLock = async () => {
+            const isLockedNx = (await RedisDriver.setnxAsync(lockKey, now + LOCK_TIMEOUT + 1)) === 0;
+            if (!isLockedNx) {
+                return true;
+            }
+            const timeout = await RedisDriver.getAsync(lockKey);
+            if (now > timeout) {
+                const newtimeout = await RedisDriver.getsetAsync(lockKey, now + LOCK_TIMEOUT + 1);
+                if (newtimeout !== timeout) {
+                    return true;
+                }
+                return false;
+            }
+            else {
+                return false;
+            }
         };
+        const getData = async () => {
+            return {
+                value: await this.get(key),
+                unlock: () => {
+                    return RedisDriver.putAsync(lockKey, null);
+                },
+            };
+        };
+        const isLocked = await checkLock();
+        if (!isLocked) {
+            return await getData();
+        }
+        else {
+            let retryIntents = 0;
+            do {
+                await delay_1.delay(RETRY_DURATION);
+                const isLocked = await checkLock();
+                if (!isLocked) {
+                    return await getData();
+                }
+                retryIntents++;
+            } while (retryIntents <= RETRY_LIMIT);
+            throw new common_1.RequestTimeoutException("Redis lock retry limit exceded");
+        }
     }
 }
 exports.RedisDriver = RedisDriver;

@@ -3,7 +3,7 @@ import { KafkaConfig, ITopicConfig, ConsumerConfig } from "kafkajs";
 
 export const defaultEventTopicConfig = (name: string): ITopicConfig => ({
   topic: name,
-  numPartitions: 10,
+  numPartitions: 30,
   replicationFactor: 1,
   configEntries: [{ name: "retention.ms", value: "-1" }],
 });
@@ -17,9 +17,16 @@ export const defaultReplyTopic = (name: string): ITopicConfig => ({
 
 export const defaultRequestTopic = (name: string): ITopicConfig => ({
   topic: name,
-  numPartitions: 5,
+  numPartitions: 30,
   replicationFactor: 1,
   configEntries: [{ name: "retention.ms", value: "0" }],
+});
+
+export const defaultCommandTopic = (name: string): ITopicConfig => ({
+  topic: name,
+  numPartitions: 5,
+  replicationFactor: 1,
+  configEntries: [{ name: "retention.ms", value: "86400000" }],
 });
 
 export const defaultClientConfig = {
@@ -29,12 +36,7 @@ export const defaultClientConfig = {
 
 export const defaultConsumerConfig = (groupId: string): ConsumerConfig => ({
   groupId: groupId + "-kafkajs-v2",
-});
-
-export const defaultConsumerSubscriberConfig = (
-  groupId: string
-): ConsumerConfig => ({
-  groupId: groupId + "-kafkajs-v2",
+  maxBytesPerPartition: 10,
 });
 
 export const defaultReplyConsumerconfig = (): ConsumerConfig => ({
@@ -44,6 +46,8 @@ export const defaultReplyConsumerconfig = (): ConsumerConfig => ({
 // -----------------
 
 export const kafkaConfig: KafkaConfig = {
-  brokers: [process.env.KAFKA_BROKER_LIST || "localhost:9092"],
+  brokers: process.env.KAFKA_BROKER_LIST
+    ? process.env.KAFKA_BROKER_LIST.split(",")
+    : ["localhost:9092"],
   clientId: "app",
 };

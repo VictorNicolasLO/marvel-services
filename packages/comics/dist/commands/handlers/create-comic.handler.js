@@ -14,6 +14,7 @@ const create_comic_command_1 = require("../impl/create-comic.command");
 const comics_repository_1 = require("../../repositories/comics.repository");
 const comic_created_event_1 = require("../../events/domain/comic-created.event");
 const common_1 = require("@nestjs/common");
+const infrastructure_1 = require("@marvel/infrastructure");
 let CreateComicHandler = class CreateComicHandler {
     constructor(eventBus, repository) {
         this.eventBus = eventBus;
@@ -21,10 +22,10 @@ let CreateComicHandler = class CreateComicHandler {
     }
     async execute(command) {
         const comicExist = await this.repository.findOne({
-            title: command.comicDto.title,
+            id: command.comicDto.id,
         });
         if (comicExist) {
-            throw new common_1.BadRequestException("Comic already exist");
+            throw new common_1.BadRequestException(`Comic with id ${command.comicDto.id} already exist`);
         }
         const comic = await this.repository.create(command.comicDto);
         const comicDto = comic.toDto();
@@ -34,7 +35,7 @@ let CreateComicHandler = class CreateComicHandler {
 };
 CreateComicHandler = __decorate([
     cqrs_1.CommandHandler(create_comic_command_1.CreateComicCommand),
-    __metadata("design:paramtypes", [cqrs_1.EventBus,
+    __metadata("design:paramtypes", [infrastructure_1.AppEventBus,
         comics_repository_1.ComicsRepository])
 ], CreateComicHandler);
 exports.CreateComicHandler = CreateComicHandler;

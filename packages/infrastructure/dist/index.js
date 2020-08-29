@@ -8,6 +8,8 @@ var app_query_bus_1 = require("./lib/publishers/app-query-bus");
 Object.defineProperty(exports, "AppQueryBus", { enumerable: true, get: function () { return app_query_bus_1.AppQueryBus; } });
 var event_publisher_1 = require("./lib/publishers/event.publisher");
 Object.defineProperty(exports, "AppEventPublisher", { enumerable: true, get: function () { return event_publisher_1.AppEventPublisher; } });
+var app_event_bus_1 = require("./lib/publishers/app-event-bus");
+Object.defineProperty(exports, "AppEventBus", { enumerable: true, get: function () { return app_event_bus_1.AppEventBus; } });
 var generic_query_repository_1 = require("./lib/repositories/generic-query-repository");
 Object.defineProperty(exports, "GenericQueryRepository", { enumerable: true, get: function () { return generic_query_repository_1.GenericQueryRepository; } });
 var generic_query_key_value_repository_1 = require("./lib/repositories/generic-query-key-value-repository");
@@ -22,4 +24,6 @@ var aggregate_event_1 = require("./lib/events/aggregate-event");
 Object.defineProperty(exports, "AggregateEvent", { enumerable: true, get: function () { return aggregate_event_1.AggregateEvent; } });
 var domain_event_1 = require("./lib/events/domain-event");
 Object.defineProperty(exports, "DomainEvent", { enumerable: true, get: function () { return domain_event_1.DomainEvent; } });
+var saga_wrapper_1 = require("./lib/sagas/saga-wrapper");
+Object.defineProperty(exports, "sagaWrapper", { enumerable: true, get: function () { return saga_wrapper_1.sagaWrapper; } });
 //# sourceMappingURL=index.js.map

@@ -11,8 +11,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const cqrs_1 = require("@nestjs/cqrs");
+const infrastructure_1 = require("@marvel/infrastructure");
 const operators_1 = require("rxjs/operators");
-const comics_1 = require("@marvel/comics");
 const create_character_interaction_command_1 = require("../commands/impl/create-character-interaction.command");
 const get_character_couples_1 = require("../utils/get-character-couples");
 const CAPTAIN_AMERICA_ID = 1009220;
@@ -27,7 +27,7 @@ const containsIronManOrCaptainAmerica = (characterCouple) => characterCouple[0].
 let ComicsSaga = class ComicsSaga {
     constructor() {
         this.signedUp = (events$) => {
-            return events$.pipe(cqrs_1.ofType(comics_1.ComicCreatedEventDomain), operators_1.flatMap(({ comic }) => {
+            return events$.pipe(operators_1.flatMap(infrastructure_1.sagaWrapper(({ comic }) => {
                 const couples = get_character_couples_1.getCharacterCouples(comic.characters);
                 const res = couples.map((characterCouples) => characterCouples
                     .filter(containsIronManOrCaptainAmerica)
@@ -38,12 +38,15 @@ let ComicsSaga = class ComicsSaga {
                     return new create_character_interaction_command_1.CreateCharacterInteractionCommand({
                         id,
                         characters,
-                        comic: { id: comic.id, image: comic.image, title: comic.title },
+                        comic: {
+                            id: comic.id,
+                            image: comic.image,
+                            title: comic.title,
+                        },
                     });
                 }));
-                const finalRes = res.filter((arr) => arr.length > 0).reduce(flat, []);
-                return finalRes;
-            }));
+                return res.filter((arr) => arr.length > 0).reduce(flat, []);
+            })));
         };
     }
 };

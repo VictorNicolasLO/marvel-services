@@ -1278,16 +1278,20 @@
         "signature": "8e7c4209b5ed087f83698b188f104a72dc80a844b0a6f6e9f0808f3b3498334d"
       },
       "../../infrastructure/dist/lib/publishers/app-command-bus.d.ts": {
-        "version": "552c0edab4b8c5e22f536203dab4631e807f7e733eb6d0b0446a784fa75c6f93",
-        "signature": "552c0edab4b8c5e22f536203dab4631e807f7e733eb6d0b0446a784fa75c6f93"
+        "version": "dbc3f3fb4b5e0e4c94d6f0225a3a2d64f14158e888a4e341a0b3017c6fbbe57e",
+        "signature": "dbc3f3fb4b5e0e4c94d6f0225a3a2d64f14158e888a4e341a0b3017c6fbbe57e"
       },
       "../../infrastructure/dist/lib/publishers/app-query-bus.d.ts": {
-        "version": "200b6c9e4132c00dda6c6e61d2b6c39a0a93ecf2ee8f0bf6ddb16a56384a805e",
-        "signature": "200b6c9e4132c00dda6c6e61d2b6c39a0a93ecf2ee8f0bf6ddb16a56384a805e"
+        "version": "c1929dccca1a8e3a48db428354aa63124b587a7f451cc179311fbaccb52bed97",
+        "signature": "c1929dccca1a8e3a48db428354aa63124b587a7f451cc179311fbaccb52bed97"
+      },
+      "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts": {
+        "version": "3dc45208b4be14fff206d12903e79025da6625f5af70174446dbcd34e0bca867",
+        "signature": "3dc45208b4be14fff206d12903e79025da6625f5af70174446dbcd34e0bca867"
       },
       "../../infrastructure/dist/lib/publishers/event.publisher.d.ts": {
-        "version": "2b26569a5629badf6a3ed900aed77d0d2ba131871f4d8f04c1657ac52a3fc990",
-        "signature": "2b26569a5629badf6a3ed900aed77d0d2ba131871f4d8f04c1657ac52a3fc990"
+        "version": "db05acbfa2934ba1edb2ad2c053ed332b176cb09c094bed4fd44fca9c253ddba",
+        "signature": "db05acbfa2934ba1edb2ad2c053ed332b176cb09c094bed4fd44fca9c253ddba"
       },
       "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts": {
         "version": "66337a32f120bf833ef4891166db23a2aa0f20a4ef6711bc934e088864e0e652",
@@ -1302,8 +1306,8 @@
         "signature": "2670dd380d7b46210bc404b0a3c2e6e8ee4f5c60f8289d538cd6e131b9ec824d"
       },
       "../../infrastructure/dist/lib/repositories/generic-repository.d.ts": {
-        "version": "59a66a5fcc815f7e710cb8edca1da8a30b1c6672019355750941e2e9ee6891a9",
-        "signature": "59a66a5fcc815f7e710cb8edca1da8a30b1c6672019355750941e2e9ee6891a9"
+        "version": "e3dbe0fac39e33ed1b821237c199c1d6065ddc60de7148f929215cc30be5882a",
+        "signature": "e3dbe0fac39e33ed1b821237c199c1d6065ddc60de7148f929215cc30be5882a"
       },
       "../../infrastructure/dist/lib/db-drivers/redis-driver.d.ts": {
         "version": "2f32a09bd4668e4a177dd6c7d577929fc7d5584a6740a95bf3e30123d5c5cf10",
@@ -1321,9 +1325,13 @@
         "version": "4ee0bf308e31c445c7b054e832fec130a6dedab3fe29c993950fd05944024785",
         "signature": "4ee0bf308e31c445c7b054e832fec130a6dedab3fe29c993950fd05944024785"
       },
+      "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts": {
+        "version": "da4a80ce94198750d9cab9b9d4ee01ec25d30522e857afe485dffa60b13d9929",
+        "signature": "da4a80ce94198750d9cab9b9d4ee01ec25d30522e857afe485dffa60b13d9929"
+      },
       "../../infrastructure/dist/index.d.ts": {
-        "version": "efaaf25a2aaaddf24136508b35b58012f139e0544bc9acaec3d6ecaa2e03bfc9",
-        "signature": "efaaf25a2aaaddf24136508b35b58012f139e0544bc9acaec3d6ecaa2e03bfc9"
+        "version": "56a22e1e6d70bdacff96a68beedefd655bfced53bf9a3c35d002dea6e15cf2df",
+        "signature": "56a22e1e6d70bdacff96a68beedefd655bfced53bf9a3c35d002dea6e15cf2df"
       },
       "../repositories/interfaces/istatus.ts": {
         "version": "5698e5e83b8e37ab14fc40d5399bf71f9f414ce2dfdf68bcec708e366c310f7f",
@@ -1594,8 +1602,8 @@
         "signature": "a6255bcc474f63b92f3375c881ac7ed306cb612e1f2d614e1f13f0bf1000b5a2"
       },
       "../marvel-comics-cron.service.ts": {
-        "version": "d631b2f88d2e969a8ea6e1ee9465c914a82164db97c5dddb8c16ce7e3f6e173a",
-        "signature": "35d79a9ad6d4e62dfeaf3544b881233bf0478b2bf2474f1a5312cf4b8688db9c"
+        "version": "8ff3767e9033b8065ca68d241030560190343b82d5ce49f59e35ee0585bff299",
+        "signature": "04c31feba23538bd5c194240c2150c259a4d4969c142922189ef9417b5c7b97b"
       },
       "../marvel-comics-cron.module.ts": {
         "version": "3467b781ea622cf2df4e87ec336fd665c060767ad0460cbe2f90aebbc2bcce9c",
@@ -4865,9 +4873,21 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts": [
+        "../../../node_modules/@nestjs/cqrs/index.d.ts",
+        "../../infrastructure/dist/lib/publishers/app-command-bus.d.ts",
+        "../../../node_modules/@nestjs/core/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../../infrastructure/dist/lib/publishers/event.publisher.d.ts": [
         "../../../node_modules/@nestjs/cqrs/index.d.ts",
         "../../../node_modules/rxjs/index.d.ts",
+        "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -4904,7 +4924,7 @@
       "../../infrastructure/dist/lib/repositories/generic-repository.d.ts": [
         "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts",
         "../../infrastructure/dist/lib/model.d.ts",
-        "../../../node_modules/@nestjs/cqrs/index.d.ts",
+        "../../infrastructure/dist/lib/publishers/event.publisher.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -4946,11 +4966,20 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../../infrastructure/dist/index.d.ts": [
         "../../infrastructure/dist/lib/model.d.ts",
         "../../infrastructure/dist/lib/publishers/app-command-bus.d.ts",
         "../../infrastructure/dist/lib/publishers/app-query-bus.d.ts",
         "../../infrastructure/dist/lib/publishers/event.publisher.d.ts",
+        "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts",
         "../../infrastructure/dist/lib/repositories/generic-query-repository.d.ts",
         "../../infrastructure/dist/lib/repositories/generic-query-key-value-repository.d.ts",
         "../../infrastructure/dist/lib/repositories/generic-repository.d.ts",
@@ -4958,6 +4987,7 @@
         "../../infrastructure/dist/lib/db-drivers/mongo-driver.d.ts",
         "../../infrastructure/dist/lib/events/aggregate-event.d.ts",
         "../../infrastructure/dist/lib/events/domain-event.d.ts",
+        "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -5966,6 +5996,7 @@
         "../../infrastructure/dist/index.d.ts"
       ],
       "../marvel-comics-cron.service.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
         "../../infrastructure/dist/index.d.ts",
         "../repositories/sync-status-repository.ts",
         "../apis/marvel.api.ts"
@@ -6070,10 +6101,10 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../infrastructure/dist/lib/repositories/generic-repository.d.ts": [
-        "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts",
-        "../../infrastructure/dist/lib/model.d.ts",
+      "../../infrastructure/dist/lib/publishers/event.publisher.d.ts": [
         "../../../node_modules/@nestjs/cqrs/index.d.ts",
+        "../../../node_modules/rxjs/index.d.ts",
+        "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -6086,6 +6117,7 @@
         "../../infrastructure/dist/lib/publishers/app-command-bus.d.ts",
         "../../infrastructure/dist/lib/publishers/app-query-bus.d.ts",
         "../../infrastructure/dist/lib/publishers/event.publisher.d.ts",
+        "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts",
         "../../infrastructure/dist/lib/repositories/generic-query-repository.d.ts",
         "../../infrastructure/dist/lib/repositories/generic-query-key-value-repository.d.ts",
         "../../infrastructure/dist/lib/repositories/generic-repository.d.ts",
@@ -6093,6 +6125,7 @@
         "../../infrastructure/dist/lib/db-drivers/mongo-driver.d.ts",
         "../../infrastructure/dist/lib/events/aggregate-event.d.ts",
         "../../infrastructure/dist/lib/events/domain-event.d.ts",
+        "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -6149,9 +6182,21 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../infrastructure/dist/lib/publishers/event.publisher.d.ts": [
+      "../../infrastructure/dist/lib/repositories/generic-repository.d.ts": [
+        "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts",
+        "../../infrastructure/dist/lib/model.d.ts",
+        "../../infrastructure/dist/lib/publishers/event.publisher.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts": [
         "../../../node_modules/@nestjs/cqrs/index.d.ts",
-        "../../../node_modules/rxjs/index.d.ts",
+        "../../infrastructure/dist/lib/publishers/app-command-bus.d.ts",
+        "../../../node_modules/@nestjs/core/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -9075,6 +9120,14 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../../infrastructure/dist/lib/events/domain-event.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts": [
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",

@@ -18,11 +18,12 @@ let CharacterInteractionCreatedHandler = class CharacterInteractionCreatedHandle
         this.readCharacterInteractionsRepository = readCharacterInteractionsRepository;
     }
     async handle({ characterInteraction }) {
-        await Promise.all(characterInteraction.characters.map(async (character, index) => {
+        for (let index = 0; index < characterInteraction.characters.length; index++) {
+            const character = characterInteraction.characters[index];
             const characterToAdd = characterInteraction.characters[index - 1] ||
                 characterInteraction.characters[index + 1];
             const nameId = generate_name_id_1.generateNameId(character.name);
-            const { value: interactionsFound, unlock, } = await this.readCharacterInteractionsRepository.getAndLock(nameId);
+            const interactionsFound = await this.readCharacterInteractionsRepository.get(nameId);
             const comicSummary = {
                 name: characterInteraction.comic.title,
                 image: characterInteraction.comic.image,
@@ -57,8 +58,7 @@ let CharacterInteractionCreatedHandler = class CharacterInteractionCreatedHandle
                     ],
                 });
             }
-            await unlock();
-        }));
+        }
     }
 };
 CharacterInteractionCreatedHandler = __decorate([

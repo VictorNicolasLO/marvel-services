@@ -1,5 +1,6 @@
-import { DbDriver } from './db-driver';
+import { DbDriver } from "./db-driver";
 export declare class MysqlDriver<T> extends DbDriver<T> {
+    transaction(): Promise<any>;
     findOne(filter: Partial<T>): Promise<T>;
     findById(id: string): Promise<T>;
     find(filter: Partial<T>): Promise<T[]>;

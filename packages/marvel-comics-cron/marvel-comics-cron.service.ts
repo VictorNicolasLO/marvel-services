@@ -1,4 +1,4 @@
-import { Injectable, Logger } from "@nestjs/common";
+import { Injectable, Logger, OnModuleInit } from "@nestjs/common";
 import { Cron, CronExpression } from "@nestjs/schedule";
 import { AppCommandBus } from "@marvel/infrastructure";
 import { SyncStatusRepository } from "./repositories/sync-status-repository";
@@ -12,7 +12,7 @@ const CAPTAIN_AMERICA_ID = 1009220;
 const IRON_MAN_ID = 1009368;
 const CHARACTERS = `${IRON_MAN_ID},${CAPTAIN_AMERICA_ID}`;
 @Injectable()
-export class MarvelComicsCronService {
+export class MarvelComicsCronService implements OnModuleInit {
   private logger = new Logger(MarvelComicsCronService.name);
   private loading = false;
   constructor(
@@ -21,7 +21,11 @@ export class MarvelComicsCronService {
     private marvelApi: MarvelApi
   ) {}
 
-  @Cron(CronExpression.EVERY_5_SECONDS)
+  onModuleInit() {
+    this.handleCron();
+  }
+
+  @Cron(CronExpression.EVERY_HOUR)
   async handleCron() {
     this.logger.log("Try job");
     if (!this.loading) {

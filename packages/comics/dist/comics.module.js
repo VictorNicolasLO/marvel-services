@@ -14,6 +14,7 @@ const comics_repository_1 = require("./repositories/comics.repository");
 const cqrs_1 = require("@nestjs/cqrs");
 const infrastructure_1 = require("@marvel/infrastructure");
 const create_comic_handler_1 = require("./commands/handlers/create-comic.handler");
+const PREFIX = "v2";
 let ComicsModule = class ComicsModule {
     constructor(command$, event$, eventPublisher) {
         this.command$ = command$;
@@ -21,10 +22,12 @@ let ComicsModule = class ComicsModule {
         this.eventPublisher = eventPublisher;
     }
     onModuleInit() {
+        this.eventPublisher.groupIdPrefix = PREFIX;
         this.eventPublisher.setDomainName("comics");
         this.eventPublisher.registerEvents([]);
         this.eventPublisher.bridgeEventsTo(this.event$.subject$);
         this.event$.publisher = this.eventPublisher;
+        this.command$.groupIdPrefix = PREFIX;
         this.command$.domainName = "comics";
         this.command$.register([create_comic_handler_1.CreateComicHandler]);
     }
@@ -37,10 +40,11 @@ ComicsModule = __decorate([
             infrastructure_1.AppEventPublisher,
             create_comic_handler_1.CreateComicHandler,
             infrastructure_1.AppCommandBus,
+            infrastructure_1.AppEventBus,
         ],
     }),
     __metadata("design:paramtypes", [infrastructure_1.AppCommandBus,
-        cqrs_1.EventBus,
+        infrastructure_1.AppEventBus,
         infrastructure_1.AppEventPublisher])
 ], ComicsModule);
 exports.ComicsModule = ComicsModule;

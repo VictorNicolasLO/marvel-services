@@ -13,6 +13,7 @@ exports.AppEventPublisher = void 0;
 const cqrs_1 = require("@nestjs/cqrs");
 const common_1 = require("@nestjs/common");
 const kafka_1 = require("../brokers/kafka");
+const app_event_bus_1 = require("./app-event-bus");
 const PREFIX = process.env.BROKER_PREFIX || "";
 let AppEventPublisher = class AppEventPublisher extends cqrs_1.EventPublisher {
     constructor(es) {
@@ -47,15 +48,16 @@ let AppEventPublisher = class AppEventPublisher extends cqrs_1.EventPublisher {
         const broker = new kafka_1.KafkaBroker({ groupId: this.groupIdPrefix + this.domainName }, true);
         const topicsCallbacks = {};
         this.eventClasses.forEach(async (EventClass) => {
-            const onEvent = async (msg) => {
-                await new Promise((resolve) => setTimeout(resolve, 1000));
+            const onEvent = (msg) => {
                 console.log(this.domainName);
                 console.log(msg);
                 console.log(msg.type);
                 console.log(EventClass.name);
                 if (msg.type === EventClass.name) {
                     const obj = new EventClass();
-                    return await subject.next(Object.setPrototypeOf(msg.data, obj));
+                    return new Promise((resolve, reject) => {
+                        subject.next(Object.setPrototypeOf(Object.assign(Object.assign({}, msg.data), { __promise: { resolve, reject } }), obj));
+                    });
                 }
             };
             if (EventClass.domainName) {
@@ -89,10 +91,25 @@ let AppEventPublisher = class AppEventPublisher extends cqrs_1.EventPublisher {
     registerEvents(eventClasses) {
         this.eventClasses = eventClasses;
     }
+    mergeClassContext(metatype) {
+        const eventBus = this.es;
+        return class extends metatype {
+            publish(event) {
+                eventBus.publish(event);
+            }
+        };
+    }
+    mergeObjectContext(object) {
+        const eventBus = this.es;
+        object.publish = (event) => {
+            eventBus.publish(event);
+        };
+        return object;
+    }
 };
 AppEventPublisher = __decorate([
     common_1.Injectable(),
-    __metadata("design:paramtypes", [cqrs_1.EventBus])
+    __metadata("design:paramtypes", [app_event_bus_1.AppEventBus])
 ], AppEventPublisher);
 exports.AppEventPublisher = AppEventPublisher;
 //# sourceMappingURL=event.publisher.js.map

@@ -26,7 +26,7 @@ class MongoDriver extends db_driver_1.DbDriver {
     constructor(collection) {
         super();
         const customSchema = new mongoose_1.Schema({
-            id: String,
+            id: { String, unique: true, index: true },
         }, {
             strict: false,
             id: false,
@@ -34,34 +34,48 @@ class MongoDriver extends db_driver_1.DbDriver {
         this.collection = mongoose_1.default.model(collection, customSchema);
     }
     static init(url) {
-        mongoose_1.default.connect(url, err => {
+        mongoose_1.default
+            .connect(url, (err) => {
             if (!err) {
-                console.log('MONGO RUNNING');
+                console.log("MONGO RUNNING");
             }
             else {
                 console.log(err);
             }
+        })
+            .then((db) => {
+            MongoDriver.db = db;
         });
     }
-    async findOne(filter) {
-        const result = await this.collection.findOne(filter);
+    async findOne(filter, options = {}) {
+        const operation = this.collection.findOne(filter);
+        const result = await (options.session
+            ? operation.session(options.session)
+            : operation);
+        return result && result.toObject();
+    }
+    async findById(id, options = {}) {
+        const operation = this.collection.findOne({ id });
+        const result = await (options.session
+            ? operation.session(options.session)
+            : operation);
         return result && result.toObject();
     }
     async find(filter) {
-        return (await this.collection.find(filter)).map(item => item.toObject());
+        return (await this.collection.find(filter)).map((item) => item.toObject());
     }
-    async findById(id) {
-        const result = await this.collection.findOne({ id });
-        return result && result.toObject();
-    }
-    async insert(data) {
-        return (await this.collection.create(data));
+    async insert(data, options = {}) {
+        return (await this.collection.create(data, options));
     }
     async update(filter, data) {
         return await this.collection.update(filter, data);
     }
     async delete(data) {
         return await this.collection.deleteOne(data.id);
+    }
+    async transaction() {
+        const session = await MongoDriver.db.startSession();
+        return session;
     }
 }
 exports.MongoDriver = MongoDriver;

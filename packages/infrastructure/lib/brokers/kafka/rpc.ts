@@ -3,6 +3,7 @@ import {
   defaultReplyTopic,
   defaultReplyConsumerconfig,
   defaultRequestTopic,
+  defaultCommandTopic,
 } from "./default-config";
 import { Kafka, Admin, Consumer, EachMessagePayload, Producer } from "kafkajs";
 import { RequestTimeoutException } from "@nestjs/common";
@@ -102,7 +103,9 @@ export class Rpc {
           });
         }
       },
-      defaultRequestTopic(topic)
+      topic.startsWith("command")
+        ? defaultCommandTopic(topic)
+        : defaultRequestTopic(topic)
     );
   }
 
@@ -137,7 +140,11 @@ export class Rpc {
       } else {
         console.log(topic);
         await this.kafkaClient.createTopics({
-          topics: [defaultRequestTopic(topic)],
+          topics: [
+            topic.startsWith("command")
+              ? defaultRequestTopic(topic)
+              : defaultRequestTopic(topic),
+          ],
         });
         run();
         this.createdTopics[topic] = true;

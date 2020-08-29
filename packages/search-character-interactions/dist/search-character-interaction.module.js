@@ -24,7 +24,7 @@ let SearchCharacterInteractionModule = class SearchCharacterInteractionModule {
     }
     onModuleInit() {
         this.event$.register([character_interaction_created_handler_1.CharacterInteractionCreatedHandler]);
-        this.eventPublisher.groupIdPrefix = "x10";
+        this.eventPublisher.groupIdPrefix = "v2";
         this.eventPublisher.setDomainName("search-character-interactions");
         this.eventPublisher.registerEvents([character_interactions_1.CharacterInteractionCreatedEvent]);
         this.eventPublisher.bridgeEventsTo(this.event$.subject$);
@@ -37,15 +37,17 @@ SearchCharacterInteractionModule = __decorate([
     common_1.Module({
         imports: [cqrs_1.CqrsModule],
         providers: [
+            infrastructure_1.AppCommandBus,
             read_character_interactions_repository_1.ReadCharacterInteractionsRepository,
             infrastructure_1.AppEventPublisher,
             infrastructure_1.AppQueryBus,
             character_interaction_created_handler_1.CharacterInteractionCreatedHandler,
             get_character_interaction_handler_1.GetCharacterInteractionByNameHandler,
+            infrastructure_1.AppEventBus,
         ],
     }),
     __metadata("design:paramtypes", [infrastructure_1.AppQueryBus,
-        cqrs_1.EventBus,
+        infrastructure_1.AppEventBus,
         infrastructure_1.AppEventPublisher])
 ], SearchCharacterInteractionModule);
 exports.SearchCharacterInteractionModule = SearchCharacterInteractionModule;
