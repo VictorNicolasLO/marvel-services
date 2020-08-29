@@ -1817,7 +1817,7 @@
         "affectsGlobalScope": false
       },
       "../lib/brokers/kafka/default-config.ts": {
-        "version": "60de37fc915db53297f5cf132dc377c72fcd1e5c66358baf2a752e07fd8da6c3",
+        "version": "51cc6331c302f2de89ef31ff60c595b49308e3814dfe6b05018efd13b5c6ffcd",
         "signature": "80ea99b5c45707fb2e6b66e556542120adc9e7f0f6e6d8a759db66f3eaf3bd12",
         "affectsGlobalScope": false
       },
@@ -1827,7 +1827,7 @@
         "affectsGlobalScope": false
       },
       "../lib/brokers/kafka/rpc.ts": {
-        "version": "7fb9e3da4e0e01f428bc63d1b33d4af099372bdb2cca7b437214d05e7befccf6",
+        "version": "66129626372cce70992418da1c6c58ae3c29e79d7c9d02a408e6f05c0c8ed00e",
         "signature": "45e6831620cc591940d924dd4610f92ef3ac7f3accbb68176cfb5f2658364b05",
         "affectsGlobalScope": false
       },
@@ -1887,7 +1887,7 @@
         "affectsGlobalScope": false
       },
       "../lib/db-drivers/redis-driver.ts": {
-        "version": "cc2a40a67e4df1659c2be98e037b47b16f061427b3dadadb9bf0f2469c4f9cdd",
+        "version": "f98aae94d92522e97034e5cfc44fa74d9907a77baac6c480a8f3c14b856079b6",
         "signature": "f8ef46236e22509ad9bddb570243f8775a3f90e5cbdc2bd62a691229bc66fa04",
         "affectsGlobalScope": false
       },
@@ -1907,8 +1907,8 @@
         "affectsGlobalScope": false
       },
       "../lib/db-drivers/mongo-driver.ts": {
-        "version": "60963f7e127b05b232a4ea6ca638c649a8e91cc04222735009be1146817f3e75",
-        "signature": "6653f736442e1ee9f5ae5b65e8f1b06234c1a0cc0d3ba3150779cab6357fe35d",
+        "version": "174a7a2fc129f54bee5672d3da3d5ed3c163e0996ab98250f5928ba07377c59c",
+        "signature": "222398204fdf86c852f6e5231f188d3411b574fef29152ed3b41ab57128ae35a",
         "affectsGlobalScope": false
       },
       "../lib/events/aggregate-event.ts": {

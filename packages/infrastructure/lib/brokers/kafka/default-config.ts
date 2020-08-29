@@ -24,7 +24,7 @@ export const defaultRequestTopic = (name: string): ITopicConfig => ({
 
 export const defaultCommandTopic = (name: string): ITopicConfig => ({
   topic: name,
-  numPartitions: 5,
+  numPartitions: 30,
   replicationFactor: 1,
   configEntries: [{ name: "retention.ms", value: "86400000" }],
 });
@@ -36,7 +36,7 @@ export const defaultClientConfig = {
 
 export const defaultConsumerConfig = (groupId: string): ConsumerConfig => ({
   groupId: groupId + "-kafkajs-v2",
-  maxBytesPerPartition: 10,
+  maxBytesPerPartition: 1000,
 });
 
 export const defaultReplyConsumerconfig = (): ConsumerConfig => ({

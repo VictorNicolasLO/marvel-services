@@ -12,17 +12,19 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const cqrs_1 = require("@nestjs/cqrs");
 const operators_1 = require("rxjs/operators");
-const comics_1 = require("@marvel/comics");
 const create_character_creator_command_1 = require("../commands/impl/create-character-creator.command");
+const infrastructure_1 = require("@marvel/infrastructure");
 const CAPTAIN_AMERICA_ID = 1009220;
 const IRON_MAN_ID = 1009368;
 const hasIronManOrCaptainAmerica = ({ id }) => id == CAPTAIN_AMERICA_ID || id == IRON_MAN_ID;
+const flat = (current, newArr) => [...current, ...newArr];
 let ComicsSaga = class ComicsSaga {
     constructor() {
         this.signedUp = (events$) => {
-            return events$.pipe(cqrs_1.ofType(comics_1.ComicCreatedEventDomain), operators_1.flatMap(({ comic, __promise }) => {
+            return events$.pipe(operators_1.flatMap(infrastructure_1.sagaWrapper(({ comic }) => {
                 const validCharacters = comic.characters.filter(hasIronManOrCaptainAmerica);
-                const result = validCharacters.map((character) => {
+                return validCharacters
+                    .map((character) => {
                     return comic.creators.map((creator) => {
                         return new create_character_creator_command_1.CreateCharacterCreatorCommand({
                             character,
@@ -32,10 +34,9 @@ let ComicsSaga = class ComicsSaga {
                             role: creator.role,
                         });
                     });
-                });
-                __promise.resolve();
-                return result;
-            }));
+                })
+                    .reduce(flat, []);
+            })));
         };
     }
 };

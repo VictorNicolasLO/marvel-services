@@ -10,6 +10,7 @@ export class CreateCharacterCreatorHandler
 
   async execute(command: CreateCharacterCreatorCommand) {
     const session = await this.repository.transaction();
+    await session.startTransaction();
     const characterCreatorFound = await this.repository.findOne(
       {
         characterId: command.characterCreatorDto.characterId,
@@ -25,8 +26,8 @@ export class CreateCharacterCreatorHandler
       command.characterCreatorDto,
       { session }
     );
-    session.commitTransaction();
-    session.endSession();
+    await session.commitTransaction();
+    await session.endSession();
     return characterCreator.toDto();
   }
 }

@@ -8,7 +8,7 @@ export declare class MongoDriver<T> extends DbDriver<T> {
     findOne(filter: Partial<T>, options?: DbDriverOptions): Promise<T | null>;
     findById(id: string, options?: DbDriverOptions): Promise<T | null>;
     find(filter: Partial<T>): Promise<T[]>;
-    insert(data: T, options?: DbDriverOptions): Promise<T>;
+    insert(data: T, options: DbDriverOptions): Promise<T>;
     update(filter: Partial<T>, data: Partial<T>): Promise<T>;
     delete(data: Partial<T>): Promise<any>;
     transaction(): Promise<IDbsession>;

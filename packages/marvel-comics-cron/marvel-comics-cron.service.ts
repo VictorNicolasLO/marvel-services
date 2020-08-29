@@ -41,27 +41,28 @@ export class MarvelComicsCronService implements OnModuleInit {
         result = await this.marvelApi.getComics({
           limit: BATCH_NUMBER,
           offset,
-          orderBy: "onsaleDate",
           characters: CHARACTERS,
         });
         console.log(result);
         result.data.results.forEach((comic) => {
-          this.commandBus.execute(
-            new CreateComicCommand({
-              id: comic.id.toString(),
-              title: comic.title,
-              image: `${comic.thumbnail.path}/portrait_incredible.${comic.thumbnail.extension}`,
-              characters: comic.characters.items.map((character) => ({
-                id: extractIdFromUrl(character.resourceURI),
-                name: character.name,
-              })),
-              creators: comic.creators.items.map((creator) => ({
-                id: extractIdFromUrl(creator.resourceURI),
-                name: creator.name,
-                role: creator.role,
-              })),
-            })
-          );
+          this.commandBus
+            .execute(
+              new CreateComicCommand({
+                id: comic.id.toString(),
+                title: comic.title,
+                image: `${comic.thumbnail.path}/portrait_incredible.${comic.thumbnail.extension}`,
+                characters: comic.characters.items.map((character) => ({
+                  id: extractIdFromUrl(character.resourceURI),
+                  name: character.name,
+                })),
+                creators: comic.creators.items.map((creator) => ({
+                  id: extractIdFromUrl(creator.resourceURI),
+                  name: creator.name,
+                  role: creator.role,
+                })),
+              })
+            )
+            .catch(() => {});
         });
         offset += result.data.count;
         await this.syncStatusRepository.put("status", { lastOffset: offset });

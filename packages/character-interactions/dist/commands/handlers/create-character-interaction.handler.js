@@ -12,18 +12,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const cqrs_1 = require("@nestjs/cqrs");
 const create_character_interaction_command_1 = require("../impl/create-character-interaction.command");
 const character_interactions_repository_1 = require("../../repositories/character-interactions.repository");
-const common_1 = require("@nestjs/common");
 let CreateCharacterInteractionHandler = class CreateCharacterInteractionHandler {
     constructor(repository) {
         this.repository = repository;
     }
     async execute(command) {
-        const characterInteractionExist = await this.repository.findOne({
-            id: command.characterInteractionDto.id,
-        });
-        if (characterInteractionExist) {
-            throw new common_1.BadRequestException(`characterInteractionExist with id: ${command.characterInteractionDto.id} already exist`);
-        }
         const characterInteraction = await this.repository.create(command.characterInteractionDto);
         return characterInteraction.toDto();
     }

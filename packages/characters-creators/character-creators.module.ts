@@ -31,6 +31,7 @@ export class CharacterCreatorsModule implements OnModuleInit {
   ) {}
   onModuleInit() {
     /** ------------ */
+    this.eventPublisher.groupIdPrefix = "v2";
     this.eventPublisher.setDomainName(DOMAIN_NAME);
     this.eventPublisher.registerEvents([ComicCreatedEventDomain]);
     this.eventPublisher.bridgeEventsTo(this.event$.subject$);

@@ -15,8 +15,28 @@
       "skipFiles": ["<node_internals>/**"]
     },
     {
+      "name": "Launch CHARACTER CREATORS",
+      "cwd": "${workspaceFolder}/packages/characters-creators",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "start:debug"],
+      "port": 9229,
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
       "name": "Launch search CHARACTER INTERACTIONS",
       "cwd": "${workspaceFolder}/packages/search-character-interactions",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "npm",
+      "runtimeArgs": ["run-script", "start:debug"],
+      "port": 9229,
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Launch search CHARACTER creators",
+      "cwd": "${workspaceFolder}/packages/search-character-creators",
       "type": "node",
       "request": "launch",
       "runtimeExecutable": "npm",

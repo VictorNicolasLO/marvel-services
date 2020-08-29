@@ -24,6 +24,7 @@ let CharacterCreatorsModule = class CharacterCreatorsModule {
         this.eventPublisher = eventPublisher;
     }
     onModuleInit() {
+        this.eventPublisher.groupIdPrefix = "v2";
         this.eventPublisher.setDomainName(DOMAIN_NAME);
         this.eventPublisher.registerEvents([comics_1.ComicCreatedEventDomain]);
         this.eventPublisher.bridgeEventsTo(this.event$.subject$);

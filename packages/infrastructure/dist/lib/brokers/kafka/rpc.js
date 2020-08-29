@@ -50,7 +50,8 @@ class Rpc {
         });
     }
     rpc(topic, cb) {
-        this.subscriber.subscribe(topic, async (payload) => {
+        const isQuery = topic.startsWith("queries");
+        const proccess = async (payload) => {
             const { data, replyTopic, requestId } = JSON.parse(payload.message.value.toString("utf-8"));
             try {
                 const response = await cb(data);
@@ -83,7 +84,12 @@ class Rpc {
                     acks: 0,
                 });
             }
-        }, topic.startsWith("command")
+        };
+        this.subscriber.subscribe(topic, isQuery
+            ? (paylpad) => {
+                proccess(paylpad).then();
+            }
+            : proccess, topic.startsWith("command")
             ? default_config_1.defaultCommandTopic(topic)
             : default_config_1.defaultRequestTopic(topic));
     }

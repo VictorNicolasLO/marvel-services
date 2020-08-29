@@ -10,7 +10,7 @@ const IRON_MAN_ID = 1009368;
 
 const hasIronManOrCaptainAmerica = ({ id }) =>
   id == CAPTAIN_AMERICA_ID || id == IRON_MAN_ID;
-
+const flat = (current, newArr) => [...current, ...newArr];
 @Injectable()
 export class ComicsSaga {
   @Saga()
@@ -21,17 +21,19 @@ export class ComicsSaga {
           const validCharacters = comic.characters.filter(
             hasIronManOrCaptainAmerica
           );
-          return validCharacters.map((character) => {
-            return comic.creators.map((creator) => {
-              return new CreateCharacterCreatorCommand({
-                character,
-                creator,
-                characterId: character.id,
-                creatorId: creator.id,
-                role: creator.role,
+          return validCharacters
+            .map((character) => {
+              return comic.creators.map((creator) => {
+                return new CreateCharacterCreatorCommand({
+                  character,
+                  creator,
+                  characterId: character.id,
+                  creatorId: creator.id,
+                  role: creator.role,
+                });
               });
-            });
-          });
+            })
+            .reduce(flat, []);
         })
       )
     );

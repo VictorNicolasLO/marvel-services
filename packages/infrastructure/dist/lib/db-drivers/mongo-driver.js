@@ -26,7 +26,7 @@ class MongoDriver extends db_driver_1.DbDriver {
     constructor(collection) {
         super();
         const customSchema = new mongoose_1.Schema({
-            id: { String, unique: true, index: true },
+            id: { type: String, unique: true, index: true },
         }, {
             strict: false,
             id: false,
@@ -64,8 +64,8 @@ class MongoDriver extends db_driver_1.DbDriver {
     async find(filter) {
         return (await this.collection.find(filter)).map((item) => item.toObject());
     }
-    async insert(data, options = {}) {
-        return (await this.collection.create(data, options));
+    async insert(data, options) {
+        return (await this.collection.create([data], options));
     }
     async update(filter, data) {
         return await this.collection.update(filter, data);

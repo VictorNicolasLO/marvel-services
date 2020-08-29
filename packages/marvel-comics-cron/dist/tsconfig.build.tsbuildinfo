@@ -1294,8 +1294,8 @@
         "signature": "db05acbfa2934ba1edb2ad2c053ed332b176cb09c094bed4fd44fca9c253ddba"
       },
       "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts": {
-        "version": "66337a32f120bf833ef4891166db23a2aa0f20a4ef6711bc934e088864e0e652",
-        "signature": "66337a32f120bf833ef4891166db23a2aa0f20a4ef6711bc934e088864e0e652"
+        "version": "c72a45c62b5b9a19c4b94afc00d021db144a656ec91e07a75c9d2cb560c5d37a",
+        "signature": "c72a45c62b5b9a19c4b94afc00d021db144a656ec91e07a75c9d2cb560c5d37a"
       },
       "../../infrastructure/dist/lib/repositories/generic-query-repository.d.ts": {
         "version": "c39cf401bb5cc5bf89ddc8de3796322a95d8bc87c60c73a6a0a8993f0ce79604",
@@ -1306,44 +1306,8 @@
         "signature": "2670dd380d7b46210bc404b0a3c2e6e8ee4f5c60f8289d538cd6e131b9ec824d"
       },
       "../../infrastructure/dist/lib/repositories/generic-repository.d.ts": {
-        "version": "e3dbe0fac39e33ed1b821237c199c1d6065ddc60de7148f929215cc30be5882a",
-        "signature": "e3dbe0fac39e33ed1b821237c199c1d6065ddc60de7148f929215cc30be5882a"
-      },
-      "../../infrastructure/dist/lib/db-drivers/redis-driver.d.ts": {
-        "version": "2f32a09bd4668e4a177dd6c7d577929fc7d5584a6740a95bf3e30123d5c5cf10",
-        "signature": "2f32a09bd4668e4a177dd6c7d577929fc7d5584a6740a95bf3e30123d5c5cf10"
-      },
-      "../../infrastructure/dist/lib/db-drivers/mongo-driver.d.ts": {
-        "version": "fb45afbf24560286ba7e3e5793fb79df6a9b7c030f25aaeaa577aafdfe6985d8",
-        "signature": "fb45afbf24560286ba7e3e5793fb79df6a9b7c030f25aaeaa577aafdfe6985d8"
-      },
-      "../../infrastructure/dist/lib/events/aggregate-event.d.ts": {
-        "version": "960351a02c2616296dc3814e9ae5a30cdbb46e6e513abc3e95d8c7cf4292fe28",
-        "signature": "960351a02c2616296dc3814e9ae5a30cdbb46e6e513abc3e95d8c7cf4292fe28"
-      },
-      "../../infrastructure/dist/lib/events/domain-event.d.ts": {
-        "version": "4ee0bf308e31c445c7b054e832fec130a6dedab3fe29c993950fd05944024785",
-        "signature": "4ee0bf308e31c445c7b054e832fec130a6dedab3fe29c993950fd05944024785"
-      },
-      "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts": {
-        "version": "da4a80ce94198750d9cab9b9d4ee01ec25d30522e857afe485dffa60b13d9929",
-        "signature": "da4a80ce94198750d9cab9b9d4ee01ec25d30522e857afe485dffa60b13d9929"
-      },
-      "../../infrastructure/dist/index.d.ts": {
-        "version": "56a22e1e6d70bdacff96a68beedefd655bfced53bf9a3c35d002dea6e15cf2df",
-        "signature": "56a22e1e6d70bdacff96a68beedefd655bfced53bf9a3c35d002dea6e15cf2df"
-      },
-      "../repositories/interfaces/istatus.ts": {
-        "version": "5698e5e83b8e37ab14fc40d5399bf71f9f414ce2dfdf68bcec708e366c310f7f",
-        "signature": "62f938a0c281d34ebcbbf2f381ee6561559780b63461db04ecfde3d67b4c76d6"
-      },
-      "../repositories/sync-status-repository.ts": {
-        "version": "1e47d0b1523e8a40bcde76e88602b2ca9511a572152ab9eaff1a8a1678f22939",
-        "signature": "82f4bac5f12fd7480af67530b6b1f1f28412004edd680073d2fdb19959f95237"
-      },
-      "../../../node_modules/axios/index.d.ts": {
-        "version": "c50b2f015a8bddda1689f8228703f177614f9e10348f4a845104f04351264507",
-        "signature": "c50b2f015a8bddda1689f8228703f177614f9e10348f4a845104f04351264507"
+        "version": "56e67bec3bd31a10a23cf7f504845ab065dca24a8de13a1e9d583516b180e2af",
+        "signature": "56e67bec3bd31a10a23cf7f504845ab065dca24a8de13a1e9d583516b180e2af"
       },
       "../../../node_modules/@types/node/globals.d.ts": {
         "version": "6fc83519155969f2457d2454908d68830a6f6480974914c024eaf4e3248a2fd1",
@@ -1553,6 +1517,58 @@
         "version": "d522314e80ed71b57e3c2939d3c9594eaae63a4adf028559e6574f6b270b0fee",
         "signature": "d522314e80ed71b57e3c2939d3c9594eaae63a4adf028559e6574f6b270b0fee"
       },
+      "../../../node_modules/@types/redis/index.d.ts": {
+        "version": "eeb4e8b48dc0d5e8fad71a7cf7824b19eaf998607871620f259c84a7e7dac64e",
+        "signature": "eeb4e8b48dc0d5e8fad71a7cf7824b19eaf998607871620f259c84a7e7dac64e"
+      },
+      "../../infrastructure/dist/lib/db-drivers/redis-driver.d.ts": {
+        "version": "f8ef46236e22509ad9bddb570243f8775a3f90e5cbdc2bd62a691229bc66fa04",
+        "signature": "f8ef46236e22509ad9bddb570243f8775a3f90e5cbdc2bd62a691229bc66fa04"
+      },
+      "../../../node_modules/@types/bson/index.d.ts": {
+        "version": "3994ebfd11faa4018d8e1b879190046588f41f5cd60438e642ca39a705c726be",
+        "signature": "3994ebfd11faa4018d8e1b879190046588f41f5cd60438e642ca39a705c726be"
+      },
+      "../../../node_modules/@types/mongodb/index.d.ts": {
+        "version": "eec88fea8bc6e0947834f8fc400eca5b8ec375397802a443d2bd72143581478a",
+        "signature": "eec88fea8bc6e0947834f8fc400eca5b8ec375397802a443d2bd72143581478a"
+      },
+      "../../../node_modules/@types/mongoose/index.d.ts": {
+        "version": "a618e255205dca2298e36992edeabafa03975942d3ed6c8b6857e831de3b1159",
+        "signature": "a618e255205dca2298e36992edeabafa03975942d3ed6c8b6857e831de3b1159"
+      },
+      "../../infrastructure/dist/lib/db-drivers/mongo-driver.d.ts": {
+        "version": "222398204fdf86c852f6e5231f188d3411b574fef29152ed3b41ab57128ae35a",
+        "signature": "222398204fdf86c852f6e5231f188d3411b574fef29152ed3b41ab57128ae35a"
+      },
+      "../../infrastructure/dist/lib/events/aggregate-event.d.ts": {
+        "version": "960351a02c2616296dc3814e9ae5a30cdbb46e6e513abc3e95d8c7cf4292fe28",
+        "signature": "960351a02c2616296dc3814e9ae5a30cdbb46e6e513abc3e95d8c7cf4292fe28"
+      },
+      "../../infrastructure/dist/lib/events/domain-event.d.ts": {
+        "version": "4ee0bf308e31c445c7b054e832fec130a6dedab3fe29c993950fd05944024785",
+        "signature": "4ee0bf308e31c445c7b054e832fec130a6dedab3fe29c993950fd05944024785"
+      },
+      "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts": {
+        "version": "da4a80ce94198750d9cab9b9d4ee01ec25d30522e857afe485dffa60b13d9929",
+        "signature": "da4a80ce94198750d9cab9b9d4ee01ec25d30522e857afe485dffa60b13d9929"
+      },
+      "../../infrastructure/dist/index.d.ts": {
+        "version": "56a22e1e6d70bdacff96a68beedefd655bfced53bf9a3c35d002dea6e15cf2df",
+        "signature": "56a22e1e6d70bdacff96a68beedefd655bfced53bf9a3c35d002dea6e15cf2df"
+      },
+      "../repositories/interfaces/istatus.ts": {
+        "version": "5698e5e83b8e37ab14fc40d5399bf71f9f414ce2dfdf68bcec708e366c310f7f",
+        "signature": "62f938a0c281d34ebcbbf2f381ee6561559780b63461db04ecfde3d67b4c76d6"
+      },
+      "../repositories/sync-status-repository.ts": {
+        "version": "1e47d0b1523e8a40bcde76e88602b2ca9511a572152ab9eaff1a8a1678f22939",
+        "signature": "82f4bac5f12fd7480af67530b6b1f1f28412004edd680073d2fdb19959f95237"
+      },
+      "../../../node_modules/axios/index.d.ts": {
+        "version": "c50b2f015a8bddda1689f8228703f177614f9e10348f4a845104f04351264507",
+        "signature": "c50b2f015a8bddda1689f8228703f177614f9e10348f4a845104f04351264507"
+      },
       "../../../node_modules/@types/md5/index.d.ts": {
         "version": "e7f03760c579dec5db5b0cd4daf8f50eb1939467fb5786382b5666207b6c9425",
         "signature": "e7f03760c579dec5db5b0cd4daf8f50eb1939467fb5786382b5666207b6c9425"
@@ -1602,7 +1618,7 @@
         "signature": "a6255bcc474f63b92f3375c881ac7ed306cb612e1f2d614e1f13f0bf1000b5a2"
       },
       "../marvel-comics-cron.service.ts": {
-        "version": "8ff3767e9033b8065ca68d241030560190343b82d5ce49f59e35ee0585bff299",
+        "version": "865852a5eb80ac2e8cc65026e28c3d9c1f8788d8f8676a0fd983e86977627abb",
         "signature": "04c31feba23538bd5c194240c2150c259a4d4969c142922189ef9417b5c7b97b"
       },
       "../marvel-comics-cron.module.ts": {
@@ -1620,10 +1636,6 @@
       "../../../node_modules/@types/http-assert/index.d.ts": {
         "version": "97fd9fd06a67deac133ddeac0b4a266db5eede2e40ec6ad67b31b0b862559643",
         "signature": "97fd9fd06a67deac133ddeac0b4a266db5eede2e40ec6ad67b31b0b862559643"
-      },
-      "../../../node_modules/@types/redis/index.d.ts": {
-        "version": "eeb4e8b48dc0d5e8fad71a7cf7824b19eaf998607871620f259c84a7e7dac64e",
-        "signature": "eeb4e8b48dc0d5e8fad71a7cf7824b19eaf998607871620f259c84a7e7dac64e"
       },
       "../../../node_modules/@types/redlock/index.d.ts": {
         "version": "3bc4c9ca353f42e4eebf9986974e7bcfb7bc7eadb7a9da67c84f6bc123ce18e6",
@@ -4932,96 +4944,6 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../infrastructure/dist/lib/db-drivers/redis-driver.d.ts": [
-        "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../infrastructure/dist/lib/db-drivers/mongo-driver.d.ts": [
-        "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../infrastructure/dist/lib/events/aggregate-event.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../infrastructure/dist/lib/events/domain-event.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../infrastructure/dist/index.d.ts": [
-        "../../infrastructure/dist/lib/model.d.ts",
-        "../../infrastructure/dist/lib/publishers/app-command-bus.d.ts",
-        "../../infrastructure/dist/lib/publishers/app-query-bus.d.ts",
-        "../../infrastructure/dist/lib/publishers/event.publisher.d.ts",
-        "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts",
-        "../../infrastructure/dist/lib/repositories/generic-query-repository.d.ts",
-        "../../infrastructure/dist/lib/repositories/generic-query-key-value-repository.d.ts",
-        "../../infrastructure/dist/lib/repositories/generic-repository.d.ts",
-        "../../infrastructure/dist/lib/db-drivers/redis-driver.d.ts",
-        "../../infrastructure/dist/lib/db-drivers/mongo-driver.d.ts",
-        "../../infrastructure/dist/lib/events/aggregate-event.d.ts",
-        "../../infrastructure/dist/lib/events/domain-event.d.ts",
-        "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../repositories/interfaces/istatus.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../repositories/sync-status-repository.ts": [
-        "../../../node_modules/@nestjs/common/index.d.ts",
-        "../../infrastructure/dist/index.d.ts",
-        "../repositories/interfaces/istatus.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/axios/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
       "../../../node_modules/@types/node/globals.d.ts": [
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -5532,6 +5454,144 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
+      "../../../node_modules/@types/redis/index.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
+        "../../../node_modules/@types/node/ts3.7/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../infrastructure/dist/lib/db-drivers/redis-driver.d.ts": [
+        "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts",
+        "../../../node_modules/@types/redis/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/bson/index.d.ts": [
+        "../../../node_modules/@types/node/ts3.7/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/mongodb/index.d.ts": [
+        "../../../node_modules/@types/bson/index.d.ts",
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
+        "../../../node_modules/@types/node/tls.d.ts",
+        "../../../node_modules/@types/node/ts3.7/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/mongoose/index.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/mongodb/index.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
+        "../../../node_modules/@types/mongoose/index.d.ts",
+        "../../../node_modules/@types/node/ts3.7/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../infrastructure/dist/lib/db-drivers/mongo-driver.d.ts": [
+        "../../../node_modules/@types/mongoose/index.d.ts",
+        "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../infrastructure/dist/lib/events/aggregate-event.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../infrastructure/dist/lib/events/domain-event.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../infrastructure/dist/index.d.ts": [
+        "../../infrastructure/dist/lib/model.d.ts",
+        "../../infrastructure/dist/lib/publishers/app-command-bus.d.ts",
+        "../../infrastructure/dist/lib/publishers/app-query-bus.d.ts",
+        "../../infrastructure/dist/lib/publishers/event.publisher.d.ts",
+        "../../infrastructure/dist/lib/publishers/app-event-bus.d.ts",
+        "../../infrastructure/dist/lib/repositories/generic-query-repository.d.ts",
+        "../../infrastructure/dist/lib/repositories/generic-query-key-value-repository.d.ts",
+        "../../infrastructure/dist/lib/repositories/generic-repository.d.ts",
+        "../../infrastructure/dist/lib/db-drivers/redis-driver.d.ts",
+        "../../infrastructure/dist/lib/db-drivers/mongo-driver.d.ts",
+        "../../infrastructure/dist/lib/events/aggregate-event.d.ts",
+        "../../infrastructure/dist/lib/events/domain-event.d.ts",
+        "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../repositories/interfaces/istatus.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../repositories/sync-status-repository.ts": [
+        "../../../node_modules/@nestjs/common/index.d.ts",
+        "../../infrastructure/dist/index.d.ts",
+        "../repositories/interfaces/istatus.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/axios/index.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
       "../../../node_modules/@types/md5/index.d.ts": [
         "../../../node_modules/@types/node/ts3.7/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
@@ -5694,17 +5754,6 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../../../node_modules/@types/http-assert/index.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/@types/redis/index.d.ts": [
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/stream.d.ts",
-        "../../../node_modules/@types/node/ts3.7/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -9076,6 +9125,7 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../../infrastructure/dist/lib/db-drivers/mongo-driver.d.ts": [
+        "../../../node_modules/@types/mongoose/index.d.ts",
         "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -9086,6 +9136,7 @@
       ],
       "../../infrastructure/dist/lib/db-drivers/redis-driver.d.ts": [
         "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts",
+        "../../../node_modules/@types/redis/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -9104,38 +9155,6 @@
       ],
       "../../infrastructure/dist/lib/repositories/generic-query-repository.d.ts": [
         "../../infrastructure/dist/lib/db-drivers/db-driver.d.ts",
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../infrastructure/dist/lib/events/aggregate-event.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../infrastructure/dist/lib/events/domain-event.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts": [
-        "../../../node_modules/@types/node/fs.d.ts",
-        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
-        "../../../node_modules/@types/node/process.d.ts",
-        "../../../node_modules/@types/node/ts3.2/process.d.ts",
-        "../../../node_modules/@types/node/util.d.ts",
-        "../../../node_modules/@types/node/ts3.2/util.d.ts"
-      ],
-      "../../../node_modules/axios/index.d.ts": [
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",
@@ -9244,9 +9263,7 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@types/redis/index.d.ts": [
-        "../../../node_modules/@types/node/events.d.ts",
-        "../../../node_modules/@types/node/stream.d.ts",
+      "../../../node_modules/@types/md5/index.d.ts": [
         "../../../node_modules/@types/node/ts3.7/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -9255,7 +9272,44 @@
         "../../../node_modules/@types/node/util.d.ts",
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
-      "../../../node_modules/@types/md5/index.d.ts": [
+      "../../../node_modules/@types/mongoose/index.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/mongodb/index.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
+        "../../../node_modules/@types/mongoose/index.d.ts",
+        "../../../node_modules/@types/node/ts3.7/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/mongodb/index.d.ts": [
+        "../../../node_modules/@types/bson/index.d.ts",
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
+        "../../../node_modules/@types/node/tls.d.ts",
+        "../../../node_modules/@types/node/ts3.7/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/bson/index.d.ts": [
+        "../../../node_modules/@types/node/ts3.7/index.d.ts",
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/@types/redis/index.d.ts": [
+        "../../../node_modules/@types/node/events.d.ts",
+        "../../../node_modules/@types/node/stream.d.ts",
         "../../../node_modules/@types/node/ts3.7/index.d.ts",
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
@@ -9468,6 +9522,38 @@
         "../../../node_modules/@types/node/ts3.2/util.d.ts"
       ],
       "../../comics/dist/commands/comics-command.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../../node_modules/axios/index.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../infrastructure/dist/lib/sagas/saga-wrapper.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../infrastructure/dist/lib/events/domain-event.d.ts": [
+        "../../../node_modules/@types/node/fs.d.ts",
+        "../../../node_modules/@types/node/ts3.2/fs.d.ts",
+        "../../../node_modules/@types/node/process.d.ts",
+        "../../../node_modules/@types/node/ts3.2/process.d.ts",
+        "../../../node_modules/@types/node/util.d.ts",
+        "../../../node_modules/@types/node/ts3.2/util.d.ts"
+      ],
+      "../../infrastructure/dist/lib/events/aggregate-event.d.ts": [
         "../../../node_modules/@types/node/fs.d.ts",
         "../../../node_modules/@types/node/ts3.2/fs.d.ts",
         "../../../node_modules/@types/node/process.d.ts",

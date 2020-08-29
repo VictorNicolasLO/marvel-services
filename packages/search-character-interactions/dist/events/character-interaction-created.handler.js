@@ -23,7 +23,7 @@ let CharacterInteractionCreatedHandler = class CharacterInteractionCreatedHandle
             const characterToAdd = characterInteraction.characters[index - 1] ||
                 characterInteraction.characters[index + 1];
             const nameId = generate_name_id_1.generateNameId(character.name);
-            const interactionsFound = await this.readCharacterInteractionsRepository.get(nameId);
+            const { value: interactionsFound, unlock, } = await this.readCharacterInteractionsRepository.getAndLock(nameId);
             const comicSummary = {
                 name: characterInteraction.comic.title,
                 image: characterInteraction.comic.image,
@@ -58,6 +58,7 @@ let CharacterInteractionCreatedHandler = class CharacterInteractionCreatedHandle
                     ],
                 });
             }
+            unlock();
         }
     }
 };

@@ -52,7 +52,8 @@ let MarvelComicsCronService = MarvelComicsCronService_1 = class MarvelComicsCron
                 });
                 console.log(result);
                 result.data.results.forEach((comic) => {
-                    this.commandBus.execute(new comics_1.CreateComicCommand({
+                    this.commandBus
+                        .execute(new comics_1.CreateComicCommand({
                         id: comic.id.toString(),
                         title: comic.title,
                         image: `${comic.thumbnail.path}/portrait_incredible.${comic.thumbnail.extension}`,
@@ -65,9 +66,10 @@ let MarvelComicsCronService = MarvelComicsCronService_1 = class MarvelComicsCron
                             name: creator.name,
                             role: creator.role,
                         })),
-                    }));
+                    }))
+                        .catch(() => { });
                 });
-                offset += result.data.count;
+                offset += result.data.count + 1;
                 await this.syncStatusRepository.put("status", { lastOffset: offset });
             } while (result.data.count > 0);
             this.loading = false;

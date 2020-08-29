@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const common_1 = require("@nestjs/common");
 const characters_controller_1 = require("./controllers/characters.controller");
+const collaborators_controller_1 = require("./controllers/collaborators.controller");
 const infrastructure_1 = require("@marvel/infrastructure");
 let WebGatewayModule = class WebGatewayModule {
     constructor(command$, appQueryBus) {
@@ -22,7 +23,7 @@ let WebGatewayModule = class WebGatewayModule {
 };
 WebGatewayModule = __decorate([
     common_1.Module({
-        controllers: [characters_controller_1.CharactersController],
+        controllers: [characters_controller_1.CharactersController, collaborators_controller_1.CollaboratorsController],
         providers: [infrastructure_1.AppCommandBus, infrastructure_1.AppQueryBus],
     }),
     __metadata("design:paramtypes", [infrastructure_1.AppCommandBus,

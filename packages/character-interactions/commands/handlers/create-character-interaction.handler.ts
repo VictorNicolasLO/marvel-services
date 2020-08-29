@@ -1,7 +1,6 @@
 import { CommandHandler, ICommandHandler, EventBus } from "@nestjs/cqrs";
 import { CreateCharacterInteractionCommand } from "../impl/create-character-interaction.command";
 import { CharacterInteractionsRepository } from "../../repositories/character-interactions.repository";
-import { BadRequestException } from "@nestjs/common";
 
 @CommandHandler(CreateCharacterInteractionCommand)
 export class CreateCharacterInteractionHandler

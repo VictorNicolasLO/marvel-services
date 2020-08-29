@@ -78,7 +78,7 @@ export class RedisDriver<T> extends KeyValueDbDriver<T> {
       return {
         value: await this.get(key),
         unlock: () => {
-          return RedisDriver.putAsync(lockKey, null);
+          return RedisDriver.putAsync(lockKey, "");
         },
       };
     };

@@ -66,43 +66,50 @@ export class Rpc {
   }
 
   public rpc(topic: string, cb: (data: any) => any) {
+    const isQuery = topic.startsWith("queries");
+    const proccess = async (payload) => {
+      const { data, replyTopic, requestId } = JSON.parse(
+        payload.message.value.toString("utf-8")
+      );
+      try {
+        // TODO Dead lettering
+        const response = await cb(data);
+        const responsePayload = {
+          topic: replyTopic,
+          messages: [
+            {
+              value: JSON.stringify({
+                response,
+                requestId,
+              }),
+            },
+          ],
+          acks: 0,
+        };
+        await this.producer.send(responsePayload);
+      } catch (e) {
+        console.log(e);
+        await this.producer.send({
+          topic: replyTopic,
+          messages: [
+            {
+              value: JSON.stringify({
+                error: e,
+                requestId,
+              }),
+            },
+          ],
+          acks: 0,
+        });
+      }
+    };
     this.subscriber.subscribe(
       topic,
-      async (payload) => {
-        const { data, replyTopic, requestId } = JSON.parse(
-          payload.message.value.toString("utf-8")
-        );
-        try {
-          const response = await cb(data);
-          const responsePayload = {
-            topic: replyTopic,
-            messages: [
-              {
-                value: JSON.stringify({
-                  response,
-                  requestId,
-                }),
-              },
-            ],
-            acks: 0,
-          };
-          await this.producer.send(responsePayload);
-        } catch (e) {
-          console.log(e);
-          await this.producer.send({
-            topic: replyTopic,
-            messages: [
-              {
-                value: JSON.stringify({
-                  error: e,
-                  requestId,
-                }),
-              },
-            ],
-            acks: 0,
-          });
-        }
-      },
+      isQuery
+        ? (paylpad) => {
+            proccess(paylpad).then();
+          }
+        : proccess,
       topic.startsWith("command")
         ? defaultCommandTopic(topic)
         : defaultRequestTopic(topic)

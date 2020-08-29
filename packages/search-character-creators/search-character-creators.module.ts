@@ -4,6 +4,7 @@ import {
   AppEventPublisher,
   AppQueryBus,
   AppEventBus,
+  AppCommandBus,
 } from "@marvel/infrastructure";
 import { CharacterCreatorCreatedEvent } from "@marvel/character-creators";
 import { ReadCharacterCreatorRepository } from "./repositories/read-character-creator.repository";
@@ -19,9 +20,10 @@ import { GetCharacterCreatorByNameHandler } from "./queries/handlers/get-charact
     CharacterCreatorCreatedHandler,
     GetCharacterCreatorByNameHandler,
     AppEventBus,
+    AppCommandBus,
   ],
 })
-export class SearchCharacterInteractionModule implements OnModuleInit {
+export class SearchCharacterCreatorModule implements OnModuleInit {
   constructor(
     private readonly query$: AppQueryBus,
     private readonly event$: AppEventBus,

@@ -12,9 +12,10 @@ export class CharacterCreatorCreatedHandler
 
   async handle({ characterCreator }: CharacterCreatorCreatedEvent) {
     const nameId = generateNameId(characterCreator.character.name);
-    const characterCreatorsFound = await this.readCharacterCreatorRepository.get(
-      nameId
-    );
+    const {
+      value: characterCreatorsFound,
+      unlock,
+    } = await this.readCharacterCreatorRepository.getAndLock(nameId);
     if (characterCreatorsFound) {
       characterCreatorsFound.lastSync = new Date();
       if (!characterCreatorsFound[characterCreator.role]) {
@@ -34,5 +35,6 @@ export class CharacterCreatorCreatedHandler
         [characterCreator.role]: [characterCreator.creator],
       });
     }
+    await unlock();
   }
 }

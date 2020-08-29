@@ -18,16 +18,19 @@ let CreateCharacterCreatorHandler = class CreateCharacterCreatorHandler {
         this.repository = repository;
     }
     async execute(command) {
+        const session = await this.repository.transaction();
+        await session.startTransaction();
         const characterCreatorFound = await this.repository.findOne({
             characterId: command.characterCreatorDto.characterId,
             creatorId: command.characterCreatorDto.creatorId,
             role: command.characterCreatorDto.role,
-        });
-        console.log(characterCreatorFound);
+        }, { session });
         if (characterCreatorFound) {
             throw new common_1.BadRequestException("characterCreatorFound already exist");
         }
-        const characterCreator = await this.repository.create(command.characterCreatorDto);
+        const characterCreator = await this.repository.create(command.characterCreatorDto, { session });
+        await session.commitTransaction();
+        await session.endSession();
         return characterCreator.toDto();
     }
 };

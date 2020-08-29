@@ -22,7 +22,7 @@ exports.defaultRequestTopic = (name) => ({
 });
 exports.defaultCommandTopic = (name) => ({
     topic: name,
-    numPartitions: 5,
+    numPartitions: 30,
     replicationFactor: 1,
     configEntries: [{ name: "retention.ms", value: "86400000" }],
 });
@@ -32,7 +32,7 @@ exports.defaultClientConfig = {
 };
 exports.defaultConsumerConfig = (groupId) => ({
     groupId: groupId + "-kafkajs-v2",
-    maxBytesPerPartition: 10,
+    maxBytesPerPartition: 1000,
 });
 exports.defaultReplyConsumerconfig = () => ({
     groupId: uuid_1.v1(),

@@ -8,7 +8,7 @@ export class MongoDriver<T> extends DbDriver<T> {
     super();
     const customSchema = new Schema(
       {
-        id: { String, unique: true, index: true },
+        id: { type: String, unique: true, index: true },
       },
       {
         strict: false,
@@ -58,8 +58,8 @@ export class MongoDriver<T> extends DbDriver<T> {
     return (await this.collection.find(filter)).map((item) => item.toObject());
   }
 
-  async insert(data: T, options: DbDriverOptions = {}): Promise<T> {
-    return (await this.collection.create(data, options)) as any;
+  async insert(data: T, options: DbDriverOptions): Promise<T> {
+    return (await this.collection.create([data], options)) as any;
   }
   async update(filter: Partial<T>, data: Partial<T>): Promise<T> {
     // TODO TRANSACTION
