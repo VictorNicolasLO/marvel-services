@@ -23,6 +23,7 @@ jobs:
       - run: APP="${REF_ARRAY[2]}"
       - run: CONTAINER_IMAGE_PROD=gcr.io/$GCLOUD_PROJECT_ID/$APP/prod
       - run: touch $GITHUB_WORKSPACE/sa.json
+      - run: echo $DEPLOY_KEY
       - run: echo $DEPLOY_KEY > $GITHUB_WORKSPACE/sa.json
       - run: cat $GITHUB_WORKSPACE/sa.json
       - run: export GOOGLE_APPLICATION_CREDENTIALS=$GITHUB_WORKSPACE/sa.json
