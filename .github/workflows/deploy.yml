@@ -24,8 +24,9 @@ jobs:
       - run: CONTAINER_IMAGE_PROD=gcr.io/$GCLOUD_PROJECT_ID/$APP/prod
       - run: touch $GITHUB_WORKSPACE/sa.json
       - run: echo $DEPLOY_KEY > $GITHUB_WORKSPACE/sa.json
+      - run: cat $GITHUB_WORKSPACE/sa.json
       - run: export GOOGLE_APPLICATION_CREDENTIALS=$GITHUB_WORKSPACE/sa.json
-      - run: gcloud auth activate-service-account --key-file=sa.json
+      - run: gcloud auth activate-service-account --key-file=$GITHUB_WORKSPACE/sa.json
       - run: gcloud config set project $GCLOUD_PROJECT_ID
       - run: gcloud config set compute/zone $CLOUDSDK_ZONE
       - run: gcloud builds submit --config cloudbuild.yml --substitutions _IMAGE=$GITHUB_REF,_CI_BUILD_ID=$GITHUB_RUN_ID,_CLOUDSDK_COMPUTE_ZONE=$CLOUDSDK_ZONE,_CLOUDSDK_CONTAINER_CLUSTER=$CONTAINER_CLUSTER,_KUBECTL_ENV=production,_APP=$APP,_CONTAINER_IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$CI_BUILD_ID,_PACKAGE=$APP --timeout="1h" .
