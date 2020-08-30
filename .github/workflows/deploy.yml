@@ -13,14 +13,21 @@ jobs:
     steps:
       - name: My first step
         uses: docker://google/cloud-sdk:latest
+        with:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          CLOUDSDK_ZONE: ${{ secrets.CLOUDSDK_ZONE }}
+          CONTAINER_CLUSTER: ${{ secrets.CONTAINER_CLUSTER }}
+          GCLOUD_PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
       - run: echo $GITHUB_REF
       - run: IFS='/@' read -ra REF_ARRAY <<< "$GITHUB_REF"
       - run: APP="${REF_ARRAY[2]}"
-      - run: CONTAINER_IMAGE_PROD=gcr.io/"${{ secrets.GCLOUD_PROJECT_ID }}"/$APP/prod
+      - run: CONTAINER_IMAGE_PROD=gcr.io/$GCLOUD_PROJECT_ID/$APP/prod
       - run: touch $GITHUB_WORKSPACE/sa.json
-      - run: echo "${{ secrets.DEPLOY_KEY }}" > $GITHUB_WORKSPACE/sa.json
+      - run: echo "$INPUT_CLOUDSDK_ZONE"
+      - run: echo "$INPUT_DEPLOY_KEY" > $GITHUB_WORKSPACE/sa.json
+      - run: cat $GITHUB_WORKSPACE/sa.json
       - run: export GOOGLE_APPLICATION_CREDENTIALS=$GITHUB_WORKSPACE/sa.json
       - run: gcloud auth activate-service-account --key-file=$GITHUB_WORKSPACE/sa.json
-      - run: gcloud config set project "${{ secrets.GCLOUD_PROJECT_ID }}"
-      - run: gcloud config set compute/zone "${{ secrets.CLOUDSDK_ZONE }}"
-      - run: gcloud builds submit --config cloudbuild.yml --substitutions _IMAGE=$GITHUB_REF,_CI_BUILD_ID=$GITHUB_RUN_ID,_CLOUDSDK_COMPUTE_ZONE="${{ secrets.CLOUDSDK_ZONE }}",_CLOUDSDK_CONTAINER_CLUSTER="${{ secrets.CONTAINER_CLUSTER }}",_KUBECTL_ENV=production,_APP=$APP,_CONTAINER_IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$CI_BUILD_ID,_PACKAGE=$APP --timeout="1h" .
+      - run: gcloud config set project $INPUT_GCLOUD_PROJECT_ID
+      - run: gcloud config set compute/zone $INPUT_CLOUDSDK_ZONE
+      - run: gcloud builds submit --config cloudbuild.yml --substitutions _IMAGE=$GITHUB_REF,_CI_BUILD_ID=$GITHUB_RUN_ID,_CLOUDSDK_COMPUTE_ZONE=$INPUT_CLOUDSDK_ZONE,_CLOUDSDK_CONTAINER_CLUSTER=$INPUT_CONTAINER_CLUSTER,_KUBECTL_ENV=production,_APP=$APP,_CONTAINER_IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$CI_BUILD_ID,_PACKAGE=$APP --timeout="1h" .
