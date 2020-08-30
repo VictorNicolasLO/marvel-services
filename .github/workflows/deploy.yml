@@ -12,12 +12,20 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: My first step
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          CLOUDSDK_ZONE: ${{ secrets.CLOUDSDK_ZONE }}
+          CONTAINER_CLUSTER: ${{ secrets.CONTAINER_CLUSTER }}
+          GCLOUD_PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
         uses: docker://google/cloud-sdk:latest
       - run: echo $GITHUB_REF
-      - run: touch $CI_PROJECT_DIR/sa.json
-      - run: echo $DEPLOY_KEY > $CI_PROJECT_DIR/sa.json
-      - run: export GOOGLE_APPLICATION_CREDENTIALS=$CI_PROJECT_DIR/sa.json
+      - run: IFS='/@' read -ra REF_ARRAY <<< "$GITHUB_REF"
+      - run: APP="${REF_ARRAY[2]}"
+      - run: CONTAINER_IMAGE_PROD=gcr.io/$GCLOUD_PROJECT_ID/$APP/prod
+      - run: touch $GITHUB_WORKSPACE/sa.json
+      - run: echo $DEPLOY_KEY > $GITHUB_WORKSPACE/sa.json
+      - run: export GOOGLE_APPLICATION_CREDENTIALS=$GITHUB_WORKSPACE/sa.json
       - run: gcloud auth activate-service-account --key-file=sa.json
       - run: gcloud config set project $GCLOUD_PROJECT_ID
       - run: gcloud config set compute/zone $CLOUDSDK_ZONE
-      - run: gcloud builds submit --config cloudbuild.yml --substitutions _IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$CI_BUILD_ID,_CLOUDSDK_COMPUTE_ZONE=$CLOUDSDK_ZONE,_CLOUDSDK_CONTAINER_CLUSTER=$CONTAINER_CLUSTER,_KUBECTL_ENV=production,_APP=$APP,_CONTAINER_IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$CI_BUILD_ID,_PACKAGE=$PACKAGE --timeout="1h" .
+      - run: gcloud builds submit --config cloudbuild.yml --substitutions _IMAGE=$GITHUB_REF,_CI_BUILD_ID=$GITHUB_RUN_ID,_CLOUDSDK_COMPUTE_ZONE=$CLOUDSDK_ZONE,_CLOUDSDK_CONTAINER_CLUSTER=$CONTAINER_CLUSTER,_KUBECTL_ENV=production,_APP=$APP,_CONTAINER_IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$CI_BUILD_ID,_PACKAGE=$APP --timeout="1h" .
