@@ -11,4 +11,12 @@ steps:
         "package=${_PACKAGE}",
         ".",
       ]
+    env:
+      - "CLOUDSDK_COMPUTE_ZONE=${_CLOUDSDK_COMPUTE_ZONE}"
+      - "CLOUDSDK_CONTAINER_CLUSTER=${_CLOUDSDK_CONTAINER_CLUSTER}"
+      - "KUBECTL_ENV=${_KUBECTL_ENV}"
+      - "APP=${$_APP}"
+      - "CONTAINER_IMAGE=${_CONTAINER_IMAGE}"
+      - "CI_BUILD_ID=${_CI_BUILD_ID}"
+      - "PACKAGE=${_PACKAGE}"
 images: ["${_IMAGE}:latest", "${_IMAGE}:${_CI_BUILD_ID}"]
