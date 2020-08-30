@@ -2,7 +2,7 @@ import { Controller, Get, Param } from "@nestjs/common";
 import { AppQueryBus } from "@marvel/infrastructure";
 import { GetCharacterInteractionByNameQuery } from "@marvel/search-character-interactions";
 
-@Controller("characters")
+@Controller("marvel/characters")
 export class CharactersController {
   constructor(private queryBus: AppQueryBus) {}
 
