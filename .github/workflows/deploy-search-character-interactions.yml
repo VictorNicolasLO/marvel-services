@@ -2,10 +2,6 @@ name: Deploy Marvel service
 on:
   push:
     tags:
-      - character-interactions@*
-      - characters-creators@*
-      - marvel-comics-cron@*
-      - search-character-creators@*
       - search-character-interactions@*
 jobs:
   build-deploy:
