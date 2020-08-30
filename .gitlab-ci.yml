@@ -30,4 +30,10 @@ deploy-dev:
     - gcloud builds submit --config cloudbuild.yml --substitutions _IMAGE=$CONTAINER_IMAGE_DEV,_CI_BUILD_ID=$CI_BUILD_ID,_CLOUDSDK_COMPUTE_ZONE=$CLOUDSDK_ZONE,_CLOUDSDK_CONTAINER_CLUSTER=$CONTAINER_CLUSTER,_KUBECTL_ENV=development,_APP=$APP,_CONTAINER_IMAGE=$CONTAINER_IMAGE_DEV,_CI_BUILD_ID=$CI_BUILD_ID,_PACKAGE=$PACKAGE --timeout="1h" .
 
 
-    gcloud builds submit --config ./cloudbuild.yml --substitutions _IMAGE=image,_CI_BUILD_ID=1,_CLOUDSDK_COMPUTE_ZONE=us-central1-a,_CLOUDSDK_CONTAINER_CLUSTER=sigepin-cluster,_KUBECTL_ENV=production,_APP=sigein-backend,_CONTAINER_IMAGE=gcr.io/$GCLOUD_PROJECT_ID/test/prod,_CI_BUILD_ID=$CI_BUILD_ID,_PACKAGE=test --timeout="1h" .
+    gcloud builds submit --config ./cloudbuild.yml --substitutions _IMAGE=image,_CI_BUILD_ID=1,_CLOUDSDK_COMPUTE_ZONE=us-central1-a,_CLOUDSDK_CONTAINER_CLUSTER=sigepin-cluster,_KUBECTL_ENV=production,_APP=sigein-backend,_CONTAINER_IMAGE=gcr.io/marvel-287923/test/prod,_CI_BUILD_ID=12,_PACKAGE=search-character-interactions --timeout="1h" .
+
+
+    gcloud builds submit --config ./cloudbuild.yml --substitutions _IMAGE=image,_CI_BUILD_ID=1,_CLOUDSDK_COMPUTE_ZONE=us-central1-a,_CLOUDSDK_CONTAINER_CLUSTER=sigepin-cluster,_KUBECTL_ENV=production,_APP=sigein-backend,_CONTAINER_IMAGE=gcr.io/marvel-287923/test/prod,_CI_BUILD_ID=12,_PACKAGE=search-character-interactions --timeout="1h" .
+
+
+    gcloud builds submit --config $GITHUB_WORKSPACE/cloudbuild.yml --substitutions _IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$GITHUB_RUN_ID,_CLOUDSDK_COMPUTE_ZONE=***,_CLOUDSDK_CONTAINER_CLUSTER=***,_KUBECTL_ENV=production,_APP=$APP,_CONTAINER_IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$CI_BUILD_ID,_PACKAGE=$APP --timeout="1h" 
