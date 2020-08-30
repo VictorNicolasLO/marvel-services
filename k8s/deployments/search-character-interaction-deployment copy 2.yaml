@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sigein-frontend-deployment
+  name: search-character-interaction-deployment
   labels:
-    app: sigein-frontend
+    app: search-character-interaction
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: sigein-frontend
+      app: search-character-interaction
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -17,11 +17,11 @@ spec:
   template:
     metadata:
       labels:
-        app: sigein-frontend
+        app: search-character-interaction
     spec:
       containers:
-        - name: sigein-frontend
-          image: gcr.io/sigein/sigein-frontend/development:t1
+        - name: search-character-interaction
+          image: gcr.io/marvel-2-288009/search-character-interactions
           imagePullPolicy: Always
           ports:
-            - containerPort: 80
+            - containerPort: 3200

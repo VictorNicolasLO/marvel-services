@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: sigein-backend-deployment
+  name: search-character-creators-deployment
   labels:
-    app: sigein-backend
+    app: search-character-creators
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: sigein-backend
+      app: search-character-creators
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -17,11 +17,11 @@ spec:
   template:
     metadata:
       labels:
-        app: sigein-backend
+        app: search-character-creators
     spec:
       containers:
-        - name: sigein-backend
-          image: gcr.io/sigein/sigein-backend/development:t1
+        - name: search-character-creators
+          image: gcr.io/marvel-2-288009/search-character-creators
           imagePullPolicy: Always
           ports:
             - containerPort: 3200

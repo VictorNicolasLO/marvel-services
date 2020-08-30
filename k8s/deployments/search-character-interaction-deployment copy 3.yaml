@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: search-character-interaction-deployment
+  labels:
+    app: search-character-interaction
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: search-character-interaction
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: search-character-interaction
+    spec:
+      containers:
+        - name: search-character-interaction
+          image: gcr.io/marvel-2-288009/search-character-interactions
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3200
