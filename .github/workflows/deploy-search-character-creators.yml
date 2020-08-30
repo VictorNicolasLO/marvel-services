@@ -1,4 +1,4 @@
-name: Deploy Marvel service
+name: Deploy search-character-creators
 on:
   push:
     tags:

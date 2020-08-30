@@ -1,4 +1,4 @@
-name: Deploy Marvel service
+name: Deploy character-interactions
 on:
   push:
     tags:

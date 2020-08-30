@@ -1,4 +1,4 @@
-name: Deploy Marvel service
+name: Deploy marvel-comics-cron
 on:
   push:
     tags:
