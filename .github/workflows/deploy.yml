@@ -18,14 +18,14 @@ jobs:
           project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
           service_account_key: ${{ secrets.DEPLOY_KEY }}
           export_default_credentials: true
-        run: |
-          gcloud info
-          echo $GITHUB_REF
-          IFS='/@' read -ra REF_ARRAY <<< "$GITHUB_REF"
-          export APP="${REF_ARRAY[2]}"
-          echo $APP
-          export CONTAINER_IMAGE_PROD=gcr.io/${{ secrets.GCLOUD_PROJECT_ID }}/$APP/prod
-          echo $CONTAINER_IMAGE_PROD
-          gcloud config set project ${{ secrets.GCLOUD_PROJECT_ID }}
-          gcloud config set compute/zone ${{ secrets.CLOUDSDK_ZONE }}
-          gcloud builds submit --config $GITHUB_WORKSPACE/cloudbuild.yml --substitutions _IMAGE=$CONTAINER_IMAGE_PROD,_CLOUDSDK_COMPUTE_ZONE=${{ secrets.CLOUDSDK_ZONE }},_CLOUDSDK_CONTAINER_CLUSTER=${{ secrets.CONTAINER_CLUSTER }},_KUBECTL_ENV=production,_APP=$APP,_CONTAINER_IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$GITHUB_RUN_ID,_PACKAGE=$APP --timeout="1h" $GITHUB_WORKSPACE
+       - run: |
+        gcloud info
+        echo $GITHUB_REF
+        IFS='/@' read -ra REF_ARRAY <<< "$GITHUB_REF"
+        export APP="${REF_ARRAY[2]}"
+        echo $APP
+        export CONTAINER_IMAGE_PROD=gcr.io/${{ secrets.GCLOUD_PROJECT_ID }}/$APP/prod
+        echo $CONTAINER_IMAGE_PROD
+        gcloud config set project ${{ secrets.GCLOUD_PROJECT_ID }}
+        gcloud config set compute/zone ${{ secrets.CLOUDSDK_ZONE }}
+        gcloud builds submit --config $GITHUB_WORKSPACE/cloudbuild.yml --substitutions _IMAGE=$CONTAINER_IMAGE_PROD,_CLOUDSDK_COMPUTE_ZONE=${{ secrets.CLOUDSDK_ZONE }},_CLOUDSDK_CONTAINER_CLUSTER=${{ secrets.CONTAINER_CLUSTER }},_KUBECTL_ENV=production,_APP=$APP,_CONTAINER_IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$GITHUB_RUN_ID,_PACKAGE=$APP --timeout="1h" $GITHUB_WORKSPACE
