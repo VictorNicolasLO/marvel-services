@@ -11,6 +11,7 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: My first step
         uses: GoogleCloudPlatform/github-actions@0.1.2
         with:
@@ -24,4 +25,4 @@ jobs:
       - run: CONTAINER_IMAGE_PROD=gcr.io/${{ secrets.GCLOUD_PROJECT_ID }}/$APP/prod
       - run: gcloud config set project ${{ secrets.GCLOUD_PROJECT_ID }}
       - run: gcloud config set compute/zone ${{ secrets.CLOUDSDK_ZONE }}
-      - run: gcloud builds submit --config cloudbuild.yml --substitutions _IMAGE=$GITHUB_REF,_CI_BUILD_ID=$GITHUB_RUN_ID,_CLOUDSDK_COMPUTE_ZONE=${{ secrets.CLOUDSDK_ZONE }},_CLOUDSDK_CONTAINER_CLUSTER=${{ secrets.CONTAINER_CLUSTER }},_KUBECTL_ENV=production,_APP=$APP,_CONTAINER_IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$CI_BUILD_ID,_PACKAGE=$APP --timeout="1h" .
+      - run: gcloud builds submit --config $GITHUB_WORKSPACE/cloudbuild.yml --substitutions _IMAGE=$GITHUB_REF,_CI_BUILD_ID=$GITHUB_RUN_ID,_CLOUDSDK_COMPUTE_ZONE=${{ secrets.CLOUDSDK_ZONE }},_CLOUDSDK_CONTAINER_CLUSTER=${{ secrets.CONTAINER_CLUSTER }},_KUBECTL_ENV=production,_APP=$APP,_CONTAINER_IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$CI_BUILD_ID,_PACKAGE=$APP --timeout="1h" .
