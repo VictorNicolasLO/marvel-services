@@ -1,0 +1,25 @@
+name: Deploy Marvel service
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - character-interactions
+      - characters-creators
+      - marvel-comics-cron
+      - search-character-creators
+      - search-character-interactions
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: My first step
+        uses: docker://google/cloud-sdk:latest
+      - run: ECHO $GITHUB_REF
+      - run: touch $CI_PROJECT_DIR/sa.json
+      - run: echo $DEPLOY_KEY > $CI_PROJECT_DIR/sa.json
+      - run: export GOOGLE_APPLICATION_CREDENTIALS=$CI_PROJECT_DIR/sa.json
+      - run: gcloud auth activate-service-account --key-file=sa.json
+      - run: gcloud config set project $GCLOUD_PROJECT_ID
+      - run: gcloud config set compute/zone $CLOUDSDK_ZONE
+      - run: gcloud builds submit --config cloudbuild.yml --substitutions _IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$CI_BUILD_ID,_CLOUDSDK_COMPUTE_ZONE=$CLOUDSDK_ZONE,_CLOUDSDK_CONTAINER_CLUSTER=$CONTAINER_CLUSTER,_KUBECTL_ENV=production,_APP=$APP,_CONTAINER_IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$CI_BUILD_ID,_PACKAGE=$PACKAGE --timeout="1h" .

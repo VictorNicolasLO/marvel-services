@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sigein-frontend-deployment
+  labels:
+    app: sigein-frontend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sigein-frontend
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: sigein-frontend
+    spec:
+      containers:
+        - name: sigein-frontend
+          image: gcr.io/sigein/sigein-frontend/development:t1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 80

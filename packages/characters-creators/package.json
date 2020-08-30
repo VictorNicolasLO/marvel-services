@@ -6,7 +6,7 @@
   "author": "Victor Nicolas Lizarraga Ochoa",
   "private": true,
   "scripts": {
-    "build": "yarn tsc",
+    "build": "rm -rf ./dist & yarn tsc",
     "start": "rm -rf ./dist & nest start",
     "start:dev": "nest start --watch",
     "start:debug": "nest start --debug --watch",

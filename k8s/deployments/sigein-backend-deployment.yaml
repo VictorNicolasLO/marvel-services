@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: sigein-backend-deployment
+  labels:
+    app: sigein-backend
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sigein-backend
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: sigein-backend
+    spec:
+      containers:
+        - name: sigein-backend
+          image: gcr.io/sigein/sigein-backend/development:t1
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3200

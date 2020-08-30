@@ -1,0 +1,23 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  annotations:
+    ingress.kubernetes.io/backends: '{"k8s-be-31515--e255007c3492b404":"HEALTHY"}'
+    ingress.kubernetes.io/forwarding-rule: k8s-fw-default-test-frontend--e255007c3492b404
+    ingress.kubernetes.io/target-proxy: k8s-tp-default-test-frontend--e255007c3492b404
+    ingress.kubernetes.io/url-map: k8s-um-default-test-frontend--e255007c3492b404
+  creationTimestamp: "2020-03-05T07:01:28Z"
+  generation: 1
+  name: test-frontend
+  namespace: default
+  resourceVersion: "2725138"
+  selfLink: /apis/extensions/v1beta1/namespaces/default/ingresses/test-frontend
+  uid: 22b06610-5eaf-11ea-b053-42010a800075
+spec:
+  backend:
+    serviceName: sigein-frontend-service
+    servicePort: 3050
+status:
+  loadBalancer:
+    ingress:
+      - ip: 34.95.68.66
