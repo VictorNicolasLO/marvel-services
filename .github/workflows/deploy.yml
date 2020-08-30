@@ -13,19 +13,16 @@ jobs:
     steps:
       - name: My first step
         uses: docker://google/cloud-sdk:latest
-        env:
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
-          CLOUDSDK_ZONE: ${{ secrets.CLOUDSDK_ZONE }}
-          CONTAINER_CLUSTER: ${{ secrets.CONTAINER_CLUSTER }}
-          GCLOUD_PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
+      - run: DEPLOY_KEY=${{ secrets.DEPLOY_KEY }}
+      - run: CLOUDSDK_ZONE=${{ secrets.CLOUDSDK_ZONE }}
+      - run: CONTAINER_CLUSTER=${{ secrets.CONTAINER_CLUSTER }}
+      - run: GCLOUD_PROJECT_ID=${{ secrets.GCLOUD_PROJECT_ID }}
       - run: echo $GITHUB_REF
       - run: IFS='/@' read -ra REF_ARRAY <<< "$GITHUB_REF"
       - run: APP="${REF_ARRAY[2]}"
       - run: CONTAINER_IMAGE_PROD=gcr.io/$GCLOUD_PROJECT_ID/$APP/prod
       - run: touch $GITHUB_WORKSPACE/sa.json
       - run: echo "$CLOUDSDK_ZONE"
-      - run: echo ${{ secrets.CLOUDSDK_ZONE }}
-
       - run: echo "$DEPLOY_KEY" > $GITHUB_WORKSPACE/sa.json
       - run: cat $GITHUB_WORKSPACE/sa.json
       - run: export GOOGLE_APPLICATION_CREDENTIALS=$GITHUB_WORKSPACE/sa.json
