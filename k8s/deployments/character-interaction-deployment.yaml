@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: character-interaction
-          image: gcr.io/marvel-2-288009/character-interactions
+          image: gcr.io/marvel-2-288009/character-interactions/prod
           imagePullPolicy: Always
           ports:
             - containerPort: 3200

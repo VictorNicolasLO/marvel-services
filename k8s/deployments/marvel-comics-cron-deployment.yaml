@@ -5,7 +5,7 @@ metadata:
   labels:
     app: marvel-comics-cron
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: marvel-comics-cron
@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: marvel-comics-cron
-          image: gcr.io/marvel-2-288009/marvel-comics-cron
+          image: gcr.io/marvel-2-288009/marvel-comics-cron/prod
           imagePullPolicy: Always
           ports:
             - containerPort: 3200

@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: character-creators
-          image: gcr.io/marvel-2-288009/character-creators
+          image: gcr.io/marvel-2-288009/characters-creators/prod
           imagePullPolicy: Always
           ports:
             - containerPort: 3200

@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: search-character-creators
-          image: gcr.io/marvel-2-288009/search-character-creators
+          image: gcr.io/marvel-2-288009/search-character-creators/prod
           imagePullPolicy: Always
           ports:
             - containerPort: 3200

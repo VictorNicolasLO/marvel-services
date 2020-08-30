@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
         - name: web-gateway
-          image: gcr.io/marvel-2-288009/web-gateway
+          image: gcr.io/marvel-2-288009/web-gateway/prod
           imagePullPolicy: Always
           ports:
             - containerPort: 3200
