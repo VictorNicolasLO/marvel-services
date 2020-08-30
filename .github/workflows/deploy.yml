@@ -26,6 +26,6 @@ jobs:
       - run: IFS='/@' read -ra REF_ARRAY <<< "$GITHUB_REF"
       - run: APP="${REF_ARRAY[2]}"
       - run: CONTAINER_IMAGE_PROD=gcr.io/$GCLOUD_PROJECT_ID/$APP/prod
-      - run: gcloud config set project $INPUT_GCLOUD_PROJECT_ID
-      - run: gcloud config set compute/zone $INPUT_CLOUDSDK_ZONE
-      - run: gcloud builds submit --config cloudbuild.yml --substitutions _IMAGE=$GITHUB_REF,_CI_BUILD_ID=$GITHUB_RUN_ID,_CLOUDSDK_COMPUTE_ZONE=$INPUT_CLOUDSDK_ZONE,_CLOUDSDK_CONTAINER_CLUSTER=$INPUT_CONTAINER_CLUSTER,_KUBECTL_ENV=production,_APP=$APP,_CONTAINER_IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$CI_BUILD_ID,_PACKAGE=$APP --timeout="1h" .
+      - run: gcloud config set project $GCLOUD_PROJECT_ID
+      - run: gcloud config set compute/zone $CLOUDSDK_ZONE
+      - run: gcloud builds submit --config cloudbuild.yml --substitutions _IMAGE=$GITHUB_REF,_CI_BUILD_ID=$GITHUB_RUN_ID,_CLOUDSDK_COMPUTE_ZONE=$CLOUDSDK_ZONE,_CLOUDSDK_CONTAINER_CLUSTER=$CONTAINER_CLUSTER,_KUBECTL_ENV=production,_APP=$APP,_CONTAINER_IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$CI_BUILD_ID,_PACKAGE=$APP --timeout="1h" .
