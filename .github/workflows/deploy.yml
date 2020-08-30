@@ -18,7 +18,8 @@ jobs:
       - run: APP="${REF_ARRAY[2]}"
       - run: CONTAINER_IMAGE_PROD=gcr.io/"${{ secrets.GCLOUD_PROJECT_ID }}"/$APP/prod
       - run: touch $GITHUB_WORKSPACE/sa.json
-      - run: echo "${{ secrets.DEPLOY_KEY }}" > $GITHUB_WORKSPACE/sa.json
+      - run: export DEPLOY_KEY="${{ secrets.DEPLOY_KEY }}"
+      - run: echo $DEPLOY_KEY > $GITHUB_WORKSPACE/sa.json
       - run: export GOOGLE_APPLICATION_CREDENTIALS=$GITHUB_WORKSPACE/sa.json
       - run: gcloud auth activate-service-account --key-file=$GITHUB_WORKSPACE/sa.json
       - run: gcloud config set project "${{ secrets.GCLOUD_PROJECT_ID }}"
