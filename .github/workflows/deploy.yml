@@ -21,7 +21,8 @@ jobs:
       - run: gcloud info
       - run: echo $GITHUB_REF
       - run: IFS='/@' read -ra REF_ARRAY <<< "$GITHUB_REF"
-      - run: APP="${REF_ARRAY[2]}"
+      - run: echo REF_ARRAY
+      - run: echo '::set-env name=APP::"${REF_ARRAY[2]}"'
       - run: echo $APP
       - run: export CONTAINER_IMAGE_PROD=gcr.io/${{ secrets.GCLOUD_PROJECT_ID }}/$APP/prod
       - run: echo $CONTAINER_IMAGE_PROD
