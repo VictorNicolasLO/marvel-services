@@ -11,6 +11,14 @@ steps:
         "package=${_PACKAGE}",
         ".",
       ]
+  - name: "gcr.io/cloud-builders/kubectl"
+    args:
+      [
+        "set",
+        "image",
+        "deployment/$_APP-deployment",
+        "$_APP=$_CONTAINER_IMAGE:$_CI_BUILD_ID",
+      ]
     env:
       - "CLOUDSDK_COMPUTE_ZONE=${_CLOUDSDK_COMPUTE_ZONE}"
       - "CLOUDSDK_CONTAINER_CLUSTER=${_CLOUDSDK_CONTAINER_CLUSTER}"
