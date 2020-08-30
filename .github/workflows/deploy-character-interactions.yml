@@ -1,0 +1,30 @@
+name: Deploy Marvel service
+on:
+  push:
+    tags:
+      - character-interactions@*
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: My first step
+        uses: GoogleCloudPlatform/github-actions@0.1.2
+        with:
+          project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
+          service_account_key: ${{ secrets.DEPLOY_KEY }}
+          export_default_credentials: true
+      - name: deploy
+        env:
+          CLOUDSDK_ZONE: ${{ secrets.CLOUDSDK_ZONE }}
+          GCLOUD_PROJECT_ID: ${{ secrets.GCLOUD_PROJECT_ID }}
+          CONTAINER_CLUSTER: ${{ secrets.CONTAINER_CLUSTER }}
+        run: |
+          gcloud info
+          echo $GITHUB_REF
+          IFS='/@' read -ra REF_ARRAY <<< "$GITHUB_REF"
+          export APP="${REF_ARRAY[2]}"
+          export CONTAINER_IMAGE_PROD=gcr.io/$GCLOUD_PROJECT_ID/$APP/prod
+          gcloud config set project $GCLOUD_PROJECT_ID
+          gcloud config set compute/zone $CLOUDSDK_ZONE
+          gcloud builds submit --config $GITHUB_WORKSPACE/cloudbuild.yml --substitutions _IMAGE=$CONTAINER_IMAGE_PROD,_CLOUDSDK_COMPUTE_ZONE=,_CLOUDSDK_CONTAINER_CLUSTER=$CONTAINER_CLUSTER,_KUBECTL_ENV=production,_APP=$APP,_CONTAINER_IMAGE=$CONTAINER_IMAGE_PROD,_CI_BUILD_ID=$GITHUB_RUN_ID,_PACKAGE=$APP --timeout="1h" $GITHUB_WORKSPACE
