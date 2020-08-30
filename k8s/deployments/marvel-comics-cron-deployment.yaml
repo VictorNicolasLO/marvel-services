@@ -1,14 +1,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: search-character-interaction-deployment
+  name: marvel-comics-cron-deployment
   labels:
-    app: search-character-interaction
+    app: marvel-comics-cron
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: search-character-interaction
+      app: marvel-comics-cron
   strategy:
     type: RollingUpdate
     rollingUpdate:
@@ -17,11 +17,11 @@ spec:
   template:
     metadata:
       labels:
-        app: search-character-interaction
+        app: marvel-comics-cron
     spec:
       containers:
-        - name: search-character-interaction
-          image: gcr.io/marvel-2-288009/search-character-interactions
+        - name: marvel-comics-cron
+          image: gcr.io/marvel-2-288009/marvel-comics-cron
           imagePullPolicy: Always
           ports:
             - containerPort: 3200
