@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web-gateway-deployment
+  labels:
+    app: web-gateway
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: web-gateway
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: web-gateway
+    spec:
+      containers:
+        - name: web-gateway
+          image: gcr.io/marvel-2-288009/web-gateway
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3200

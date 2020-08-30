@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: comics-deployment
+  labels:
+    app: comics
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: comics
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: 1
+      maxSurge: 1
+  template:
+    metadata:
+      labels:
+        app: comics
+    spec:
+      containers:
+        - name: comics
+          image: gcr.io/marvel-2-288009/comics
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3200
