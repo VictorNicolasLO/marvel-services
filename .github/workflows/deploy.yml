@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: My first step
-      - uses: GoogleCloudPlatform/github-actions@0.1.2
+        uses: GoogleCloudPlatform/github-actions@0.1.2
         with:
           project_id: ${{ secrets.GCLOUD_PROJECT_ID }}
           service_account_key: ${{ secrets.DEPLOY_KEY }}
