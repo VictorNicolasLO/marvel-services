@@ -4,4 +4,4 @@ metadata:
   name: certificate-manager
 spec:
   domains:
-    - sigein.victordev.me
+    - marvel.victordev.me
