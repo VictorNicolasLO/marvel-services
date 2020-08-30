@@ -1,8 +1,6 @@
 name: Deploy Marvel service
 on:
   push:
-    branches:
-      - master
     tags:
       - character-interactions
       - characters-creators
@@ -15,7 +13,7 @@ jobs:
     steps:
       - name: My first step
         uses: docker://google/cloud-sdk:latest
-      - run: ECHO $GITHUB_REF
+      - run: echo $GITHUB_REF
       - run: touch $CI_PROJECT_DIR/sa.json
       - run: echo $DEPLOY_KEY > $CI_PROJECT_DIR/sa.json
       - run: export GOOGLE_APPLICATION_CREDENTIALS=$CI_PROJECT_DIR/sa.json
