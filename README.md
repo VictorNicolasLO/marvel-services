@@ -8,7 +8,7 @@
 
 ### Infrastructure
 
-![image](https://www.gstatic.com/devrel-devsite/prod/v425077d6c7be97246d05a953898cb9591a173a3cef753a451b8729896196bc0a/cloud/images/cloud-logo.svg =300x)
+![image](https://www.gstatic.com/devrel-devsite/prod/v425077d6c7be97246d05a953898cb9591a173a3cef753a451b8729896196bc0a/cloud/images/cloud-logo.svg | width=300px)
 
 **Google Services used** - Kubernetes Engine (GKE) - Cloud build - Compute Engine - Container registry
 
@@ -25,7 +25,7 @@
 
 **Databases**
 
-- MongoDB (In Mongo Atlas) ![alt text](https://infinapps.com/wp-content/uploads/2018/10/mongodb-logo.png =20x)
+- MongoDB (In Mongo Atlas) ![alt text](https://infinapps.com/wp-content/uploads/2018/10/mongodb-logo.png | width=20px)
 - SSDB (Key Value Persistent Database)
 
 ### Microservices patterns
