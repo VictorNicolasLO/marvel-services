@@ -43,7 +43,6 @@ export class MarvelComicsCronService implements OnModuleInit {
           offset,
           characters: CHARACTERS,
         });
-        console.log(result);
         result.data.results.forEach((comic) => {
           this.commandBus
             .execute(

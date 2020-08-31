@@ -21,7 +21,6 @@ export class AppCommandBus extends CommandBus {
   public groupIdPrefix: string = "";
 
   async execute<T extends ICommand>(command: T): Promise<any> {
-    console.log(this.domainName);
     const broker = new KafkaBroker(
       { groupId: this.groupIdPrefix + this.domainName },
       true

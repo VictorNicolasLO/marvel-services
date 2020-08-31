@@ -3,7 +3,6 @@ import redis, { RedisClient } from "redis";
 import { delay } from "../../utils/delay";
 import { RequestTimeoutException } from "@nestjs/common";
 const { promisify } = require("util");
-console.log(process.env.REDIS_URL);
 
 const LOCK_TIMEOUT = 15000;
 const RETRY_DURATION = 100;

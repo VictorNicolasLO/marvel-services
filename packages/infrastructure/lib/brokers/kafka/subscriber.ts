@@ -68,7 +68,7 @@ export class Subscriber {
             return await cb(message);
           })
         );
-        console.log("FINISH");
+        console.log("Message proccesed");
       },
     });
   }
