@@ -2,7 +2,7 @@ name: Deploy search-character-interactions
 on:
   push:
     tags:
-      - search-character-interactions@*
+      - search-character-interaction@*
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
