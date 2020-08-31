@@ -4,6 +4,7 @@
 
 ### Architecture Summary
 
+Please click for HD resolution
 ![Architecture summary](https://user-images.githubusercontent.com/21212247/91680422-68e00900-eb08-11ea-9167-c1cb3d83482e.png)
 
 ### Infrastructure
@@ -25,7 +26,7 @@
 
 **Databases**
 
-- MongoDB (In Mongo Atlas) ![alt text](https://infinapps.com/wp-content/uploads/2018/10/mongodb-logo.png)
+- MongoDB (In Mongo Atlas) <img src="https://infinapps.com/wp-content/uploads/2018/10/mongodb-logo.png" width="30" />
 - SSDB (Key Value Persistent Database)
 
 ### Microservices patterns
