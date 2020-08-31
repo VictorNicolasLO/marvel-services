@@ -1,4 +1,4 @@
-name: Deploy search-character-interactions
+name: Deploy search-character-interaction
 on:
   push:
     tags:
