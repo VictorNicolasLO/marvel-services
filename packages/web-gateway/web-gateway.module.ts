@@ -2,8 +2,13 @@ import { Module } from "@nestjs/common";
 import { CharactersController } from "./controllers/characters.controller";
 import { CollaboratorsController } from "./controllers/collaborators.controller";
 import { AppCommandBus, AppQueryBus } from "@marvel/infrastructure";
+import { HealtCheckController } from "./controllers/healtcheck.controller";
 @Module({
-  controllers: [CharactersController, CollaboratorsController],
+  controllers: [
+    CharactersController,
+    CollaboratorsController,
+    HealtCheckController,
+  ],
   providers: [AppCommandBus, AppQueryBus],
 })
 export class WebGatewayModule {
