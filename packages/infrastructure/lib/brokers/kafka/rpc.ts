@@ -58,6 +58,7 @@ export class Rpc {
           value.toString("utf-8")
         );
         const { timeoutId, resolve, reject } = this.pendingResponses[requestId];
+        delete this.pendingResponses[requestId];
         clearTimeout(timeoutId);
         if (!error) resolve(response);
         else reject(error);
